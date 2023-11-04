@@ -1,0 +1,4 @@
+{
+    "ig_url": "https://hl7-eu.github.io/unicom-ig/", 
+    "server_url": "http://localhost:8080/fhir"
+}
