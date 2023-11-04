@@ -24,17 +24,17 @@ p {
 
 
 .ppd {
-    background: #d4f9ff;
+    background: #d4f9ff !important;
 }
 
 .mpd {
-    background: #fffbae;
+    background: #fffbae !important;
 }
 
 
 .ra {
     
-    background: #ffc4ae;
+    background: #ffc4ae !important;
 
 }
 
@@ -48,11 +48,11 @@ p {
 
 
 .apd {
-    background: #f1e2f5;
+    background: #f1e2f5 !important;
 }
 
 .mid {
-    background: #fee3e9;
+    background: #fee3e9 !important;
 }
 
 .miding {
@@ -64,7 +64,7 @@ p {
 }
 
 .pack {
-    background: #b2eece;
+    background: #b2eece !important;
 }
 
 
@@ -92,3 +92,12 @@ dl, ol, ul {
     margin-bottom: .1rem;
 }
 
+.accordion-header .accordion-button {
+    padding-top: 0.25rem; /* Reduce the top padding */
+    padding-bottom: 0.25rem; /* Reduce the bottom padding */
+}
+
+/* Make sure to add !important if Bootstrap styles override these */
+.accordion-header {
+    padding: 0 !important; /* Remove padding from the header if needed */
+}
