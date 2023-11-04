@@ -1,3 +1,42 @@
+:root {
+    --error-color: #ffc4ae; /* Bootstrap's `$danger` color, or your custom color for errors */
+    --warning-color: #fffbae; /* Bootstrap's `$warning` color, or your custom color for warnings */
+    --information-color: #d4f9ff; /* Bootstrap's `$info` color, or your custom color for informational messages */
+  }
+  
+  /* Additional styles for accordion headers */
+  .accordion-button {
+    /* Default state, when not collapsed (i.e., when accordion is open) */
+    background-color: white; /* White background for expanded state */
+    color: #212529; /* Dark color for the text */
+  }
+  
+  .accordion-button:not(.collapsed) {
+    /* When the accordion button is not collapsed (active/expanded) */
+    /*background-color: white;*/ /* White background for expanded state */
+    color: #212529; /* Dark color for the text */
+  }
+  
+  .accordion-button.error.collapsed {
+    /* Collapsed state for error button */
+    background-color: var(--error-color);
+    color: black;
+  }
+  
+  .accordion-button.warning.collapsed {
+    /* Collapsed state for warning button */
+    background-color: var(--warning-color);
+    color: black;
+  }
+  
+  .accordion-button.information.collapsed {
+    /* Collapsed state for information button */
+    background-color: var(--information-color);
+    color: black;
+  }
+
+
+  
 .rcorners {
     border-radius: 7px;
     border: 1px solid #71775b;    
@@ -8,7 +47,7 @@
 
 
 .bleft {
-    margin-topss:7px;
+    margin-top: 7px;
     border-radius: 10px; 
     border-left: 9px solid rgb(77, 73, 73);
     }

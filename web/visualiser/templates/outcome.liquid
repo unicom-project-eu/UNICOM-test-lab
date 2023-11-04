@@ -1,7 +1,7 @@
 
 {% comment %}GET all MPDs from the Bundle - the resource inside each entry{% endcomment %}
 
-
+<h3>Validation outcome</h3>
 {% assign errors = issue | where: "severity", "error" %}
 {% assign warnings = issue | where: "severity", "warning" %}
 {% assign informations = issue | where: "severity", "information" %}
@@ -11,7 +11,7 @@
   {% if errors.size > 0 %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingErrors">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseErrors" aria-expanded="true" aria-controls="collapseErrors">
+      <button class="accordion-button error" type="button" data-bs-toggle="collapse" data-bs-target="#collapseErrors" aria-expanded="true" aria-controls="collapseErrors">
         Errors ({{ errors.size }})
       </button>
     </h2>
@@ -32,7 +32,7 @@
   {% if warnings.size > 0 %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingWarnings">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWarnings" aria-expanded="false" aria-controls="collapseWarnings">
+      <button class="accordion-button warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWarnings" aria-expanded="false" aria-controls="collapseWarnings">
         Warnings ({{ warnings.size }})
       </button>
     </h2>
@@ -53,7 +53,7 @@
   {% if informations.size > 0 %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingInformation">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInformation" aria-expanded="false" aria-controls="collapseInformation">
+      <button class="accordion-button information collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInformation" aria-expanded="false" aria-controls="collapseInformation">
         Information ({{ informations.size }})
       </button>
     </h2>
