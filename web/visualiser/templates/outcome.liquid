@@ -1,0 +1,32 @@
+
+{% comment %}GET all MPDs from the Bundle - the resource inside each entry{% endcomment %}
+
+
+{% assign errors = issue | where: "severity", "error" %}
+{% assign warnings = issue | where: "severity", "warning" %}
+{% assign informations = issue | where: "severity", "information" %}
+
+  {% for error in errors %}
+  <div class="container rcorners ra">
+  ERROR: {{ error.details.coding[0].code }}<br>
+  {{error.diagnostics}}
+  </div>
+  {% endfor %}
+
+
+
+  {% for warning in warnings %}
+  <div class="container rcorners mpd">
+  Warning: {{ warning.details.coding[0].code }}<br>
+  {{warning.diagnostics}}
+  </div>
+  {% endfor %}
+
+
+
+  {% for information in informations %}
+  <div class="container rcorners ppd">
+  Information: {{ information.details.coding[0].code }}<br>
+  {{information.diagnostics}}
+  </div>
+  {% endfor %}

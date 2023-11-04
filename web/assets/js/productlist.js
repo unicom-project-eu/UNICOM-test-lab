@@ -294,8 +294,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     // '<span class="warning-count" data-resource-id="' + resource.id + '">&nbsp;&nbsp;</span> ' +
                     // '<span class="info-count" data-resource-id="' + resource.id + '">&nbsp;&nbsp;</span> ' +
 
+
                     '<span class="full-validation-link">' +
                     '<a target="_blank" href="' +
+                    './visualiser/outcome.html?url=' +
                     baseurl +
                     '/MedicinalProductDefinition/' +
                     resource.id +
