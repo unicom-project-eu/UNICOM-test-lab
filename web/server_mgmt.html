@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Management</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="icon" href="favicon.png" sizes="32x32" />    
 </head>
 <body>
-  <div class="container mt-4">
-    <h2>Package Upload</h2>
-    <p id="server-status" class="status-searching">Searching for server...</p>
+
+  <header>  
+    <nav class="navbar navbar-light navbar-expand-md bg-light py-3">
+      <div class="container custom-container">
+      <div class="row align-items-center custom-row">
+    <!-- Left Column -->
+    <div class="col-md-4 text-start">
+        <a class="navbar-brand" href="#">
+            <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="height: 47px;width: 47px;">
+                <i class="fa fa-list-ul" style="font-size: 32px;"></i>
+            </span>
+        </a>
+    </div>
+    <!-- Center Column -->
+    <div class="col-md-4 d-flex justify-content-center">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo-img">
+        </div>
+    </div>
+    <!-- Right Column -->
+    <div class="col-md-4 text-end">
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-5">
+        </div>
+    </div>
+  </div>
+</div></div>
+
+
+
+
+</header>
+
+<div class="container mt-4">
+  <h3>Package Upload</h3>
+</div>
+
+<div class="container mt-4">
+  <p id="server-status" class="status-searching">Searching for server...</p>
 
     <!-- Tabs Navigation -->
     <ul class="nav nav-tabs" id="customTabs" role="tablist">
