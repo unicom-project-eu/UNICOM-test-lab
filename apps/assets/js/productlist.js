@@ -108,22 +108,31 @@ function addValidationClickListener() {
 
 
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Your JavaScript code here, including the event listener for the "Validate All" button
-
+document.addEventListener('DOMContentLoaded', async function () {
   // Fetch the configuration from config.json
   fetch('config.json')
-    .then((response) => {
-      return response.json();
-    })
+    .then((response) => response.json())
     .then((config) => {
-      // Get the server_url from the config
       var baseurl = config.server_url;
-
-      // Construct the URL for fetching Bundle resources
       var url = baseurl + '/Bundle?_format=json&_count=20000';
 
+      var productFormatType = document.getElementById('productFormatType');
+
+      // Event listener for the checkbox
+      productToggle.addEventListener('change', function() {
+        var isBundleOfBundles = this.checked;
+        var url = isBundleOfBundles 
+          ? baseurl + '/Bundle?_format=json&_count=20000' 
+          : baseurl + '/MedicinalProductDefinition?_format=json&_count=20000';
+
+        // Clear the existing data in the table
+        t.clear();
+
+        // Fetch and process the new data
+        getDataToProcess(url, isBundleOfBundles)
+          .then(data => processData(data, baseurl))
+          .catch(error => console.error('Error:', error));
+      });
 
 
 
@@ -178,162 +187,226 @@ document.addEventListener('DOMContentLoaded', function () {
         return null; // Return null if no valid resource ID is found
       }
 
-
       // Initialize DataTable
       initializeDataTable();
-
       // Clear validation labels
       clearValidationLabels();
-
       // Add the event listener for validation
       addValidationClickListener();
 
-
-      // Fetch data from the constructed URL
-      return fetch(url)
-        .then((response) => {
-          return response.json();
-        })
-        .then((bundles) => {
-          initializeDataTable(); // Initialize DataTable 
-
-          // clearValidationLabels(); // Clear validation labels
-
-
-
-
-          // document.getElementById('validate-all-button').addEventListener('click', function () {
-          //   // Iterate through all rows in the DataTable
-          //   t.rows().every(function () {
-          //     const resourceId = this.data()[0]; // Assuming the resource ID is in the first column
-
-          //     if (resourceId) {
-          //       // Trigger the validation for each resource
-          //       validateResource(resourceId, baseurl)
-          //         .then((validationData) => {
-          //           // Update the validation labels for the current row
-          //           populateValidationLabels(resourceId, validationData);
-          //         });
-          //     }
-          //   });
-          // });
-
-
-
-
-          for (bundle in bundles.entry) {
-            // Check if the resource is a Bundle
-            if (bundles.entry[bundle].resource.resourceType === 'Bundle') {
-              // Process each entry in the Bundle
-              for (entry in bundles.entry[bundle].resource.entry) {
-                var resource = bundles.entry[bundle].resource.entry[entry].resource;
-
-                // Check if the resource is a MedicinalProductDefinition
-                if (resource.resourceType === 'MedicinalProductDefinition') {
-                  // Create the data row and add it to DataTable
-                  var current_row = [];
-
-                  try {
-                    current_row.push(resource.id);
-                  } catch (error) {
-                    current_row.push(error);
-                  }
-
-                  try {
-                    current_row.push('<b>' + resource.name[0].productName + '</b>');
-                  } catch (error) {
-                    current_row.push(error);
-                  }
-
-                  try {
-                    current_row.push(
-                      resource.name[0].usage[0].country.coding[0].display
-                    );
-                  } catch (error) {
-                    current_row.push(error);
-                  }
-
-                  try {
-                    current_row.push(
-                      // '<a target="_blank" href="https://idmp-viewer.azurewebsites.net/display-product?url=' +
-                      //   baseurl +
-                      //   '/MedicinalProductDefinition/' +
-                      //   resource.id +
-                      //   '">Viewer</a> <br> '+
-                      '<a target="_blank" href="' +
-
-                      './visualiser/index.html?url=' +
-                      baseurl +
-                      '/MedicinalProductDefinition/' +
-                      resource.id +
-                      '">Viewer</a>'
-                    );
-                  } catch (error) {
-                    current_row.push(error);
-                  }
-
-                  try {
-                    current_row.push(
-                      '<a target="_blank" href="' +
-                      baseurl +
-                      '/MedicinalProductDefinition/' +
-                      resource.id +
-                      '?_format=xml">XML</a> <br> <a href="' +
-                      baseurl +
-                      '/MedicinalProductDefinition/' +
-                      resource.id +
-                      '?_format=json">JSON</a>'
-                    );
-                  } catch (error) {
-                    current_row.push(error);
-                  }
-
-
-                  current_row.push(
-                    // '<span class="error-count" data-resource-id="' + resource.id + '">&nbsp;&nbsp;</span> ' +
-                    // '<span class="warning-count" data-resource-id="' + resource.id + '">&nbsp;&nbsp;</span> ' +
-                    // '<span class="info-count" data-resource-id="' + resource.id + '">&nbsp;&nbsp;</span> ' +
-
-
-                    '<span class="full-validation-link">' +
-                    '<a target="_blank" href="' +
-                    './visualiser/outcome.html?url=' +
-                    baseurl +
-                    '/MedicinalProductDefinition/' +
-                    resource.id +
-                    '/$validate">Report</a>' +
-                    '</span>'
-                  );
-
-                  t.row.add(current_row);
-                }
-              }
-            }
-          }
-
-          // Draw the DataTable after all data is added
-          t.draw();
-
-          // Handle click events on "Validate" buttons
-          $('#prod-table').on('click', '.validate-button', function () {
-            var resourceId = $(this).data('resource-id');
-            validateAndPopulateLabels(resourceId, baseurl);
-          });
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error);
-        });
+      productToggle.dispatchEvent(new Event('change'));
+      //// Fetch and process the data
+      // getDataToProcess(url, false) // Set true for Bundle of Bundles
+      //   .then(data => processData(data, baseurl))
+      //   .catch((error) => console.error('Error processing data:', error));
     })
-    .catch((error) => {
-      console.error('Error fetching configuration:', error);
-    });
-
-
-
-
-
-
+    .catch((error) => console.error('Error fetching configuration:', error));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function getDataToProcess(url, isBundleOfBundles) {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  if (isBundleOfBundles) {
+    // Process a Bundle of Bundles
+    return data.entry
+      .map(bundle => bundle.resource.entry)
+      .flat()
+      .map(entry => entry.resource);
+  } else {
+    // Process a single Bundle
+    return data.entry.map(entry => entry.resource);
+  }
+}
+
+
+async function processData(data, baseurl) {
+  var processingModal = document.getElementById('processingModal');
+  processingModal.style.display = 'block'; // Show the modal
+  var totalCount = data.length;
+
+  for (var i = 0; i < totalCount; i++) {
+//    await new Promise(resolve => setTimeout(resolve, 10));
+
+
+    var resource = data[i];
+    if (resource && resource.resourceType === 'MedicinalProductDefinition') {
+
+      var current_row = [];
+
+      try {
+        current_row.push(resource.id);
+      } catch (error) {
+        current_row.push(error);
+      }
+
+      try {
+        current_row.push('<b>' + resource.name[0].productName + '</b>');
+      } catch (error) {
+        current_row.push(error);
+      }
+
+      try {
+        current_row.push(resource.name[0].usage[0].country.coding[0].display);
+      } catch (error) {
+        current_row.push(error);
+      }
+
+      try {
+        current_row.push('<a target="_blank" href="./visualiser/index.html?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '">Viewer</a>');
+      } catch (error) {
+        current_row.push(error);
+      }
+
+      try {
+        current_row.push('<a target="_blank" href="' + baseurl + '/MedicinalProductDefinition/' + resource.id + '?_format=xml">XML</a> <br> <a href="' + baseurl + '/MedicinalProductDefinition/' + resource.id + '?_format=json">JSON</a>');
+      } catch (error) {
+        current_row.push(error);
+      }
+
+      current_row.push(
+        '<span class="full-validation-link">' +
+        '<a target="_blank" href="./visualiser/outcome.html?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '/$validate">Report</a>' +
+        '</span>'
+      );
+
+      t.row.add(current_row);
+
+      // Update progress indicator
+      progressIndicator.innerText = 'Processing product ' + (i + 1) + ' of ' + totalCount + '...';
+    }
+  }
+
+  // Hide the progress indicator after processing
+  processingModal.style.display = 'none'; // Hide the modal
+
+  // Draw the DataTable after all data is added
+  t.draw();
+
+
+
+  
+}
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Your JavaScript code here, including the event listener for the "Validate All" button
+
+//   // Fetch the configuration from config.json
+//   fetch('config.json')
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((config) => {
+//       // Get the server_url from the config
+//       var baseurl = config.server_url;
+
+//       // Construct the URL for fetching Bundle resources
+//       var url = baseurl + '/MedicinalProductDefinition?_format=json&_count=20000';
+
+
+
+
+
+//       // Fetch data from the constructed URL
+//       return fetch(url)
+//         .then((response) => {
+//           return response.json();
+//         })
+//         .then((bundles) => {
+//           initializeDataTable(); // Initialize DataTable 
+
+//           // clearValidationLabels(); // Clear validation labels
+
+
+
+
+//           // document.getElementById('validate-all-button').addEventListener('click', function () {
+//           //   // Iterate through all rows in the DataTable
+//           //   t.rows().every(function () {
+//           //     const resourceId = this.data()[0]; // Assuming the resource ID is in the first column
+
+//           //     if (resourceId) {
+//           //       // Trigger the validation for each resource
+//           //       validateResource(resourceId, baseurl)
+//           //         .then((validationData) => {
+//           //           // Update the validation labels for the current row
+//           //           populateValidationLabels(resourceId, validationData);
+//           //         });
+//           //     }
+//           //   });
+//           // });
+
+// // Show the progress indicator
+// var progressIndicator = document.getElementById('progressIndicator');
+// progressIndicator.style.display = 'block';
+
+// // Get the total count
+// var totalCount = bundles.entry.length;
+
+
+
+//           // Handle click events on "Validate" buttons
+//           $('#prod-table').on('click', '.validate-button', function () {
+//             var resourceId = $(this).data('resource-id');
+//             validateAndPopulateLabels(resourceId, baseurl);
+//           });
+//         })
+//         .catch((error) => {
+//           console.error('Error fetching data:', error);
+//         });
+//     })
+//     .catch((error) => {
+//       console.error('Error fetching configuration:', error);
+//     });
+
+
+
+
+// });
 
 
 
@@ -419,9 +492,6 @@ async function validateResource(resourceId, baseurl) {
 function clearValidationLabels() {
   $('#prod-table').find('.validation-label').html('');
 }
-
-
-
 
 
 
