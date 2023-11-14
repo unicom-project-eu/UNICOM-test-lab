@@ -2,10 +2,8 @@ version: "3.9"
 
 services:
   fhir-server:
-    image: costateixeira/hapistarter:new
-    
-    restart: always
-
+    image: costateixeira/hapistarter:2.0.0
+    restart: unless-stopped
     container_name: ${server_name}
     ports:
       - ${server_port:-8080}:8080
@@ -45,17 +43,11 @@ services:
       - hapi.fhir.graphql_enabled=true
       - hapi.fhir.mdm_enabled=false
       - hapi.fhir.cors.allowed_origin='*'
-
-      - hapi.fhir.staticLocation=/static/
-      - hapi.fhir.staticLocationPrefix=/static
+      - hapi.fhir.ig_runtime_upload_enabled=true
+      - hapi.fhir.custom_content_path=/custom
+      - hapi.fhir.app_content_path=/apps
 
     volumes:
 #      - ./default:/static
-      - ./web:/static
-#      - ./entrypoint.sh:/usr/bin/entrypoint.sh
-#    entrypoint: ["/bin/sh", "-c", "/usr/bin/entrypoint.sh"]
-
-    # command: >-
-    #   /bin/sh -c "
-    #   echo '{\"ig_url\": \"'$ig_url'\", \"server_url\": \"http://localhost:'$server_port'/fhir\"}' > web/config.json && \
-    #   nginx -g 'daemon off;'"      
+      - ./web:/custom
+      - ./apps:/apps
