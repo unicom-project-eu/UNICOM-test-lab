@@ -293,7 +293,9 @@ async function processData(data, baseurl) {
       }
 
       try {
-        current_row.push('<a target="_blank" href="./visualiser/index.html?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '">Viewer</a>');
+        current_row.push(
+          '<a target="_blank" href="./visualiser/index.html?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '">Viewer</a> <br>'+
+          '<a target="_blank" href="https://idmp-viewer.azurewebsites.net/display-product?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '">Ext. Viewer</a> <br> ');
       } catch (error) {
         current_row.push(error);
       }
