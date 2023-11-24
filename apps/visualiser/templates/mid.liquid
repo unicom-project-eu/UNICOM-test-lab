@@ -22,7 +22,7 @@
     {% assign midid = mid.id | prepend: 'ManufacturedItemDefinition/' %}
     {% for midingfor in miding.for %}
       {% if midingfor.reference == midid %}
-        {% include './templates/midingredient.liquid' with miding %}
+        {% include './midingredient.liquid' with miding %}
 
       {% endif %}
     {% endfor %}
