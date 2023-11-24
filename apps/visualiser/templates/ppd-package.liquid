@@ -20,7 +20,7 @@
     {% assign fmid = mid.id | prepend: 'ManufacturedItemDefinition/' %}
 
     {% if pckgcontainedItem.item.reference.reference == fmid %}
-      {% include './templates/mid.liquid' with mid %}
+      {% include './mid.liquid' with mid %}
     {% endif %}
   {% endfor %}
 {% endfor %}
