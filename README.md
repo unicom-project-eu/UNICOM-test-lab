@@ -1,14 +1,22 @@
 # UNICOM-test-lab
 
+This is a set of artifacts to facilitate testing and experimenting with IDMP -compatible data exchange using HL7 FHIR (Release 5).
+This test lab consists of
 
-## test data
+## Features
+* Standalone FHIR R5 server, prepacked with the necessary content
+* IDMP medicinal product browser, including
+  * IDMP medicinal product visualizer
+  * Validator
+* Server management page, for uploading new content
+* Data generation auxilliary functions
 
-1. install docker and docker compose
+## Usage
+(TBD)
+
+
+## Running 
+1. install docker
 2. download (clone) this repository
-3. change the file config.json inside apps to ```{
-    "ig_url": "https://hl7-eu.github.io/unicom-ig/", 
-    "server_url": "https://jpa.unicom.datawizard.it/fhir"
-}```
-4. inside the repository run ```docker-compose up```
+4. inside the folder run ```docker-compose up```
 5. access the homepage in localhost:8080
-6. Select product Browser and access 5819 products

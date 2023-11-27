@@ -1,10 +1,10 @@
 {% comment %}GET all MPDs from the Bundle - the resource inside each entry{% endcomment %}
- 
- 
+
 {% assign errors = issue | where: "severity", "error" %}
 {% assign warnings = issue | where: "severity", "warning" %}
 {% assign informations = issue | where: "severity", "information" %}
- 
+
+
 <!-- Status Div -->
 {% if errors.size > 0 %}
 <div class="container rcorners fail">
@@ -15,7 +15,9 @@
 <h3>Validation outcome: PASS</h3>
 </div>
 {% endif %}
- 
+
+
+
 <div class="accordion" id="accordionValidation">
   <!-- Details Accordion Item -->
   <div class="accordion-item">
@@ -26,7 +28,9 @@
     </h2>
     <div id="collapseDetails" class="accordion-collapse collapse" aria-labelledby="headingDetails" data-bs-parent="#accordionValidation">
       <div class="accordion-body">
- 
+
+
+
         <!-- Nested Accordion for Errors -->
         {% if errors.size > 0 %}
         <div class="accordion-item">
@@ -48,10 +52,9 @@
             </div>
           </div>
           {% endif %}
- 
- 
- 
- 
+
+
+
         <!-- Nested Accordion for Warnings -->
         {% if warnings.size > 0 %}
         <div class="accordion-item">
@@ -73,10 +76,10 @@
             </div>
           </div>
           {% endif %}
- 
- 
- 
- 
+
+
+
+
       <!-- Nested Accordion for Informations -->
       {% if informations.size > 0 %}
       <div class="accordion-item">
@@ -98,14 +101,17 @@
         </div>
       </div>
       {% endif %}
- 
- 
- 
+
+
+
+
       </div>
     </div>
   </div>
 </div>
- 
+
+
+
 <style>
   .pass {
     background-color: green;
