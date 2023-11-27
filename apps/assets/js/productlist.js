@@ -46,7 +46,7 @@ function populateValidationLabels(resourceId, validationData) {
 async function validateAndPopulateLabels(resourceId, baseurl) {
   // Construct the validation URL
   const validationUrl = `${baseurl}/MedicinalProductDefinition/${resourceId}/$validate`;
-
+//  const validationUrl = 
   try {
     // Make the API call to get the validation report
     const response = await fetch(validationUrl);
@@ -299,16 +299,24 @@ async function processData(data, baseurl) {
       } catch (error) {
         current_row.push(error);
       }
-
+      
+      //http://fhir.hl7.pt:8787/fhir/MedicinalProductDefinition?_id=ABASAGLAR-100eml-Solution-SE-IS-MedicinalProductDefinition&_revinclude=RegulatedAuthorization:subject&_include:iterate=RegulatedAuthorization:holder&_revinclude:iterate=Ingredient:for&_revinclude=PackagedProductDefinition:package-for&_include:iterate=PackagedProductDefinition:manufactured-item&_revinclude=AdministrableProductDefinition:form-of&_revinclude:iterate=Ingredient:for&_include:iterate=Ingredient:for&_format=json
       try {
-        current_row.push('<a target="_blank" href="' + baseurl + '/MedicinalProductDefinition/' + resource.id + '?_format=xml">XML</a> <br> <a href="' + baseurl + '/MedicinalProductDefinition/' + resource.id + '?_format=json">JSON</a>');
+        current_row.push('<a target="_blank" href="' + baseurl + '/MedicinalProductDefinition?_id=' + resource.id + '&_revinclude=RegulatedAuthorization:subject&_include:iterate=RegulatedAuthorization:holder&_revinclude:iterate=Ingredient:for&_revinclude=PackagedProductDefinition:package-for&_include:iterate=PackagedProductDefinition:manufactured-item&_revinclude=AdministrableProductDefinition:form-of&_revinclude:iterate=Ingredient:for&_include:iterate=Ingredient:for&_format=xml">XML</a> <br> <a href="' + baseurl + '/MedicinalProductDefinition?_id=' + resource.id + '&_revinclude=RegulatedAuthorization:subject&_include:iterate=RegulatedAuthorization:holder&_revinclude:iterate=Ingredient:for&_revinclude=PackagedProductDefinition:package-for&_include:iterate=PackagedProductDefinition:manufactured-item&_revinclude=AdministrableProductDefinition:form-of&_revinclude:iterate=Ingredient:for&_include:iterate=Ingredient:for&_format=json">JSON</a>');
       } catch (error) {
         current_row.push(error);
       }
 
+    /*  try {
+        current_row.push('<a target="_blank" href="' + baseurl + '/MedicinalProductDefinition/' + resource.id + '?_format=xml">XML</a> <br> <a href="' + baseurl + '/MedicinalProductDefinition/' + resource.id + '?_format=json">JSON</a>');
+      } catch (error) {
+        current_row.push(error);
+      }
+      */
+
       current_row.push(
         '<span class="full-validation-link">' +
-        '<a target="_blank" href="./visualiser/outcome.html?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '/$validate">Report</a>' +
+        '<a target="_blank" href="./visualiser/outcome.html?url=' + baseurl + '/MedicinalProductDefinition?_id=' + resource.id + '&_revinclude=RegulatedAuthorization:subject&_include:iterate=RegulatedAuthorization:holder&_revinclude:iterate=Ingredient:for&_revinclude=PackagedProductDefinition:package-for&_include:iterate=PackagedProductDefinition:manufactured-item&_revinclude=AdministrableProductDefinition:form-of&_revinclude:iterate=Ingredient:for&_include:iterate=Ingredient:for&_format=json">Report</a>' +
         '</span>'
       );
 
