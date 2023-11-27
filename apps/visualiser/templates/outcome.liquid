@@ -5,13 +5,16 @@
 {% assign errors = issue | where: "severity", "error" %}
 {% assign warnings = issue | where: "severity", "warning" %}
 {% assign informations = issue | where: "severity", "information" %}
+
+
+
 <div class="accordion" id="accordionValidation">
 
   <!-- Errors Accordion Item -->
   {% if errors.size > 0 %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingErrors">
-      <button class="accordion-button error" type="button" data-bs-toggle="collapse" data-bs-target="#collapseErrors" aria-expanded="true" aria-controls="collapseErrors">
+      <button class="accordion-button error" type="button" data-bs-toggle="collapse" data-bs-target="#collapseErrors" aria-expanded="false" aria-controls="collapseErrors">
         Errors ({{ errors.size }})
       </button>
     </h2>
