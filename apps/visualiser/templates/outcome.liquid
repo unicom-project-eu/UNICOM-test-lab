@@ -42,7 +42,7 @@
           <div id="collapseErrorsNested" class="accordion-collapse collapse" aria-labelledby="headingErrorsNested" data-bs-parent="#collapseDetails">
             <div class="accordion-body">
                 {% for error in errors %}
-                <div class="container rcorners mpd">
+                <div class="container rcorners ra">
                   Error: {{ error.details.coding[0].code }}<br>
                   {{ error.diagnostics }}<br>
                   <p><small>{{ error.location }}</small></p>
