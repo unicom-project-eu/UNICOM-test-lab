@@ -19,8 +19,9 @@
       <div class="accordion-body">
         {% for error in errors %}
         <div class="container rcorners ra">
-          ERROR: {{ error.details.coding[0].code }}<br>
-          {{ error.diagnostics }}
+          ERROR: <b>{{ error.details.coding[0].code }}</b><br>
+          {{ error.diagnostics }}<br>
+          <p><small>{{ error.location }}</small></p>
         </div>
         {% endfor %}
       </div>
