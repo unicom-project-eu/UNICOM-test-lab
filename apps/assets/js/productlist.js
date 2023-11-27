@@ -316,7 +316,7 @@ async function processData(data, baseurl) {
 
       current_row.push(
         '<span class="full-validation-link">' +
-        '<a target="_blank" href="./visualiser/outcome.html?url=' + baseurl + '/MedicinalProductDefinition/' + resource.id + '/$validate">Report</a>' +
+        '<a target="_blank" href="./visualiser/outcome.html?url=' + baseurl + '/MedicinalProductDefinition?_id=' + resource.id + '&_revinclude=RegulatedAuthorization:subject&_include:iterate=RegulatedAuthorization:holder&_revinclude:iterate=Ingredient:for&_revinclude=PackagedProductDefinition:package-for&_include:iterate=PackagedProductDefinition:manufactured-item&_revinclude=AdministrableProductDefinition:form-of&_revinclude:iterate=Ingredient:for&_include:iterate=Ingredient:for&_format=json">Report</a>' +
         '</span>'
       );
 
