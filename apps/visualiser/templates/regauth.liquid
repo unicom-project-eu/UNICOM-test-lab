@@ -55,7 +55,7 @@
   <p>
     Status:
     <b>
-      {{ ra.status.coding[0].display }} ({{ ra.statusDate }})
+      {{ ra.status.coding[0].display }}     {% if ra.statusDate %}        ({{ ra.statusDate }})     {% endif %}
     </b>
   </p>
 
