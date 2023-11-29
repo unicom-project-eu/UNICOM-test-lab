@@ -40,8 +40,16 @@
     <div class="tab-content" id="customTabsContent">
         <!-- Published Package Tab Content -->
         <div class="tab-pane fade show active p-3" id="package" role="tabpanel" aria-labelledby="package-tab">
-            IG URL: <strong><span id="igUrlLabel"></span></strong><p></p>
-            <select id="jsonDropdown"></select>
+          <div class="selectingdiv">
+            <div>
+                 <strong>IG URL<span id="igUrlLabel"></span></strong>
+            </div>
+            <div>
+                <select id="jsonDropdown"></select>
+            </div>
+        </div>
+    
+
 
             <div class="mb-3">
                 <button id="refreshPackageBtn" class="btn btn-secondary">Load from published package</button>

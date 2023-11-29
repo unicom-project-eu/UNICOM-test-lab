@@ -55,3 +55,15 @@
             background-color: #e1e1e1;  /* Set to a light gray; adjust as needed */
             border: 1px solid #c7c7c7;  /* Set a gray border; adjust as needed */
         }
+        .selectingdiv {
+            display: flex;
+            align-items: center; /* Align vertically */
+            justify-content: flex-start; /* Spacing between elements */
+        }
+        
+        .selectingdiv > div {
+            margin-right: 10px; /* Optional: to add space between text and select box */
+        }
+        .selectingdiv {
+            margin-bottom: 20px; /* Adjust the value as needed */
+        }
