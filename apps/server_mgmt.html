@@ -391,7 +391,10 @@
     </script>
    <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('/web/apps/registry.json')
+      const proxyurl = 'https://corsproxy.io/?' + encodeURIComponent('https://fhir.org/guides/stats2/registry.json');
+      fetch(proxyurl)
+
+        //fetch('/web/apps/registry.json')
             .then(response => response.json())
             .then(data => {
                 const packages = data.packages; // Access the 'packages' property
