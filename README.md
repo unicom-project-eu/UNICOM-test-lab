@@ -30,7 +30,7 @@ This test lab consists of
    1. "Published Package" is a dropdown of all packages in the [registry page](http://fhir.org/guides/registry/)
    2. "Local Package" is for uploading your own package from file system to the server
    3. "URL" is for providing a link for a package on the web and upload its data to the server
-   > Currently you can only add data with "published Package" option
+   > Currently you can only add data with "published Package" option. IDMP-compatible data created by UNICOM WP4 is available for manual uploading - see section below "existing data".
    
 3. With option 1) "Published Package", you can select the package from the dropdown (i.e. unicom-ig), 
 4. Then click "Upload package resources to server"
@@ -49,7 +49,7 @@ This test lab consists of
 6. Validation - The report of the validation of resource 
 
 ### existing data
-1. [ufis](https://github.com/unicom-project-eu/unicom-tools/tree/main/ufis/ufis-fhir/input/fsh)
+1. [UFIS (Swedish and Estonian) data](https://github.com/unicom-project-eu/unicom-tools/tree/main/ufis/ufis-fhir/input/fsh)
 2. [Portugal Data](https://github.com/unicom-project-eu/unicom-tools/tree/main/pt-PPLCreator/fhir-data/input/fsh/pt)
 
 ## reporting issues
