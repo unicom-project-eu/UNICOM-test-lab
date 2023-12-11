@@ -12,15 +12,25 @@ This test lab consists of
 * Data generation auxilliary functions
 
 ## Usage
+
+### starting up
 1. git clone the repository (`git clone https://github.com/unicom-project-eu/UNICOM-test-lab.git` )
 2. in the folder of the new created repository run `docker-compose up -d` (this assumes docker and docker-compose installed)
 3. access in the localhost:8080 the main page of the server.
-4. click on the product browser tab to access the product browser/viewer
+
+
+### Adding Data
+1. click on the product browser tab to access the product browser/viewer
    1. In this page, click the wrench tool to access sever management:
-5. In the server management, you can search by packages in the registry page or upload your own, or provide a link
-   > Currently the upload and link are with a bug, already reported
-6. When you select a package from the dropdown, (i.e. unicom-ig), you can click "Upload package resources to server"
-7. You can go back to the product browser and visualize the products.
+2. In the server management, you can have 3 ways of adding data:
+   1. search by packages in the [registry page](http://fhir.org/guides/registry/)
+   2. upload your own package
+   3. provide a link
+   > Currently the upload and link are with a bug (1 and 2), already reported
+   
+3. With option 1), you can select a package from the dropdown (i.e. unicom-ig), 
+4. Then click "Upload package resources to server"
+5. You can go back to the product browser and visualize the products.
 
 
 ### product browser
@@ -29,7 +39,7 @@ This test lab consists of
 2. Name is the MP name
 3. Country is the country of MP
 4. Viewer:
-   1. link for built in viz (viewer)
+   1. link for built-in viz (viewer)
    2. link for external viz (Ext. Viewer)
 5. Source - the data (bundle with all) in JSON and XML
 6. Validation - The report of the validation of resource 
