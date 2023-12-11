@@ -35,7 +35,7 @@ This test lab consists of
 5. You can go back to the product browser and visualize the products.
 
 
-### product browser
+### Product browser
 
 1. ID is the resource ID (MP)
 2. Name is the MP name
