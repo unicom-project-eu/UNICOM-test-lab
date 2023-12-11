@@ -24,13 +24,15 @@ This test lab consists of
 ### Adding Data
 1. click on the product browser tab to access the product browser/viewer
    1. In this page, click the wrench tool to access sever management:
-2. In the server management, you can have 3 ways of adding data:
-   1. search by packages in the [registry page](http://fhir.org/guides/registry/)
-   2. upload your own package
-   3. provide a link
-   > Currently the upload and link are with a bug (1 and 2), already reported
+2. In the server management, you can have 3 ways of adding data, like the image below:
+    ![package upload](apps/assets/images/package-upload.png)
+
+   1. "Published Package" is a dropdown of all packages in the [registry page](http://fhir.org/guides/registry/)
+   2. "Local Package" is for uploading your own package from file system to the server
+   3. "URL" is for providing a link for a package on the web and upload its data to the server
+   > Currently the "local Package" and "URL" have a bug, already reported
    
-3. With option 1), you can select a package from the dropdown (i.e. unicom-ig), 
+3. With option 1) "Published Package", you can select the package from the dropdown (i.e. unicom-ig), 
 4. Then click "Upload package resources to server"
 5. You can go back to the product browser and visualize the products.
 
