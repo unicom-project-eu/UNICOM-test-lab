@@ -14,9 +14,11 @@ This test lab consists of
 ## Usage
 
 ### starting up
-1. git clone the repository (`git clone https://github.com/unicom-project-eu/UNICOM-test-lab.git` )
-2. in the folder of the new created repository run `docker-compose up -d` (this assumes docker and docker-compose installed)
-3. access in the localhost:8080 the main page of the server.
+1. install docker
+2. download (clone) this repository (`git clone https://github.com/unicom-project-eu/UNICOM-test-lab.git` )
+3. inside the folder run ```docker-compose up -d```
+4. access the homepage in localhost:8080
+
 
 
 ### Adding Data
@@ -44,9 +46,9 @@ This test lab consists of
 5. Source - the data (bundle with all) in JSON and XML
 6. Validation - The report of the validation of resource 
 
-## Running 
-1. install docker
-2. download (clone) this repository
-4. inside the folder run ```docker-compose up```
-5. access the homepage in localhost:8080
+
+## reporting issues
+
+Please use the issue tracker in this repository to ask questions, provide feedback and/or ask for help
+[link](https://github.com/unicom-project-eu/UNICOM-test-lab/issues)
 
