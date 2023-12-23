@@ -43,9 +43,9 @@
             <div class="accordion-body">
                 {% for error in errors %}
                 <div class="container rcorners ra">
-                  Error: {{ error.details.coding[0].code }}<br>
+                  Error: <b>{{ error.details.coding[0].code }}</b><br>
                   {{ error.diagnostics }}<br>
-                  <p><small>{{ error.location }}</small></p>
+                  <p><small><i>{{ error.location }}</i></small></p>
                 </div>
                 {% endfor %}
               </div>
@@ -67,9 +67,9 @@
             <div class="accordion-body">
                 {% for warning in warnings %}
                 <div class="container rcorners mpd">
-                  Warning: {{ warning.details.coding[0].code }}<br>
+                  Warning: <b>{{ warning.details.coding[0].code }}</b><br>
                   {{ warning.diagnostics }}<br>
-                  <p><small>{{ warning.location }}</small></p>
+                  <p><small><i>{{ warning.location }}</i></small></p>
                 </div>
                 {% endfor %}
               </div>
@@ -92,9 +92,9 @@
           <div class="accordion-body">
               {% for information in informations %}
               <div class="container rcorners ppd">
-                Information: {{ information.details.coding[0].code }}<br>
+                Information: <b>{{ information.details.coding[0].code }}</b><br>
                 {{ information.diagnostics }}<br>
-                  <p><small>{{ information.location }}</small></p>
+                  <p><small><i>{{ information.location }}</i></small></p>
               </div>
               {% endfor %}
           </div>
