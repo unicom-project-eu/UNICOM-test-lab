@@ -90,7 +90,7 @@
             if (xhr.status === 200 || xhr.status === 412) {
 
               var processedData = processResponseData(xhr.responseJSON);
-
+              console.log(processedData);
               // Render the template with the response
               engine.parseAndRender(ltemplate, processedData)
                 .then(html => result.innerHTML = html);
@@ -102,6 +102,7 @@
         });
       });
     });
+  });
   </script>
 </body>
 

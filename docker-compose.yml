@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
   fhir-server:
-    image: costateixeira/hapistarter:2.0.0
+    #image: costateixeira/hapistarter:2.0.0
+   # image: jfcal/myhapi:latest
+    image: hapiproject/hapi:latest
     restart: unless-stopped
     container_name: ${server_name}
     ports:
@@ -21,7 +23,7 @@ services:
       - hapi.fhir.cr_enabled=true
 
 
-
+      - spring.main.allow-bean-definition-overriding=true
       - spring.jpa.properties.hibernate.format_sql=false
       - spring.jpa.properties.hibernate.show_sql=false
       - spring.jpa.properties.hibernate.dialect=ca.uhn.fhir.jpa.model.dialect.HapiFhirH2Dialect
