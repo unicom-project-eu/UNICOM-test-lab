@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Questionnaire</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const addButton = document.getElementById('addIngredient');
+                const ingredientBox = document.getElementById('ingredientBox');
+                let ingredientCount = 1;
+            
+                addButton.addEventListener('click', function() {
+                    ingredientCount++;
+                    const newBox = ingredientBox.cloneNode(true);
+                    newBox.id = 'ingredientBox' + ingredientCount;
+                    
+                    // Update the IDs and names of the inputs in the new box
+                    const inputs = newBox.querySelectorAll('select, input');
+                    inputs.forEach(input => {
+                        const oldId = input.id;
+                        const newId = input.id + ingredientCount;
+                        input.id = newId;
+                        input.name = newId;
+                        const label = newBox.querySelector(`label[for="${oldId}"]`);
+                        if (label) {
+                            label.setAttribute('for', newId);
+                        }
+                    });
+            
+                    // Update the title of the new box
+                    const title = newBox.querySelector('h2');
+                    title.textContent = `Ingredient ${ingredientCount}`;
+            
+                    // Insert the new box before the add button
+                    addButton.parentNode.insertBefore(newBox, addButton);
+
+                    const newSelects = newBox.querySelectorAll('.dynamic-select');
+                    console.log(newSelects)
+                newSelects.forEach(select => {
+                    $(select).val(null).trigger('change'); // Clear any existing data
+
+                
+                });
+            });
+        });
+            </script>
+    </head>
+    <body class="bg-gray-200 p-6">
+        <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold mb-12">UNICOM Product Register</h1>
+            
+            <form id="questionnaireForm">
+                <div id="mpdBox" class="section-box mb-8 p-4 bg-yellow-50 rounded-lg">
+
+                <h2 class="font-bold mb-6">Medicina Product Definition</h2>
+                <div class="mb-4" >
+                    <label for="MPID">Medicinal Product ID</label>
+                    <input type="text"  id="MPID" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+            
+                    <div>
+                        <label for="IVP">Invented Name Part</label>
+                        <input type="text"  id="IVP" name="lastName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                    </div>
+                    <div >
+                        <label for="SP" class="block text-gray-700">Strength Part</label>
+                        <input type="text" id="SP" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                    </div>
+    
+                    <div >
+                        <label for="PDFP" class="block text-gray-700">Pharmaceutical Dose Form Part</label>
+                        <input type="text" id="PDFP" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                    </div>
+                </div>
+               
+
+                <div class="mb-4">
+                    <label for="nameusage" class="block text-gray-700">Name Usage</label>
+                    <select id="nameusage" name="" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000000002.json" required  style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="mpddoseform" class="block text-gray-700">Authorised dose form</label>
+                    <select id="mpddoseform" name="mpddoseform" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div id="regandOrgBox" class="section-box mb-8 p-4 bg-orange-50 rounded-lg">
+
+                <h2 class="font-bold mb-6">Marketing Authorization</h2>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+
+                <div >
+                    <label for="AuthNumber" class="block text-gray-700">Authorisation Number</label>
+                    <input type="text" id="AuthNumber" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                </div>
+
+                <div >
+                    <label for="MAID" class="block text-gray-700">Identifier</label>
+                    <input type="text" id="MAID" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                </div>
+            </div>
+
+                
+                <div class="grid grid-cols-2 gap-4 mb-4">
+
+                <div >
+                    <label for="MAH" class="block text-gray-700">Marketing Authorization Holder Name</label>
+                    <input type="text" id="MAH" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div >
+                    <label for="MAHID" class="block text-gray-700">Marketing Authorization Holder Identifier</label>
+                    <input type="text" id="MAHID" name="firstName" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-4 mb-4">
+                <div >
+                    <label for="mahstatus" class="block text-gray-700">Status</label>
+                    <select id="mahstatus" name="mahstatus" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" style="width: 100%;" data-placeholder="Select 1 option" data-json="100000072049.json" required>
+                        <option></option>
+                    </select>
+                </div>
+                <div >
+                    <label for="MASTATUSDATE" class="block text-gray-700">Status Date</label>
+                    <input type="date" id="MASTATUSDATE" name="birthDate" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                </div>
+                <div >
+                    <label for="region" class="block text-gray-700">Region</label>
+                    <select id="region" name="region" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" style="width: 100%;" data-placeholder="Select 1 option" data-json="100000000002.json" required>
+                        <option></option>
+                    </select>
+                </div>
+             
+
+                
+                </div>  
+            </div>
+            <div id="apdBox" class="section-box mb-8 p-4 bg-lime-50 rounded-lg">
+                <h2 class="font-bold mb-6">Administrable Product</h2>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+
+                <div>
+                    <label for="apddoseform" class="block text-gray-700">Dose Form</label>
+                    <select id="apddoseform" name="apddoseform" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000073345.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+                <div >
+                    <label for="apdunit" class="block text-gray-700">Unit of Presentation</label>
+                    <select id="apdunit" name="apdunit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000014.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+                </div>
+                <div class="mb-4">
+                    <label for="roa" class="block text-gray-700">Route of administration</label>
+                    <select id="roa" name="roa" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-json="100000073345.json" data-placeholder="Select 1 or more options" multiple="multiple" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="packageBox" class="section-box mb-8 p-4 bg-blue-50 rounded-lg">
+
+                <h2 class="font-bold mb-6">Package</h2>
+
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div >
+                        <label for="packidentifier" class="block text-gray-700">Identifier</label>
+                        <input type="text" id="packidentifier" name="packidentifier" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                    </div>
+                    <div >
+                        <label for="packsize" class="block text-gray-700">Pack size</label>
+                        <input type="number" id="packsize" name="packsize" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" >
+                    </div>
+                <div >
+                    <label for="packsizeunit" class="block text-gray-700">Pack size Unit</label>
+                    <input type="text" id="packsizeunit" name="packsizeunit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                </div>
+     
+            </div>
+
+                <div >
+                    <label for="packdescription" class="block text-gray-700">Description</label>
+                    <input type="text" id="packdescription" name="packdescription" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" >
+                </div>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+
+                <div >
+                    <label for="packquantity" class="block text-gray-700">Packaging quantity</label>
+                    <input type="number" id="packquantity" name="packquantity" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" >
+                </div>
+                <div class="mb-4">
+                    <label for="packquantityunit" class="block text-gray-700">Packaging quantity Unit</label>
+                    <select id="packquantityunit" name="packquantityunit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+                <div >
+                    <label for="containedelements" class="block text-gray-700">Contained Elements</label>
+                    <input type="number" id="containedelements" name="containedelements" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" >
+                </div>
+            </div>
+
+                <div class="mb-4">
+                    <label for="packquantitymaterial" class="block text-gray-700">Packaging Material</label>
+                    <select id="packquantitymaterial" name="packquantitymaterial" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" multiple="multiple" data-placeholder="Select 1 or more options" data-json="200000003199.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div id="midBox" class="section-box mb-8 p-4 bg-violet-50 rounded-lg">
+
+                <h2 class="font-bold mb-6">Manufactured</h2>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+
+                <div class="mb-4">
+                    <label for="middoseform" class="block text-gray-700">Dose Form</label>
+                    <select id="middoseform" name="middoseform" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="midunitpres" class="block text-gray-700">Unit of Presentation</label>
+                    <select id="midunitpres" name="midunitpres" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+            <div id="ingredientBoxContainer" class="section-box p-2 bg-red-100 rounded-lg">
+                <div id="ingredientBox" class="section-box mb-8 p-4 bg-red-50 rounded-lg">
+
+                <h2 class="font-bold mb-6">Ingredient</h2>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+
+                <div class="mb-4">
+                    <label for="substrole" class="block text-gray-700">Role</label>
+                    <select id="substrole" name="substrole" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                        <option selected value="100000072072">Active</option>
+                        <option value="100000072073">Adjuvant</option>
+                        <option value="100000072082">Excipient</option>
+                        <option value="100000136065">Starting material for excipient</option>
+                        <option value="100000136066">Solvent / Diluent</option>
+                        <option value="100000136178">Raw materials used in the manufacture of the product</option>
+                        <option value="100000136179">Starting material for active substance</option>
+                        <option value="100000136561">Overage</option>
+                        <option value="200000003427">bioenhancer</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="substance" class="block text-gray-700">Substance</label>
+                    <select id="substance" name="substance" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" required data-json="CodeSystem-substance-sms-cs.json">
+                        <option></option>
+
+                    </select>
+                </div>
+            </div>
+
+                    <p><b>Presentation Strength</b></p>
+                    <div class="grid grid-cols-4 gap-4 mb-4">
+
+                        <div class="col-md-6">
+                            <label for="ps-numerator" class="block text-gray-700">Numerator</label>
+                            <input type="number" id="ps-numerator" name="numerator" class="form-control" required>
+                        </div>
+
+                    <div>
+                    <label for="ps-num-unit" class="block text-gray-700">Numerator Unit</label>
+                    <select id="ps-num-unit" name="ps-num-unit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
+                </div>
+
+                    <div >
+                        <label for="ps-denominator" class="block text-gray-700">Denominator</label>
+                        <input type="ps-denominator" id="ps-denominator" name="numerator" class="form-control" required>
+                    </div>
+                    <div >
+
+                <label for="ps-den-unit" class="block text-gray-700">Denominator Unit</label>
+                <select id="ps-den-unit" name="ps-den-unit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" required style="width: 100%;">
+                    <option></option>
+
+                </select>
+                </div>
+            </div>
+
+
+            <p><b>Reference Strength</b></p>
+            <div class="grid grid-cols-4 gap-4 mb-4">
+
+                <div class="col-md-6">
+                    <label for="rs-numerator" class="block text-gray-700">Numerator</label>
+                    <input type="number" id="rs-numerator" name="numerator" class="form-control" >
+                </div>
+
+            <div>
+            <label for="rs-num-unit" class="block text-gray-700">Numerator Unit</label>
+            <select id="rs-num-unit" name="rs-num-unit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" style="width: 100%;">
+                <option></option>
+
+            </select>
+        </div>
+
+            <div >
+                <label for="rs-denominator" class="block text-gray-700">Denominator</label>
+                <input type="rs-denominator" id="rs-denominator" name="numerator" class="form-control" >
+            </div>
+            <div >
+
+        <label for="rs-den-unit" class="block text-gray-700">Denominator Unit</label>
+        <select id="rs-den-unit" name="rs-den-unit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" style="width: 100%;">
+            <option></option>
+
+        </select>
+        </div>
+    </div>
+
+
+                </div>
+                <button id="addIngredient" class="bg-red-500 text-white px-4 py-2 rounded-md shadow-sm mt-4">Add Ingredient</button>
+            </div>
+
+
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm">Submit</button>
+            </form>
+        </div>
+        <script src="assets/js/productregister.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const selects = document.querySelectorAll('.dynamic-select');
+    
+                selects.forEach(select => {
+                    const jsonFileName = select.getAttribute('data-json');
+                    const placeholder = select.getAttribute('data-placeholder');
+
+                    fetch(jsonFileName)
+                        .then(response => response.json())
+                        .then(data => {
+                            const formattedData = data.concept.map(item => {
+                            return {
+                                id: item.code,
+                                text: item.display
+                            };
+                        });
+                            $(select).select2({
+                                data: formattedData,
+                                placeholder: placeholder,
+                                allowClear: true,
+                                closeOnSelect: !select.hasAttribute('multiple') // Close dropdown on select only if it's not a multi-select
+
+                            });
+                        })
+                        .catch(error => console.error('Error fetching the JSON data:', error));
+                });
+            });
+        </script>
+    </body>
+    </html>
+<body>
+

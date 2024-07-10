@@ -1,0 +1,88 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Quantity Operator",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000000050",
+      "display": "less than",
+      "definition": "x\u00a0< y means x is less than y."
+    },
+    {
+      "code": "100000000051",
+      "display": "more than",
+      "definition": "x\u00a0> y means x is greater than y."
+    },
+    {
+      "code": "100000000052",
+      "display": "less than or equal to",
+      "definition": "x \u00a0\u2264 y means x is less than or equal to y."
+    },
+    {
+      "code": "100000000053",
+      "display": "more than or equal to",
+      "definition": "x\u00a0\u2265 y means x is greater than or equal to y."
+    },
+    {
+      "code": "100000000055",
+      "display": "approximately equal to",
+      "definition": "x \u2248 y means x is approximately equal to y."
+    },
+    {
+      "code": "100000000056",
+      "display": "range",
+      "definition": "x \u2212 y means the value is between x and y inclusive."
+    },
+    {
+      "code": "100000165006",
+      "display": "quantity sufficient",
+      "definition": "\u201cQuantity sufficient\u201d stands for the latin term \u201cquantum satis\u201d which means \u201cas much as necessary\u201d i.e. adding enough of a constituent to achieve a specific final volume or total weight. QS is a placeholder for an amount or volume which has to be \u201cadjusted\u201d by the given circumstances in a particular preparation."
+    },
+    {
+      "code": "200000024024",
+      "display": "average"
+    },
+    {
+      "code": "100000000049",
+      "display": "equal to",
+      "definition": "x = y means x and y represent the same thing or value."
+    },
+    {
+      "code": "100000000054",
+      "display": "equivalent to",
+      "definition": "x \u224d y means x and y do not represent the same thing or value but are corresponding or virtually identical especially in effect or function."
+    }
+  ],
+  "id": "100000000008",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000000008",
+  "name": "SPOR 100000000008 for Quantity Operator",
+  "title": "SPOR 100000000008 for Quantity Operator",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000000008"
+}

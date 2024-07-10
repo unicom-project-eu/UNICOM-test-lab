@@ -12,3 +12,30 @@ Accept: application/fhir+json;fhirVersion=5.0
 Content-Type: application/fhir+json;fhirVersion=5.0
 
 < ./{{folder}}/StructureDefinition-PPLMedicinalProductDefinition.json
+
+
+
+### teste upload
+POST {{host}}/ImplementationGuide/$install HTTP/1.1
+Content-Type: application/fhir+json
+Content-Encoding: tgz
+
+< /Users/joaoalmeida/Downloads/data.json
+
+### reindex
+
+POST {{host}}/$reindex HTTP/1.1
+
+
+### check data
+GET {{host}}/StructureDefinition/Author 
+
+
+### asdad
+
+GET http://sandbox.hl7europe.eu/baseserver/fhir/metadata
+
+###
+
+GET {{host}}/OperationDefinition/ImplementationGuide-t-install HTTP/1.1
+

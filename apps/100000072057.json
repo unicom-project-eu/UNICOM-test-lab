@@ -1,0 +1,783 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Language",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000072223",
+      "display": "Korean"
+    },
+    {
+      "code": "100000072144",
+      "display": "Chuvash"
+    },
+    {
+      "code": "100000072257",
+      "display": "Serbian"
+    },
+    {
+      "code": "100000072297",
+      "display": "Turkish"
+    },
+    {
+      "code": "100000072166",
+      "display": "Corsican"
+    },
+    {
+      "code": "100000072131",
+      "display": "Avaric"
+    },
+    {
+      "code": "100000072264",
+      "display": "Spanish"
+    },
+    {
+      "code": "100000072273",
+      "display": "Walloon"
+    },
+    {
+      "code": "100000072159",
+      "display": "Javanese"
+    },
+    {
+      "code": "100000072197",
+      "display": "Kashmiri"
+    },
+    {
+      "code": "100000072306",
+      "display": "Xhosa"
+    },
+    {
+      "code": "100000072177",
+      "display": "Georgian"
+    },
+    {
+      "code": "100000072225",
+      "display": "Lao"
+    },
+    {
+      "code": "100000072140",
+      "display": "Burmese"
+    },
+    {
+      "code": "100000072118",
+      "display": "Avestan"
+    },
+    {
+      "code": "100000072162",
+      "display": "Chechen"
+    },
+    {
+      "code": "100000072293",
+      "display": "Tibetan"
+    },
+    {
+      "code": "100000072183",
+      "display": "Haitian"
+    },
+    {
+      "code": "100000072266",
+      "display": "Tahitian"
+    },
+    {
+      "code": "100000072255",
+      "display": "Russian"
+    },
+    {
+      "code": "100000072307",
+      "display": "Yiddish"
+    },
+    {
+      "code": "100000072296",
+      "display": "Tsonga"
+    },
+    {
+      "code": "100000072152",
+      "display": "Manx"
+    },
+    {
+      "code": "100000072236",
+      "display": "Maltese"
+    },
+    {
+      "code": "100000072282",
+      "display": "Shona"
+    },
+    {
+      "code": "100000072194",
+      "display": "Italian"
+    },
+    {
+      "code": "100000072261",
+      "display": "Sinhala"
+    },
+    {
+      "code": "100000072267",
+      "display": "Telugu"
+    },
+    {
+      "code": "100000072270",
+      "display": "Turkmen"
+    },
+    {
+      "code": "100000072198",
+      "display": "Kanuri"
+    },
+    {
+      "code": "100000072209",
+      "display": "Malay"
+    },
+    {
+      "code": "100000072265",
+      "display": "Sundanese"
+    },
+    {
+      "code": "100000072201",
+      "display": "Kazakh"
+    },
+    {
+      "code": "100000072304",
+      "display": "Welsh"
+    },
+    {
+      "code": "100000072218",
+      "display": "Quechua"
+    },
+    {
+      "code": "100000072157",
+      "display": "Inuktitut"
+    },
+    {
+      "code": "100000072219",
+      "display": "Rundi"
+    },
+    {
+      "code": "100000072174",
+      "display": "Fijian"
+    },
+    {
+      "code": "100000072139",
+      "display": "Breton"
+    },
+    {
+      "code": "100000072301",
+      "display": "Venda"
+    },
+    {
+      "code": "100000072291",
+      "display": "Tajik"
+    },
+    {
+      "code": "100000072161",
+      "display": "Catalan"
+    },
+    {
+      "code": "100000072129",
+      "display": "Aragonese"
+    },
+    {
+      "code": "100000072244",
+      "display": "N'Ko"
+    },
+    {
+      "code": "100000072126",
+      "display": "Akan"
+    },
+    {
+      "code": "100000072246",
+      "display": "Ojibwa"
+    },
+    {
+      "code": "100000072274",
+      "display": "Yoruba"
+    },
+    {
+      "code": "100000072179",
+      "display": "Irish"
+    },
+    {
+      "code": "100000072271",
+      "display": "Uighur"
+    },
+    {
+      "code": "100000072305",
+      "display": "Wolof"
+    },
+    {
+      "code": "100000072212",
+      "display": "Ndonga"
+    },
+    {
+      "code": "100000072178",
+      "display": "German"
+    },
+    {
+      "code": "100000072148",
+      "display": "Ewe"
+    },
+    {
+      "code": "100000072294",
+      "display": "Tigrinya"
+    },
+    {
+      "code": "100000072134",
+      "display": "Bambara"
+    },
+    {
+      "code": "100000072138",
+      "display": "Bislama"
+    },
+    {
+      "code": "100000072247",
+      "display": "Oromo"
+    },
+    {
+      "code": "100000072128",
+      "display": "Arabic"
+    },
+    {
+      "code": "100000072254",
+      "display": "Romanian"
+    },
+    {
+      "code": "100000072192",
+      "display": "Interlingua (International Auxiliary Language Association)"
+    },
+    {
+      "code": "100000072154",
+      "display": "Hebrew"
+    },
+    {
+      "code": "100000072127",
+      "display": "Amharic"
+    },
+    {
+      "code": "100000072290",
+      "display": "Tatar"
+    },
+    {
+      "code": "100000072200",
+      "display": "Kikuyu"
+    },
+    {
+      "code": "100000072239",
+      "display": "South Ndebele"
+    },
+    {
+      "code": "100000072216",
+      "display": "Panjabi"
+    },
+    {
+      "code": "100000072182",
+      "display": "Guarani"
+    },
+    {
+      "code": "100000072222",
+      "display": "Komi"
+    },
+    {
+      "code": "100000072251",
+      "display": "Portuguese"
+    },
+    {
+      "code": "100000072119",
+      "display": "Bashkir"
+    },
+    {
+      "code": "100000072188",
+      "display": "Igbo"
+    },
+    {
+      "code": "100000072245",
+      "display": "Occitan (post 1500)"
+    },
+    {
+      "code": "100000072133",
+      "display": "Azerbaijani"
+    },
+    {
+      "code": "100000072196",
+      "display": "Greenlandic"
+    },
+    {
+      "code": "100000072286",
+      "display": "Swati"
+    },
+    {
+      "code": "100000072168",
+      "display": "Danish"
+    },
+    {
+      "code": "100000072235",
+      "display": "Malagasy"
+    },
+    {
+      "code": "100000072141",
+      "display": "Bosnian"
+    },
+    {
+      "code": "100000072191",
+      "display": "Interlingue"
+    },
+    {
+      "code": "100000072149",
+      "display": "Finnish"
+    },
+    {
+      "code": "100000072203",
+      "display": "Kongo"
+    },
+    {
+      "code": "100000072147",
+      "display": "English"
+    },
+    {
+      "code": "100000072237",
+      "display": "Mongolian"
+    },
+    {
+      "code": "100000072199",
+      "display": "Central Khmer"
+    },
+    {
+      "code": "100000072211",
+      "display": "Navaho"
+    },
+    {
+      "code": "100000072170",
+      "display": "Dzongkha"
+    },
+    {
+      "code": "100000072143",
+      "display": "Chamorro"
+    },
+    {
+      "code": "100000072190",
+      "display": "Sichuan Yi"
+    },
+    {
+      "code": "100000072233",
+      "display": "Maori"
+    },
+    {
+      "code": "100000072195",
+      "display": "Japanese"
+    },
+    {
+      "code": "100000072160",
+      "display": "Kannada"
+    },
+    {
+      "code": "100000072136",
+      "display": "Belarusian"
+    },
+    {
+      "code": "100000072258",
+      "display": "Croatian"
+    },
+    {
+      "code": "100000072229",
+      "display": "Luxembourgish"
+    },
+    {
+      "code": "100000072176",
+      "display": "Western Frisian"
+    },
+    {
+      "code": "100000072284",
+      "display": "Sotho, Southern"
+    },
+    {
+      "code": "100000072238",
+      "display": "Nauru"
+    },
+    {
+      "code": "100000072285",
+      "display": "Sardinian"
+    },
+    {
+      "code": "100000072153",
+      "display": "Gujarati"
+    },
+    {
+      "code": "100000072115",
+      "display": "Abkhazian"
+    },
+    {
+      "code": "100000072215",
+      "display": "Oriya"
+    },
+    {
+      "code": "100000072164",
+      "display": "Church Slavic"
+    },
+    {
+      "code": "100000072300",
+      "display": "Urdu"
+    },
+    {
+      "code": "100000072189",
+      "display": "Ido"
+    },
+    {
+      "code": "100000072158",
+      "display": "Indonesian"
+    },
+    {
+      "code": "100000072232",
+      "display": "Marshallese"
+    },
+    {
+      "code": "100000072193",
+      "display": "Inupiaq"
+    },
+    {
+      "code": "100000072187",
+      "display": "Hungarian"
+    },
+    {
+      "code": "100000072125",
+      "display": "Afrikaans"
+    },
+    {
+      "code": "100000072156",
+      "display": "Icelandic"
+    },
+    {
+      "code": "100000072208",
+      "display": "Malayalam"
+    },
+    {
+      "code": "100000072185",
+      "display": "Herero"
+    },
+    {
+      "code": "100000072206",
+      "display": "Lithuanian"
+    },
+    {
+      "code": "100000072184",
+      "display": "Hausa"
+    },
+    {
+      "code": "100000072228",
+      "display": "Lingala"
+    },
+    {
+      "code": "100000072130",
+      "display": "Assamese"
+    },
+    {
+      "code": "100000072309",
+      "display": "Zulu"
+    },
+    {
+      "code": "100000072256",
+      "display": "Sango"
+    },
+    {
+      "code": "100000072302",
+      "display": "Vietnamese"
+    },
+    {
+      "code": "100000072221",
+      "display": "Kirghiz"
+    },
+    {
+      "code": "100000072268",
+      "display": "Thai"
+    },
+    {
+      "code": "100000072253",
+      "display": "Romansh"
+    },
+    {
+      "code": "100000072240",
+      "display": "North Ndebele"
+    },
+    {
+      "code": "100000072249",
+      "display": "Persian"
+    },
+    {
+      "code": "100000072303",
+      "display": "Volap\u00fck"
+    },
+    {
+      "code": "100000072308",
+      "display": "Zhuang"
+    },
+    {
+      "code": "100000072288",
+      "display": "Swedish"
+    },
+    {
+      "code": "100000072214",
+      "display": "Chichewa"
+    },
+    {
+      "code": "100000072295",
+      "display": "Tswana"
+    },
+    {
+      "code": "100000072269",
+      "display": "Tonga (Tonga Islands)"
+    },
+    {
+      "code": "100000072248",
+      "display": "Ossetian"
+    },
+    {
+      "code": "100000072137",
+      "display": "Bihari"
+    },
+    {
+      "code": "100000072281",
+      "display": "Samoan"
+    },
+    {
+      "code": "100000072142",
+      "display": "Bulgarian"
+    },
+    {
+      "code": "100000072180",
+      "display": "Galician"
+    },
+    {
+      "code": "100000072252",
+      "display": "Pushto"
+    },
+    {
+      "code": "100000072283",
+      "display": "Somali"
+    },
+    {
+      "code": "100000072116",
+      "display": "Albanian"
+    },
+    {
+      "code": "100000072259",
+      "display": "Slovak"
+    },
+    {
+      "code": "100000072220",
+      "display": "Sanskrit"
+    },
+    {
+      "code": "100000072260",
+      "display": "Slovenian"
+    },
+    {
+      "code": "100000072231",
+      "display": "Macedonian"
+    },
+    {
+      "code": "100000072226",
+      "display": "Latin"
+    },
+    {
+      "code": "100000072171",
+      "display": "Esperanto"
+    },
+    {
+      "code": "100000072117",
+      "display": "Armenian"
+    },
+    {
+      "code": "100000072202",
+      "display": "Kinyarwanda"
+    },
+    {
+      "code": "100000072167",
+      "display": "Czech"
+    },
+    {
+      "code": "100000072272",
+      "display": "Uzbek"
+    },
+    {
+      "code": "100000072186",
+      "display": "Hindi"
+    },
+    {
+      "code": "100000072146",
+      "display": "Maldivian"
+    },
+    {
+      "code": "100000072151",
+      "display": "Gaelic"
+    },
+    {
+      "code": "100000072169",
+      "display": "Dutch"
+    },
+    {
+      "code": "100000072242",
+      "display": "Norwegian Nynorsk"
+    },
+    {
+      "code": "100000072172",
+      "display": "Estonian"
+    },
+    {
+      "code": "100000072150",
+      "display": "Fulah"
+    },
+    {
+      "code": "100000072241",
+      "display": "Nepali"
+    },
+    {
+      "code": "100000072227",
+      "display": "Limburgan"
+    },
+    {
+      "code": "100000072213",
+      "display": "Bokm\u00e5l, Norwegian"
+    },
+    {
+      "code": "100000072262",
+      "display": "Northern Sami"
+    },
+    {
+      "code": "100000072155",
+      "display": "Hiri Motu"
+    },
+    {
+      "code": "100000072250",
+      "display": "Pali"
+    },
+    {
+      "code": "100000072234",
+      "display": "Marathi"
+    },
+    {
+      "code": "100000072181",
+      "display": "Greek, Modern (1453-)"
+    },
+    {
+      "code": "100000072263",
+      "display": "Sindhi"
+    },
+    {
+      "code": "100000072205",
+      "display": "Latvian"
+    },
+    {
+      "code": "100000072165",
+      "display": "Cornish"
+    },
+    {
+      "code": "100000072163",
+      "display": "Chinese"
+    },
+    {
+      "code": "100000072173",
+      "display": "Faroese"
+    },
+    {
+      "code": "100000072289",
+      "display": "Tamil"
+    },
+    {
+      "code": "100000072243",
+      "display": "Norwegian"
+    },
+    {
+      "code": "100000072124",
+      "display": "Afar"
+    },
+    {
+      "code": "100000072175",
+      "display": "French"
+    },
+    {
+      "code": "100000072132",
+      "display": "Aymara"
+    },
+    {
+      "code": "100000072298",
+      "display": "Twi"
+    },
+    {
+      "code": "100000072204",
+      "display": "Kurdish"
+    },
+    {
+      "code": "100000072299",
+      "display": "Ukrainian"
+    },
+    {
+      "code": "100000072224",
+      "display": "Kuanyama"
+    },
+    {
+      "code": "100000072292",
+      "display": "Tagalog"
+    },
+    {
+      "code": "100000072217",
+      "display": "Polish"
+    },
+    {
+      "code": "100000072120",
+      "display": "Bengali"
+    },
+    {
+      "code": "100000072230",
+      "display": "Luba-Katanga"
+    },
+    {
+      "code": "100000072145",
+      "display": "Cree"
+    },
+    {
+      "code": "100000072287",
+      "display": "Swahili"
+    },
+    {
+      "code": "100000072210",
+      "display": "Moldavian"
+    },
+    {
+      "code": "100000072207",
+      "display": "Ganda"
+    },
+    {
+      "code": "100000072135",
+      "display": "Basque"
+    }
+  ],
+  "id": "100000072057",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000072057",
+  "name": "SPOR 100000072057 for Language",
+  "title": "SPOR 100000072057 for Language",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000072057"
+}

@@ -1,0 +1,186 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Legal Status for the Supply",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Puudub",
+      "display": "Narkootiline ravim - veterinaarravim"
+    },
+    {
+      "code": "200000027067",
+      "display": "Veterinary medicinal product not subject to veterinary prescription, free trade for food-producing animals",
+      "definition": "Free trade for VMPs not subject to veterinary prescription only intented for food-producing animals."
+    },
+    {
+      "code": "200000027082",
+      "display": "Veterinary medicinal product subject to not renewable veterinary prescription"
+    },
+    {
+      "code": "200000027072",
+      "display": "Veterinary medicinal product subject to veterinary prescription, narcotic for use under veterinary or special supervision"
+    },
+    {
+      "code": "200000027080",
+      "display": "Veterinary medicinal product subject to restricted veterinary prescription, use and administration exclusively by official veterinary services"
+    },
+    {
+      "code": "200000027068",
+      "display": "Veterinary medicinal product not subject to veterinary prescription, free trade for non food-producing animals",
+      "definition": "Free trade for VMPs not subject to veterinary prescription only intented for companion animals (non food-producing animals)"
+    },
+    {
+      "code": "200000027075",
+      "display": "Veterinary medicinal product subject to veterinary prescription, psychotropic for use under veterinary or special supervision"
+    },
+    {
+      "code": "200000027084",
+      "display": "Veterinary medicinal product subject to veterinary prescription and to single or multiple dispensing"
+    },
+    {
+      "code": "200000027077",
+      "display": "Veterinary medicinal product subject to restricted veterinary prescription"
+    },
+    {
+      "code": "200000027076",
+      "display": "Veterinary medicinal product subject to veterinary prescription, psychotropic use and administration exclusively by veterinarians"
+    },
+    {
+      "code": "200000027085",
+      "display": "Veterinary medicinal product subject to single dispensing"
+    },
+    {
+      "code": "200000027086",
+      "display": "Veterinary medicinal product subject to multiple dispensing"
+    },
+    {
+      "code": "200000027081",
+      "display": "Veterinary medicinal product subject to renewable or not renewable veterinary prescription"
+    },
+    {
+      "code": "200000027079",
+      "display": "Veterinary medicinal product subject to restricted veterinary prescription, use and administration exclusively by veterinarians"
+    },
+    {
+      "code": "200000027074",
+      "display": "Veterinary medicinal product subject to veterinary prescription, psychotropic",
+      "definition": "VMPs which contain psychotropic drugs including those covered by the United Nations Single Convention on Psychotropics substances on 1971, the United Nations Convention against Illicit Traffic in Narcotic drugs and Psychotropic substances of 1988."
+    },
+    {
+      "code": "200000027078",
+      "display": "Veterinary medicinal product subject to restricted veterinary prescription for use under veterinary or special supervision"
+    },
+    {
+      "code": "200000027073",
+      "display": "Veterinary medicinal product subject to veterinary prescription, narcotic use and administration exclusively by veterinarians"
+    },
+    {
+      "code": "200000027083",
+      "display": "Veterinary medicinal product subject to renewable veterinary prescription"
+    },
+    {
+      "code": "100000072076",
+      "display": "Medicinal product not subject to medical prescription",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    },
+    {
+      "code": "100000072084",
+      "display": "Medicinal product subject to medical prescription",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    },
+    {
+      "code": "100000072085",
+      "display": "Medicinal product subject to special medical prescription",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    },
+    {
+      "code": "200000017695",
+      "display": "Veterinary medicinal product not subject to veterinary prescription"
+    },
+    {
+      "code": "200000017698",
+      "display": "Veterinary medicinal product subject to veterinary prescription",
+      "definition": "This term covers all categories of article 34(1): - VMPs for food producing animals - antimicrobial VMPs - VMPs requiring prior diagnosis - euthanasia - Active substance used less than 5 years - immunological VMPs - Dir 96/22 hormonal, thyrostatic or beta-agonists."
+    },
+    {
+      "code": "100000072079",
+      "display": "Medicinal product on medical prescription for non-renewable delivery",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    },
+    {
+      "code": "100000157313",
+      "display": "Medicinal product subject to special and restricted medical prescription",
+      "definition": "Guideline on legal status for the supply to the patient of centrally authorised products (EMEA/186279/2006) published in 2006"
+    },
+    {
+      "code": "200000027070",
+      "display": "Medicated feedingstuffs retailed by feedmills only under veterinary prescription"
+    },
+    {
+      "code": "200000027071",
+      "display": "Veterinary medicinal product subject to veterinary prescription, narcotic",
+      "definition": "VMPs which contain narcotic drugs including those covered by the United Nations Single Convention on Narcotic drugs of 1961, the United Nations Convention against Illicit Traffic in Narcotic drugs and Psychotropic substances of 1988."
+    },
+    {
+      "code": "200000027069",
+      "display": "Veterinary medicinal product not subject to veterinary prescription, dispensed by retailers",
+      "definition": "VMPs not subject to veterinary prescription only sold by retailers -persons permitted to supply VMPs by national law in accordance to article 103(1)-. This term covers pharmacies and/or veterinarians depending on national laws of the Member States."
+    },
+    {
+      "code": "100000072078",
+      "display": "Medicinal product subject to restricted medical prescription",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    },
+    {
+      "code": "100000072086",
+      "display": "Medicinal product on medical prescription for renewable delivery",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    },
+    {
+      "code": "200000002239",
+      "display": "Medicinal product subject to medical prescription exempt for some pack sizes"
+    },
+    {
+      "code": "200000017699",
+      "display": "Veterinary medicinal product subject to veterinary prescription except for some pack sizes",
+      "definition": "In some member states, the legal status of supply could differ for the diffrerent pack sizes of the same product."
+    },
+    {
+      "code": "100000072077",
+      "display": "Medicinal product on medical prescription for renewable or non-renewable delivery",
+      "definition": "Article 70 of Directive 2001/83/EC; Article 67 Directive 2001/82/EC."
+    }
+  ],
+  "id": "100000072051",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000072051",
+  "name": "SPOR 100000072051 for Legal Status for the Supply",
+  "title": "SPOR 100000072051 for Legal Status for the Supply",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000072051"
+}

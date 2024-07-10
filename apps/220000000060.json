@@ -1,0 +1,67 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Regulatory Entitlement Type",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "220000000061",
+      "display": "Marketing Authorisation"
+    },
+    {
+      "code": "200000015756",
+      "display": "Homeopathic Registration"
+    },
+    {
+      "code": "220000000065",
+      "display": "Paediatric Investigational Plan"
+    },
+    {
+      "code": "220000000063",
+      "display": "Parallel Trade Approval"
+    },
+    {
+      "code": "220000000064",
+      "display": "Minor Use Minor Species"
+    },
+    {
+      "code": "220000000062",
+      "display": "Orphan Designation"
+    },
+    {
+      "code": "200000016178",
+      "display": "Exemption for veterinary medicinal products intended for animals exclusively kept as pets"
+    }
+  ],
+  "id": "220000000060",
+  "url": "https://spor.ema.europa.eu/v1/lists/220000000060",
+  "name": "SPOR 220000000060 for Regulatory Entitlement Type",
+  "title": "SPOR 220000000060 for Regulatory Entitlement Type",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/220000000060"
+}

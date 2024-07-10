@@ -1,0 +1,51 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Domain",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000000013",
+      "display": "Veterinary use"
+    },
+    {
+      "code": "100000000014",
+      "display": "Human and Veterinary use"
+    },
+    {
+      "code": "100000000012",
+      "display": "Human use"
+    }
+  ],
+  "id": "100000000004",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000000004",
+  "name": "SPOR 100000000004 for Domain",
+  "title": "SPOR 100000000004 for Domain",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000000004"
+}

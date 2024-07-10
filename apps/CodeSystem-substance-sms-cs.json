@@ -1,0 +1,432 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "Substance_SMS_CS",
+  "id": "substance-sms-cs",
+  "title": "Substances EMA SPOR SMS",
+  "description": "UNICOM PPL substances from EMA SPOR SMS",
+  "url": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
+  "concept": [
+    {
+      "code": "100000085259",
+      "display": "Amlodipine"
+    },
+    {
+      "code": "100000089370",
+      "display": "AMLODIPINE MALEATE"
+    },
+    {
+      "code": "100000089571",
+      "display": "Amlodipine mesilate"
+    },
+    {
+      "code": "100000090079",
+      "display": "Amlodipine besilate"
+    },
+    {
+      "code": "300000027652",
+      "display": "Amlodipine benzoate"
+    },
+    {
+      "code": "100000091596",
+      "display": "Amoxicillin"
+    },
+    {
+      "code": "100000090113",
+      "display": "Amoxicillin sodium"
+    },
+    {
+      "code": "100000092629",
+      "display": "Amoxicillin trihydrate"
+    },
+    {
+      "code": "100000092127",
+      "display": "Carbamazepine"
+    },
+    {
+      "code": "100000092667",
+      "display": "Cefuroxime"
+    },
+    {
+      "code": "100000093039",
+      "display": "Cefuroxime axetil"
+    },
+    {
+      "code": "100000091436",
+      "display": "Cefuroxime sodium"
+    },
+    {
+      "code": "100000089842",
+      "display": "Clavulanic acid"
+    },
+    {
+      "code": "100000093061",
+      "display": "Potassium clavulanate"
+    },
+    {
+      "code": "100000092121",
+      "display": "Ciclosporin"
+    },
+    {
+      "code": "100000155842",
+      "display": "CICLOSPORIN A"
+    },
+    {
+      "code": "100000084546",
+      "display": "Clomipramine"
+    },
+    {
+      "code": "100000090503",
+      "display": "Clomipramine hydrochloride"
+    },
+    {
+      "code": "100000092074",
+      "display": "Clotrimazole"
+    },
+    {
+      "code": "100000088282",
+      "display": "Chloroquine"
+    },
+    {
+      "code": "100000084735",
+      "display": "CHLOROQUINE HYDROCHLORIDE"
+    },
+    {
+      "code": "100000090551",
+      "display": "Chloroquine sulfate"
+    },
+    {
+      "code": "100000092628",
+      "display": "Chloroquine phosphate"
+    },
+    {
+      "code": "100000129152",
+      "display": "CHLOROQUINE DIPHOSPHATE"
+    },
+    {
+      "code": "100000092362",
+      "display": "Diazepam"
+    },
+    {
+      "code": "100000091074",
+      "display": "Diclofenac diethylamine"
+    },
+    {
+      "code": "100000092368",
+      "display": "Diclofenac potassium"
+    },
+    {
+      "code": "100000092798",
+      "display": "Diclofenac"
+    },
+    {
+      "code": "100000085789",
+      "display": "Diclofenac epolamine"
+    },
+    {
+      "code": "100000092272",
+      "display": "Diclofenac sodium"
+    },
+    {
+      "code": "100000092375",
+      "display": "Drospirenone"
+    },
+    {
+      "code": "100000092359",
+      "display": "Enalapril"
+    },
+    {
+      "code": "100000080222",
+      "display": "Enalaprilat"
+    },
+    {
+      "code": "100000091343",
+      "display": "Enalapril maleate"
+    },
+    {
+      "code": "100000153305",
+      "display": "Enalapril sodium"
+    },
+    {
+      "code": "100000085598",
+      "display": "Enoxaparin"
+    },
+    {
+      "code": "100000090152",
+      "display": "Enoxaparin sodium"
+    },
+    {
+      "code": "100000090229",
+      "display": "Ergocalciferol"
+    },
+    {
+      "code": "100000091721",
+      "display": "Ethinylestradiol"
+    },
+    {
+      "code": "100000087614",
+      "display": "Glyceryl trinitrate"
+    },
+    {
+      "code": "100000084238",
+      "display": "Goserelin"
+    },
+    {
+      "code": "100000086673",
+      "display": "Goserelin acetate"
+    },
+    {
+      "code": "100000090365",
+      "display": "Ibuprofen"
+    },
+    {
+      "code": "100000085009",
+      "display": "Ibuprofen sodium"
+    },
+    {
+      "code": "100000090111",
+      "display": "Ibuprofen lysine"
+    },
+    {
+      "code": "100000092228",
+      "display": "Ibuprofen arginine"
+    },
+    {
+      "code": "100000175414",
+      "display": "Ibuprofen isobutanolammonium"
+    },
+    {
+      "code": "100000140150",
+      "display": "Ibuprofen sodium dihydrate"
+    },
+    {
+      "code": "100000133453",
+      "display": "Ibuprofen D,L-lysinate"
+    },
+    {
+      "code": "100000079980",
+      "display": "IBUPROFEN 1-IDROSSIMETIL-1-METIL ETILAMMONIO"
+    },
+    {
+      "code": "100000091825",
+      "display": "Imatinib mesilate"
+    },
+    {
+      "code": "100000091894",
+      "display": "Imatinib"
+    },
+    {
+      "code": "100000085460",
+      "display": "Insulin glargine"
+    },
+    {
+      "code": "100000091697",
+      "display": "Itraconazole"
+    },
+    {
+      "code": "100000091713",
+      "display": "Lidocaine"
+    },
+    {
+      "code": "100000139489",
+      "display": "Lidocaine hydrochloride"
+    },
+    {
+      "code": "100000085448",
+      "display": "Metformin"
+    },
+    {
+      "code": "100000091366",
+      "display": "Metformin hydrochloride"
+    },
+    {
+      "code": "100000091840",
+      "display": "METFORMIN EMBONATE"
+    },
+    {
+      "code": "100000091372",
+      "display": "Morphine"
+    },
+    {
+      "code": "100000076239",
+      "display": "Morphine sulfate"
+    },
+    {
+      "code": "100000090494",
+      "display": "Morphine hydrochloride"
+    },
+    {
+      "code": "100000076257",
+      "display": "MORPHINE TARTRATE"
+    },
+    {
+      "code": "100000092047",
+      "display": "Omeprazole"
+    },
+    {
+      "code": "100000085918",
+      "display": "Omeprazole magnesium"
+    },
+    {
+      "code": "100000090186",
+      "display": "Omeprazole sodium"
+    },
+    {
+      "code": "100000090270",
+      "display": "Paracetamol"
+    },
+    {
+      "code": "100000091461",
+      "display": "Perindopril"
+    },
+    {
+      "code": "100000088816",
+      "display": "Perindopril arginine"
+    },
+    {
+      "code": "100000091602",
+      "display": "Perindopril tert-butylamine"
+    },
+    {
+      "code": "100000130680",
+      "display": "Perindopril tert-butylamin monohydrate"
+    },
+    {
+      "code": "100000141420",
+      "display": "Perindopril tosilate"
+    },
+    {
+      "code": "100000091518",
+      "display": "Calcium carbonate"
+    },
+    {
+      "code": "100000091629",
+      "display": "Salbutamol"
+    },
+    {
+      "code": "100000091786",
+      "display": "Simvastatin"
+    },
+    {
+      "code": "100000092635",
+      "display": "Hydrocortisone"
+    },
+    {
+      "code": "100000086186",
+      "display": "Meglumine acetrizoate"
+    },
+    {
+      "code": "100000092550",
+      "display": "Hydrocortisone sodium succinate"
+    },
+    {
+      "code": "100000086711",
+      "display": "Hydrocortisone valerate"
+    },
+    {
+      "code": "100000092260",
+      "display": "Hydrocortisone acetate"
+    },
+    {
+      "code": "100000085172",
+      "display": "Hydrocortisone butyrate"
+    },
+    {
+      "code": "100000084215",
+      "display": "Hydrocortisone aceponate"
+    },
+    {
+      "code": "100000086187",
+      "display": "Hydrocortisone cipionate"
+    },
+    {
+      "code": "100000086691",
+      "display": "HYDROCORTISONE SODIUM PHOSPHATE"
+    },
+    {
+      "code": "100000090564",
+      "display": "Salbutamol sulfate"
+    },
+    {
+      "code": "100000115886",
+      "display": "Tafluprost"
+    },
+    {
+      "code": "100000089193",
+      "display": "Teriparatide"
+    },
+    {
+      "code": "100000084795",
+      "display": "TERIPARATIDE ACETATE"
+    },
+    {
+      "code": "100000077198",
+      "display": "Tramadol"
+    },
+    {
+      "code": "100000093275",
+      "display": "Tramadol hydrochloride"
+    },
+    {
+      "code": "100000089314",
+      "display": "Trastuzumab"
+    },
+    {
+      "code": "100000128434",
+      "display": "Trastuzumab emtansine"
+    },
+    {
+      "code": "100000174462",
+      "display": "Trastuzumab deruxtecan"
+    },
+    {
+      "code": "100000089154",
+      "display": "Varenicline"
+    },
+    {
+      "code": "100000091746",
+      "display": "Varenicline tartrate"
+    },
+    {
+      "code": "100000091531",
+      "display": "Ethinylestradiol betadex clathrate"
+    },
+    {
+      "code": "100000090052",
+      "display": "LACTOSE"
+    },
+    {
+      "code": "100000084759",
+      "display": "PLACEBO"
+    },
+    {
+      "code": "100000093305",
+      "display": "Lactose monohydrate"
+    },
+    {
+      "code": "100000088000",
+      "display": "Valsartan"
+    },
+    {
+      "code": "100000091737",
+      "display": "Hydrochlorothiazide"
+    },
+    {
+      "code": "100000089279",
+      "display": "Poliovirus (inactivated) type 1 (Mahoney strain)"
+    },
+    {
+      "code": "100000089268",
+      "display": "Poliovirus (inactivated) type 2 (MEF-1 strain)"
+    },
+    {
+      "code": "100000089267",
+      "display": "Poliovirus (inactivated) type 3 (Saukett strain)"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "compositional": false,
+  "count": 104
+}

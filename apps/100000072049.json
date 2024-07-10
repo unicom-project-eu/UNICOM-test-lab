@@ -1,0 +1,126 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Regulatory Entitlement Status",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "220000000066",
+      "display": "Pending",
+      "definition": "Regulatory entitlement pending authorisation. For the veterinary domain only, the \u201cPending\" status should be used for authorisation status of Veterinary Medicinal Products approved under MR|DC or SR procedures that have been created by the RMS at the end of the European phase."
+    },
+    {
+      "code": "100000072122",
+      "display": "Suspended",
+      "definition": "Marketing Authorization suspended means the marketing authorisation is still valid but the medicinal product must not , for some reason , be placed on the market, in the meantime."
+    },
+    {
+      "code": "100000072113",
+      "display": "Withdrawn",
+      "definition": "Withdrawn after Marketing Authorisation by Marketing Authorisation Holder"
+    },
+    {
+      "code": "100000072100",
+      "display": "Expired",
+      "definition": "Renewal application not received."
+    },
+    {
+      "code": "100000072099",
+      "display": "Valid",
+      "definition": "Application for Marketing Authorisation approved."
+    },
+    {
+      "code": "220000000067",
+      "display": "Rejected"
+    },
+    {
+      "code": "100000072121",
+      "display": "Revoked",
+      "definition": "Withdrawn after Marketing Authorisation by the Regulatory Authority."
+    },
+    {
+      "code": "200000010409",
+      "display": "Surrendered",
+      "definition": "Regulatory entitlement withdrawn by the holder after it has been granted."
+    },
+    {
+      "code": "200000017707",
+      "display": "Valid - Transferred marketing authorisation"
+    },
+    {
+      "code": "200000017708",
+      "display": "Valid - Renewed/Varied",
+      "definition": "Regulatory entitlement is granted by the regulatory authority following a renewal or a variation procedure and fully in place/valid/active. Note: given that marketing authorisation numbers may change following a renewal or a variation procedure and the product record may have to be updated, this specific term is required for renewed or varied medicinal products."
+    },
+    {
+      "code": "100000072114",
+      "display": "Withdrawn, unspecified",
+      "definition": "Withdrawn after Marketing Authorisation - unspecified."
+    },
+    {
+      "code": "100000072112",
+      "display": "Not renewed",
+      "definition": "Renewal application rejected by the Regulatory Authorithy after evaluation."
+    },
+    {
+      "code": "100000072110",
+      "display": "Application not accepted",
+      "definition": "Application for Marketing Authorisation not accepted before evaluation."
+    },
+    {
+      "code": "100000072098",
+      "display": "Application withdrawn",
+      "definition": "Application withdrawn by applicant before Marketing Authorisation"
+    },
+    {
+      "code": "100000072097",
+      "display": "Application received",
+      "definition": "Application for Marketing Authorisation received."
+    },
+    {
+      "code": "100000072111",
+      "display": "Application rejected",
+      "definition": "Application for Marketing Authorisation rejected by the Regulatory Authorithy after evaluation."
+    },
+    {
+      "code": "100000072123",
+      "display": "Expired due to Sunset Clause",
+      "definition": "The marketing Authorisation expired due to the end of the sunset clause time period i.e. it is no longer valid as the medicinal product was not placed on the market for 3 years."
+    },
+    {
+      "code": "200000026056",
+      "display": "Presubmission"
+    }
+  ],
+  "id": "100000072049",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000072049",
+  "name": "SPOR 100000072049 for Regulatory Entitlement Status",
+  "title": "SPOR 100000072049 for Regulatory Entitlement Status",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000072049"
+}

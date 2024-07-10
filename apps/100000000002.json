@@ -1,0 +1,1099 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Country",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000000344",
+      "display": "Republic of Botswana"
+    },
+    {
+      "code": "100000000552",
+      "display": "Tuvalu"
+    },
+    {
+      "code": "100000000537",
+      "display": "Syrian Arab Republic"
+    },
+    {
+      "code": "100000000504",
+      "display": "Department of R\u00e9union"
+    },
+    {
+      "code": "100000000354",
+      "display": "Canada"
+    },
+    {
+      "code": "100000000446",
+      "display": "Republic of Liberia"
+    },
+    {
+      "code": "100000000431",
+      "display": "Jamaica"
+    },
+    {
+      "code": "100000000401",
+      "display": "Republic of the Gambia"
+    },
+    {
+      "code": "100000000393",
+      "display": "Republic of the Fiji Islands"
+    },
+    {
+      "code": "100000000342",
+      "display": "Plurinational State of Bolivia"
+    },
+    {
+      "code": "100000000442",
+      "display": "Lao People\u2019s Democratic Republic"
+    },
+    {
+      "code": "100000000542",
+      "display": "Timor-Leste"
+    },
+    {
+      "code": "100000000335",
+      "display": "Barbados"
+    },
+    {
+      "code": "100000000521",
+      "display": "Republic of Sierra Leone"
+    },
+    {
+      "code": "100000000548",
+      "display": "Republic of Tunisia"
+    },
+    {
+      "code": "100000000469",
+      "display": "Mongolia"
+    },
+    {
+      "code": "100000000386",
+      "display": "Republic of Equatorial Guinea"
+    },
+    {
+      "code": "100000000445",
+      "display": "Kingdom of Lesotho"
+    },
+    {
+      "code": "100000000496",
+      "display": "Republic of Paraguay"
+    },
+    {
+      "code": "100000000379",
+      "display": "Republic of Djibouti"
+    },
+    {
+      "code": "100000000558",
+      "display": "United States Minor Outlying Islands"
+    },
+    {
+      "code": "100000000384",
+      "display": "Arab Republic of Egypt"
+    },
+    {
+      "code": "100000000534",
+      "display": "Kingdom of Eswatini"
+    },
+    {
+      "code": "100000000450",
+      "display": "Republic of Lithuania"
+    },
+    {
+      "code": "100000000567",
+      "display": "Territory of the Wallis and Futuna Islands"
+    },
+    {
+      "code": "100000000488",
+      "display": "Commonwealth of the Northern Mariana Islands"
+    },
+    {
+      "code": "100000000553",
+      "display": "Republic of Uganda"
+    },
+    {
+      "code": "100000000398",
+      "display": "Territory of French Polynesia"
+    },
+    {
+      "code": "100000000320",
+      "display": "Principality of Andorra"
+    },
+    {
+      "code": "100000000362",
+      "display": "People\u2019s Republic of China"
+    },
+    {
+      "code": "100000000353",
+      "display": "Republic of Cameroon"
+    },
+    {
+      "code": "100000000540",
+      "display": "United Republic of Tanzania"
+    },
+    {
+      "code": "100000000415",
+      "display": "Cooperative Republic of Guyana"
+    },
+    {
+      "code": "100000000347",
+      "display": "British Indian Ocean Territory"
+    },
+    {
+      "code": "100000000487",
+      "display": "Territory of Norfolk Island"
+    },
+    {
+      "code": "100000000439",
+      "display": "Republic of Korea"
+    },
+    {
+      "code": "100000000497",
+      "display": "Republic of Peru"
+    },
+    {
+      "code": "100000000380",
+      "display": "Commonwealth of Dominica"
+    },
+    {
+      "code": "100000000339",
+      "display": "Republic of Benin"
+    },
+    {
+      "code": "100000000483",
+      "display": "Republic of Nicaragua"
+    },
+    {
+      "code": "100000000368",
+      "display": "Republic of the Congo"
+    },
+    {
+      "code": "100000000352",
+      "display": "Kingdom of Cambodia"
+    },
+    {
+      "code": "100000000345",
+      "display": "Bouvet Island"
+    },
+    {
+      "code": "100000000349",
+      "display": "Republic of Bulgaria"
+    },
+    {
+      "code": "100000000383",
+      "display": "Republic of Ecuador"
+    },
+    {
+      "code": "100000000366",
+      "display": "Republic of Colombia"
+    },
+    {
+      "code": "100000000509",
+      "display": "Federation of Saint Kitts and Nevis"
+    },
+    {
+      "code": "100000000389",
+      "display": "Federal Democratic Republic of Ethiopia"
+    },
+    {
+      "code": "100000000385",
+      "display": "Republic of El Salvador"
+    },
+    {
+      "code": "100000000454",
+      "display": "Republic of Madagascar"
+    },
+    {
+      "code": "100000000443",
+      "display": "Republic of Latvia"
+    },
+    {
+      "code": "100000000512",
+      "display": "Saint Vincent and the Grenadines"
+    },
+    {
+      "code": "100000000493",
+      "display": "Occupied Palestinian Territory"
+    },
+    {
+      "code": "100000000410",
+      "display": "Territory of Guam"
+    },
+    {
+      "code": "100000000463",
+      "display": "Republic of Mauritius"
+    },
+    {
+      "code": "100000000428",
+      "display": "Isle of Man"
+    },
+    {
+      "code": "100000000360",
+      "display": "Republic of Chad"
+    },
+    {
+      "code": "100000000571",
+      "display": "Republic of Zambia"
+    },
+    {
+      "code": "100000000429",
+      "display": "State of Israel"
+    },
+    {
+      "code": "100000000424",
+      "display": "Republic of Indonesia"
+    },
+    {
+      "code": "100000000464",
+      "display": "Territorial Collectivity of Mayotte"
+    },
+    {
+      "code": "200000016424",
+      "display": "Cura\u00e7ao"
+    },
+    {
+      "code": "100000000495",
+      "display": "Independent State of Papua New Guinea"
+    },
+    {
+      "code": "100000000511",
+      "display": "Territorial Collectivity of Saint Pierre and Miquelon"
+    },
+    {
+      "code": "100000000465",
+      "display": "United Mexican States"
+    },
+    {
+      "code": "100000000503",
+      "display": "State of Qatar"
+    },
+    {
+      "code": "100000000543",
+      "display": "Togolese Republic"
+    },
+    {
+      "code": "100000000390",
+      "display": "European Union"
+    },
+    {
+      "code": "100000000507",
+      "display": "Republic of Rwanda"
+    },
+    {
+      "code": "100000000461",
+      "display": "Department of Martinique"
+    },
+    {
+      "code": "100000000400",
+      "display": "Gabonese Republic"
+    },
+    {
+      "code": "100000000423",
+      "display": "Republic of India"
+    },
+    {
+      "code": "100000000456",
+      "display": "Malaysia"
+    },
+    {
+      "code": "100000000451",
+      "display": "Grand Duchy of Luxembourg"
+    },
+    {
+      "code": "100000000535",
+      "display": "Kingdom of Sweden"
+    },
+    {
+      "code": "100000110973",
+      "display": "Republic of Kosovo"
+    },
+    {
+      "code": "100000000441",
+      "display": "Kyrgyz Republic"
+    },
+    {
+      "code": "100000000350",
+      "display": "Burkina Faso"
+    },
+    {
+      "code": "100000000536",
+      "display": "Swiss Confederation"
+    },
+    {
+      "code": "100000000356",
+      "display": "Republic of Cape Verde"
+    },
+    {
+      "code": "100000000486",
+      "display": "Republic of Niue"
+    },
+    {
+      "code": "100000000388",
+      "display": "Republic of Estonia"
+    },
+    {
+      "code": "100000000417",
+      "display": "Territory of Heard Island and McDonald Islands"
+    },
+    {
+      "code": "100000000416",
+      "display": "Republic of Haiti"
+    },
+    {
+      "code": "100000000414",
+      "display": "Republic of Guinea-Bissau"
+    },
+    {
+      "code": "100000000526",
+      "display": "Somalia"
+    },
+    {
+      "code": "100000000491",
+      "display": "Islamic Republic of Pakistan"
+    },
+    {
+      "code": "100000000333",
+      "display": "Kingdom of Bahrain"
+    },
+    {
+      "code": "100000000405",
+      "display": "Gibraltar"
+    },
+    {
+      "code": "100000000566",
+      "display": "Virgin Islands of the United States"
+    },
+    {
+      "code": "100000000565",
+      "display": "British Virgin Islands"
+    },
+    {
+      "code": "100000000397",
+      "display": "Department of French Guiana"
+    },
+    {
+      "code": "100000000316",
+      "display": "\u00c5land Islands"
+    },
+    {
+      "code": "100000000478",
+      "display": "Kingdom of the Netherlands"
+    },
+    {
+      "code": "100000000550",
+      "display": "Turkmenistan"
+    },
+    {
+      "code": "100000110993",
+      "display": "Saint Martin (French Part)"
+    },
+    {
+      "code": "100000000563",
+      "display": "Bolivarian Republic of Venezuela"
+    },
+    {
+      "code": "100000000332",
+      "display": "The Commonwealth of the Bahamas"
+    },
+    {
+      "code": "100000000438",
+      "display": "Democratic People\u2019s Republic of Korea"
+    },
+    {
+      "code": "100000000561",
+      "display": "Republic of Uzbekistan"
+    },
+    {
+      "code": "100000000419",
+      "display": "Republic of Honduras"
+    },
+    {
+      "code": "100000000411",
+      "display": "Republic of Guatemala"
+    },
+    {
+      "code": "100000000538",
+      "display": "Taiwan"
+    },
+    {
+      "code": "100000000546",
+      "display": "Republic of Trinidad and Tobago"
+    },
+    {
+      "code": "100000000394",
+      "display": "Republic of Finland"
+    },
+    {
+      "code": "100000000525",
+      "display": "Solomon Islands"
+    },
+    {
+      "code": "100000000544",
+      "display": "Tokelau"
+    },
+    {
+      "code": "100000000404",
+      "display": "Republic of Ghana"
+    },
+    {
+      "code": "100000000572",
+      "display": "Republic of Zimbabwe"
+    },
+    {
+      "code": "100000000318",
+      "display": "People\u2019s Democratic Republic of Algeria"
+    },
+    {
+      "code": "100000000391",
+      "display": "Faeroe Islands"
+    },
+    {
+      "code": "100000000433",
+      "display": "Jersey"
+    },
+    {
+      "code": "100000000357",
+      "display": "Cayman Islands"
+    },
+    {
+      "code": "100000000369",
+      "display": "Democratic Republic of the Congo"
+    },
+    {
+      "code": "100000000340",
+      "display": "Bermuda"
+    },
+    {
+      "code": "100000000413",
+      "display": "Republic of Guinea"
+    },
+    {
+      "code": "100000000329",
+      "display": "Commonwealth of Australia"
+    },
+    {
+      "code": "100000000375",
+      "display": "Republic of Cyprus"
+    },
+    {
+      "code": "100000000530",
+      "display": "Democratic Socialist Republic of Sri Lanka"
+    },
+    {
+      "code": "100000000408",
+      "display": "Grenada"
+    },
+    {
+      "code": "100000000444",
+      "display": "Lebanese Republic"
+    },
+    {
+      "code": "100000000527",
+      "display": "Republic of South Africa"
+    },
+    {
+      "code": "100000000533",
+      "display": "Svalbard and Jan Mayen Islands"
+    },
+    {
+      "code": "100000000505",
+      "display": "Romania"
+    },
+    {
+      "code": "100000000392",
+      "display": "Falkland Islands"
+    },
+    {
+      "code": "100000000472",
+      "display": "Kingdom of Morocco"
+    },
+    {
+      "code": "100000110974",
+      "display": "Saint Barthelemy"
+    },
+    {
+      "code": "100000000473",
+      "display": "Republic of Mozambique"
+    },
+    {
+      "code": "100000000568",
+      "display": "Western Sahara"
+    },
+    {
+      "code": "100000000370",
+      "display": "Cook Islands"
+    },
+    {
+      "code": "100000000330",
+      "display": "Republic of Austria"
+    },
+    {
+      "code": "100000000520",
+      "display": "Republic of Seychelles"
+    },
+    {
+      "code": "100000000363",
+      "display": "Christmas Island Territory"
+    },
+    {
+      "code": "100000000358",
+      "display": "Central African Republic"
+    },
+    {
+      "code": "100000000418",
+      "display": "the Holy See (Vatican City State)"
+    },
+    {
+      "code": "100000000395",
+      "display": "French Republic"
+    },
+    {
+      "code": "100000000315",
+      "display": "Islamic Republic of Afghanistan"
+    },
+    {
+      "code": "100000000346",
+      "display": "Federative Republic of Brazil"
+    },
+    {
+      "code": "100000000455",
+      "display": "Republic of Malawi"
+    },
+    {
+      "code": "100000000361",
+      "display": "Republic of Chile"
+    },
+    {
+      "code": "200000010721",
+      "display": "Other countries"
+    },
+    {
+      "code": "100000000528",
+      "display": "South Georgia and the South Sandwich Islands"
+    },
+    {
+      "code": "100000000515",
+      "display": "Democratic Republic of S\u00e3o Tom\u00e9 and Pr\u00edncipe"
+    },
+    {
+      "code": "100000000564",
+      "display": "Socialist Republic of Viet Nam"
+    },
+    {
+      "code": "100000000321",
+      "display": "Republic of Angola"
+    },
+    {
+      "code": "100000000539",
+      "display": "Republic of Tajikistan"
+    },
+    {
+      "code": "100000000476",
+      "display": "Republic of Nauru"
+    },
+    {
+      "code": "100000000499",
+      "display": "Pitcairn Islands"
+    },
+    {
+      "code": "100000000425",
+      "display": "Islamic Republic of Iran"
+    },
+    {
+      "code": "100000000437",
+      "display": "Republic of Kiribati"
+    },
+    {
+      "code": "100000000381",
+      "display": "Dominican Republic"
+    },
+    {
+      "code": "100000000517",
+      "display": "Republic of Senegal"
+    },
+    {
+      "code": "100000000516",
+      "display": "Kingdom of Saudi Arabia"
+    },
+    {
+      "code": "100000000323",
+      "display": "Antarctica"
+    },
+    {
+      "code": "100000000555",
+      "display": "United Arab Emirates"
+    },
+    {
+      "code": "100000000569",
+      "display": "Republic of Yemen"
+    },
+    {
+      "code": "100000000407",
+      "display": "Greenland"
+    },
+    {
+      "code": "100000000502",
+      "display": "Commonwealth of Puerto Rico"
+    },
+    {
+      "code": "100000000531",
+      "display": "Republic of Sudan"
+    },
+    {
+      "code": "100000000372",
+      "display": "Republic of C\u00f4te d\u2019Ivoire"
+    },
+    {
+      "code": "100000000325",
+      "display": "Argentine Republic"
+    },
+    {
+      "code": "100000000557",
+      "display": "United States of America"
+    },
+    {
+      "code": "100000000500",
+      "display": "Republic of Poland"
+    },
+    {
+      "code": "100000000532",
+      "display": "Republic of Suriname"
+    },
+    {
+      "code": "100000000399",
+      "display": "French Southern Territories"
+    },
+    {
+      "code": "100000000485",
+      "display": "Federal Republic of Nigeria"
+    },
+    {
+      "code": "100000000448",
+      "display": "Great Socialist People\u2019s Libyan Arab Jamahiriya"
+    },
+    {
+      "code": "100000000409",
+      "display": "Department of Guadeloupe"
+    },
+    {
+      "code": "100000000551",
+      "display": "Turks and Caicos Islands"
+    },
+    {
+      "code": "100000000541",
+      "display": "Kingdom of Thailand"
+    },
+    {
+      "code": "100000000458",
+      "display": "Republic of Mali"
+    },
+    {
+      "code": "100000000422",
+      "display": "Republic of Iceland"
+    },
+    {
+      "code": "100000000510",
+      "display": "Saint Lucia"
+    },
+    {
+      "code": "100000000338",
+      "display": "Belize"
+    },
+    {
+      "code": "100000000471",
+      "display": "Montserrat"
+    },
+    {
+      "code": "100000000348",
+      "display": "Negara Brunei Darussalam"
+    },
+    {
+      "code": "100000000319",
+      "display": "Territory of American Samoa"
+    },
+    {
+      "code": "100000000432",
+      "display": "Japan"
+    },
+    {
+      "code": "100000000559",
+      "display": "Eastern Republic of Uruguay"
+    },
+    {
+      "code": "100000000477",
+      "display": "Federal Democratic Republic of Nepal"
+    },
+    {
+      "code": "100000000434",
+      "display": "Hashemite Kingdom of Jordan"
+    },
+    {
+      "code": "100000000481",
+      "display": "Territory of New Caledonia and Dependencies"
+    },
+    {
+      "code": "100000000466",
+      "display": "Federated States of Micronesia"
+    },
+    {
+      "code": "100000000492",
+      "display": "Republic of Palau"
+    },
+    {
+      "code": "100000000513",
+      "display": "Independent State of Samoa"
+    },
+    {
+      "code": "100000000412",
+      "display": "Guernsey"
+    },
+    {
+      "code": "100000000334",
+      "display": "People\u2019s Republic of Bangladesh"
+    },
+    {
+      "code": "100000000460",
+      "display": "Republic of the Marshall Islands"
+    },
+    {
+      "code": "100000000341",
+      "display": "Kingdom of Bhutan"
+    },
+    {
+      "code": "100000000522",
+      "display": "Republic of Singapore"
+    },
+    {
+      "code": "100000000494",
+      "display": "Republic of Panama"
+    },
+    {
+      "code": "100000000529",
+      "display": "Kingdom of Spain"
+    },
+    {
+      "code": "100000000374",
+      "display": "Republic of Cuba"
+    },
+    {
+      "code": "100000000482",
+      "display": "New Zealand"
+    },
+    {
+      "code": "100000000351",
+      "display": "Republic of Burundi"
+    },
+    {
+      "code": "100000000475",
+      "display": "Republic of Namibia"
+    },
+    {
+      "code": "100000000420",
+      "display": "Hong Kong Special Administrative Region of the People\u2019s Republic of China"
+    },
+    {
+      "code": "100000000387",
+      "display": "State of Eritrea"
+    },
+    {
+      "code": "100000000462",
+      "display": "Islamic Republic of Mauritania"
+    },
+    {
+      "code": "100000000474",
+      "display": "Union of Myanmar"
+    },
+    {
+      "code": "100000000562",
+      "display": "Republic of Vanuatu"
+    },
+    {
+      "code": "100000000545",
+      "display": "Kingdom of Tonga"
+    },
+    {
+      "code": "100000000371",
+      "display": "Republic of Costa Rica"
+    },
+    {
+      "code": "100000000365",
+      "display": "Territory of Cocos (Keeling) Islands"
+    },
+    {
+      "code": "100000000327",
+      "display": "Aruba"
+    },
+    {
+      "code": "100000000498",
+      "display": "Republic of the Philippines"
+    },
+    {
+      "code": "100000000457",
+      "display": "Republic of Maldives"
+    },
+    {
+      "code": "100000000324",
+      "display": "Antigua and Barbuda"
+    },
+    {
+      "code": "100000000436",
+      "display": "Republic of Kenya"
+    },
+    {
+      "code": "100000000440",
+      "display": "State of Kuwait"
+    },
+    {
+      "code": "100000000490",
+      "display": "Sultanate of Oman"
+    },
+    {
+      "code": "100000000426",
+      "display": "Republic of Iraq"
+    },
+    {
+      "code": "100000000322",
+      "display": "Anguilla"
+    },
+    {
+      "code": "100000000459",
+      "display": "Republic of Malta"
+    },
+    {
+      "code": "100000000367",
+      "display": "Union of the Comoros"
+    },
+    {
+      "code": "100000000508",
+      "display": "Saint Helena, Ascension and Tristan da Cunha"
+    },
+    {
+      "code": "100000000560",
+      "display": "Union of Soviet Socialist Republics"
+    },
+    {
+      "code": "100000000355",
+      "display": "Autonomous Community of the Canary Islands"
+    },
+    {
+      "code": "100000000378",
+      "display": "Diego Garcia"
+    },
+    {
+      "code": "100000000570",
+      "display": "Yugoslavia"
+    },
+    {
+      "code": "100000000382",
+      "display": "Democratic Republic of East Timor"
+    },
+    {
+      "code": "100000000447",
+      "display": "Libya Fezzan"
+    },
+    {
+      "code": "100000000396",
+      "display": "Metropolitan France"
+    },
+    {
+      "code": "100000000547",
+      "display": "Tristan da Cunha"
+    },
+    {
+      "code": "100000000480",
+      "display": "Neutral Zone"
+    },
+    {
+      "code": "100000000359",
+      "display": "Ceuta, Melilla"
+    },
+    {
+      "code": "100000000364",
+      "display": "Clipperton Island"
+    },
+    {
+      "code": "100000000479",
+      "display": "Netherlands Antilles"
+    },
+    {
+      "code": "100000000328",
+      "display": "Ascension Island"
+    },
+    {
+      "code": "100000000519",
+      "display": "State Union of Serbia and Montenegro"
+    },
+    {
+      "code": "200000026063",
+      "display": "Republic of South Sudan"
+    },
+    {
+      "code": "100000000421",
+      "display": "Republic of Hungary"
+    },
+    {
+      "code": "100000000430",
+      "display": "Italian Republic"
+    },
+    {
+      "code": "100000000449",
+      "display": "Principality of Liechtenstein"
+    },
+    {
+      "code": "100000000452",
+      "display": "Macao Special Administrative Region of the People\u2019s Republic of China"
+    },
+    {
+      "code": "100000000453",
+      "display": "Republic of North Macedonia"
+    },
+    {
+      "code": "100000000468",
+      "display": "Principality of Monaco"
+    },
+    {
+      "code": "100000000470",
+      "display": "Montenegro"
+    },
+    {
+      "code": "100000000484",
+      "display": "Republic of Niger"
+    },
+    {
+      "code": "100000000489",
+      "display": "Kingdom of Norway"
+    },
+    {
+      "code": "100000000506",
+      "display": "Russian Federation"
+    },
+    {
+      "code": "100000000514",
+      "display": "Republic of San Marino"
+    },
+    {
+      "code": "100000000523",
+      "display": "Slovak Republic"
+    },
+    {
+      "code": "100000000524",
+      "display": "Republic of Slovenia"
+    },
+    {
+      "code": "100000000554",
+      "display": "Ukraine"
+    },
+    {
+      "code": "100000000556",
+      "display": "United Kingdom of Great Britain and Northern Ireland"
+    },
+    {
+      "code": "100000000326",
+      "display": "Republic of Armenia"
+    },
+    {
+      "code": "100000000518",
+      "display": "Republic of Serbia"
+    },
+    {
+      "code": "100000000331",
+      "display": "Republic of Azerbaijan"
+    },
+    {
+      "code": "100000000336",
+      "display": "Republic of Belarus"
+    },
+    {
+      "code": "100000000337",
+      "display": "Kingdom of Belgium"
+    },
+    {
+      "code": "240000000000",
+      "display": "United Kingdom (Northern Ireland)"
+    },
+    {
+      "code": "100000000373",
+      "display": "Republic of Croatia"
+    },
+    {
+      "code": "100000000376",
+      "display": "Czech Republic"
+    },
+    {
+      "code": "100000000377",
+      "display": "Kingdom of Denmark"
+    },
+    {
+      "code": "100000000403",
+      "display": "Federal Republic of Germany"
+    },
+    {
+      "code": "100000000406",
+      "display": "Hellenic Republic"
+    },
+    {
+      "code": "100000000317",
+      "display": "Republic of Albania"
+    },
+    {
+      "code": "100000000343",
+      "display": "Bosnia and Herzegovina"
+    },
+    {
+      "code": "100000000402",
+      "display": "Georgia"
+    },
+    {
+      "code": "100000000427",
+      "display": "Ireland"
+    },
+    {
+      "code": "100000000435",
+      "display": "Republic of Kazakhstan"
+    },
+    {
+      "code": "100000000467",
+      "display": "Republic of Moldova"
+    },
+    {
+      "code": "100000000501",
+      "display": "Portuguese Republic"
+    },
+    {
+      "code": "100000000549",
+      "display": "Republic of Turkey"
+    }
+  ],
+  "id": "100000000002",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000000002",
+  "name": "SPOR 100000000002 for Country",
+  "title": "SPOR 100000000002 for Country",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000000002"
+}

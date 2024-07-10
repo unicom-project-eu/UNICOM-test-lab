@@ -1,0 +1,2068 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Units of Measurement",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "200000000133",
+      "display": "BU (Biological unit)"
+    },
+    {
+      "code": "200000023346",
+      "display": "log10 colony forming unit(s)",
+      "definition": "log10 colony forming unit"
+    },
+    {
+      "code": "100000110824",
+      "display": "log10 plaque forming unit(s)"
+    },
+    {
+      "code": "200000024894",
+      "display": "interference percentage unit(s)"
+    },
+    {
+      "code": "200000025934",
+      "display": "log 10 50% infective dose in chicken"
+    },
+    {
+      "code": "200000025199",
+      "display": "oocyst(s)"
+    },
+    {
+      "code": "100000151835",
+      "display": "part per million volume/volume"
+    },
+    {
+      "code": "200000018831",
+      "display": "log10 serum neutralising unit(s)"
+    },
+    {
+      "code": "100000110775",
+      "display": "cell culture infective dose 50"
+    },
+    {
+      "code": "200000000168",
+      "display": "Parts per thousand"
+    },
+    {
+      "code": "100000110898",
+      "display": "volt"
+    },
+    {
+      "code": "200000000122",
+      "display": "Allergen unit for Ambrosia Artemisiifolia"
+    },
+    {
+      "code": "200000025191",
+      "display": "log10 immunofluorescence unit(s)"
+    },
+    {
+      "code": "100000110770",
+      "display": "billion organisms"
+    },
+    {
+      "code": "200000002378",
+      "display": "haemagglutination inhibiting unit(s)",
+      "definition": "The haemagglutination inhibiting unit is the minimum amount of antibodies that will cause complete inhibition of the agglutination of the red blood cells."
+    },
+    {
+      "code": "200000003440",
+      "display": "kilodalton(s)"
+    },
+    {
+      "code": "200000000162",
+      "display": "MPL unit"
+    },
+    {
+      "code": "100000167420",
+      "display": "relative unit(s)/millilitre"
+    },
+    {
+      "code": "100000110878",
+      "display": "revolution/minute"
+    },
+    {
+      "code": "100000110678",
+      "display": "gram(s)/cubic metre"
+    },
+    {
+      "code": "200000005842",
+      "display": "unit(s)/dose"
+    },
+    {
+      "code": "100000110718",
+      "display": "curie(s)/microgram"
+    },
+    {
+      "code": "100000110697",
+      "display": "becquerel(s)/kilogram"
+    },
+    {
+      "code": "100000110712",
+      "display": "curie(s)/litre"
+    },
+    {
+      "code": "200000000181",
+      "display": "Sublingual unit (SU)"
+    },
+    {
+      "code": "100000110793",
+      "display": "gigabecquerel/gram"
+    },
+    {
+      "code": "100000110704",
+      "display": "megabecquerel(s)/litre"
+    },
+    {
+      "code": "100000110791",
+      "display": "fluorescent assay infectious dose 50%/dose"
+    },
+    {
+      "code": "100000156970",
+      "display": "milligram(s)/unit(s)"
+    },
+    {
+      "code": "200000005844",
+      "display": "LD50 unit (Lethal Dose 50%)/millilitre"
+    },
+    {
+      "code": "100000110736",
+      "display": "international unit(s)/millilitre"
+    },
+    {
+      "code": "100000110911",
+      "display": "microgram(s)/24 hours"
+    },
+    {
+      "code": "100000110726",
+      "display": "microcurie(s)/litre"
+    },
+    {
+      "code": "100000110725",
+      "display": "millicurie(s)/microgram"
+    },
+    {
+      "code": "100000110732",
+      "display": "microcurie(s)/microgram"
+    },
+    {
+      "code": "100000168600",
+      "display": "Allergy Unit(s) Modified/millilitre"
+    },
+    {
+      "code": "100000110753",
+      "display": "milligram(s)/gram"
+    },
+    {
+      "code": "100000110906",
+      "display": "Bioequivalent Allergy Unit(s)"
+    },
+    {
+      "code": "100000110899",
+      "display": "watt"
+    },
+    {
+      "code": "200000005300",
+      "display": "focus forming unit(s)"
+    },
+    {
+      "code": "200000016407",
+      "display": "degree day",
+      "definition": "Time expressed in days multiplied by the water temperature expressed in degree. Degree-days are calculated for 10\u00b0 water."
+    },
+    {
+      "code": "100000161021",
+      "display": "log2 geometric mean titre",
+      "definition": "The term Geometric Mean Titre (GMT) is used to express the results of titration which is the method or process by which the strength or concentration of a substance in a solution is measured. It refers to the simple arithmetic mean of the logarithms of the last positive dilution of a serum."
+    },
+    {
+      "code": "100000110883",
+      "display": "square metre"
+    },
+    {
+      "code": "200000018830",
+      "display": "log10 haemagglutination inhibiting unit(s)"
+    },
+    {
+      "code": "100000110857",
+      "display": "nanogram(s)"
+    },
+    {
+      "code": "200000000154",
+      "display": "Homeopathic Potency Of Quintamillesimal Korsakovian Series"
+    },
+    {
+      "code": "200000018824",
+      "display": "Absorbance Unit(s)"
+    },
+    {
+      "code": "200000000164",
+      "display": "Nitrogen treatment unit (NTU)"
+    },
+    {
+      "code": "100000110845",
+      "display": "million colony forming units"
+    },
+    {
+      "code": "200000018840",
+      "display": "log10 virus neutralising unit(s)"
+    },
+    {
+      "code": "100000110806",
+      "display": "joule"
+    },
+    {
+      "code": "100000110867",
+      "display": "pascal"
+    },
+    {
+      "code": "200000003443",
+      "display": "diagnostic biological unit(s)/millilitre"
+    },
+    {
+      "code": "100000110679",
+      "display": "milligram(s)/cubic metre"
+    },
+    {
+      "code": "100000110797",
+      "display": "gigabecquerel/microlitre"
+    },
+    {
+      "code": "200000010384",
+      "display": "nanogram(s)/millilitre"
+    },
+    {
+      "code": "100000110760",
+      "display": "allergy unit(s)/millilitre"
+    },
+    {
+      "code": "100000110854",
+      "display": "milliosmol(s)/kilogram"
+    },
+    {
+      "code": "200000003445",
+      "display": "microgram(s)/unit(s)"
+    },
+    {
+      "code": "100000110721",
+      "display": "millicurie(s)/microlitre"
+    },
+    {
+      "code": "100000110759",
+      "display": "50% Embryo Infective Dose/dose"
+    },
+    {
+      "code": "100000110872",
+      "display": "plaque forming unit(s)/millilitre"
+    },
+    {
+      "code": "100000110905",
+      "display": "Standardised Quality Unit(s)/millilitre"
+    },
+    {
+      "code": "100000167460",
+      "display": "Relative percentage protection"
+    },
+    {
+      "code": "200000003530",
+      "display": "international unit(s)/drop"
+    },
+    {
+      "code": "200000002330",
+      "display": "milligram(s)/centimetre"
+    },
+    {
+      "code": "100000110702",
+      "display": "kilobecquerel(s)/millilitre"
+    },
+    {
+      "code": "100000110740",
+      "display": "milliequivalent(s)/kilogram"
+    },
+    {
+      "code": "200000015709",
+      "display": "Protective Dose",
+      "definition": "protective dose"
+    },
+    {
+      "code": "200000025932",
+      "display": "60% effective dose in rabbit"
+    },
+    {
+      "code": "200000018837",
+      "display": "serum neutralising unit(s)"
+    },
+    {
+      "code": "200000000163",
+      "display": "NIH unit of Thrombin inhibited"
+    },
+    {
+      "code": "100000167436",
+      "display": "Centesimal potentisation"
+    },
+    {
+      "code": "100000110848",
+      "display": "million international units"
+    },
+    {
+      "code": "200000000166",
+      "display": "Osmol"
+    },
+    {
+      "code": "100000110826",
+      "display": "log10 tissue culture infective dose 50"
+    },
+    {
+      "code": "200000022787",
+      "display": "Toxic unit(s)"
+    },
+    {
+      "code": "100000110864",
+      "display": "ohm"
+    },
+    {
+      "code": "200000000171",
+      "display": "Pressor unit"
+    },
+    {
+      "code": "100000110803",
+      "display": "hertz"
+    },
+    {
+      "code": "100000110809",
+      "display": "kelvin"
+    },
+    {
+      "code": "100000110879",
+      "display": "second"
+    },
+    {
+      "code": "100000110817",
+      "display": "log 10 50% embryo infective dose/dose"
+    },
+    {
+      "code": "100000110748",
+      "display": "millimole(s)/kilogram"
+    },
+    {
+      "code": "200000005301",
+      "display": "log10 cell culture infective dose 50/millilitre"
+    },
+    {
+      "code": "100000166389",
+      "display": "millilitre(s)/millilitre"
+    },
+    {
+      "code": "100000167501",
+      "display": "Histamine Equivalent Prick/millilitre"
+    },
+    {
+      "code": "100000110711",
+      "display": "megabecquerel(s)/milligram"
+    },
+    {
+      "code": "100000110727",
+      "display": "microcurie(s)/millilitre"
+    },
+    {
+      "code": "100000110843",
+      "display": "millilitre(s)/square cm"
+    },
+    {
+      "code": "200000005840",
+      "display": "international unit(s)/dose"
+    },
+    {
+      "code": "100000110695",
+      "display": "becquerel(s)/millilitre"
+    },
+    {
+      "code": "100000110696",
+      "display": "becquerel(s)/microlitre"
+    },
+    {
+      "code": "200000005846",
+      "display": "gram(s)/milligram"
+    },
+    {
+      "code": "100000110683",
+      "display": "milligram(s)/litre"
+    },
+    {
+      "code": "100000110693",
+      "display": "mole(s)/millilitre"
+    },
+    {
+      "code": "100000110715",
+      "display": "curie(s)/kilogram"
+    },
+    {
+      "code": "100000110723",
+      "display": "millicurie(s)/gram"
+    },
+    {
+      "code": "100000110779",
+      "display": "colony forming unit(s)/millilitre"
+    },
+    {
+      "code": "100000110741",
+      "display": "milliequivalent(s)/gram"
+    },
+    {
+      "code": "100000110742",
+      "display": "milliequivalent(s)/milligram"
+    },
+    {
+      "code": "100000156990",
+      "display": "international unit(s)/unit(s)"
+    },
+    {
+      "code": "100000110819",
+      "display": "log10 cell culture infective dose 50/dose"
+    },
+    {
+      "code": "200000025938",
+      "display": "Indirect immunofluorescence unit(s)"
+    },
+    {
+      "code": "200000024899",
+      "display": "slow agglutination test unit(s)"
+    },
+    {
+      "code": "200000025937",
+      "display": "Inclusion forming unit(s)"
+    },
+    {
+      "code": "100000110810",
+      "display": "kilo international units"
+    },
+    {
+      "code": "100000110837",
+      "display": "microkatal"
+    },
+    {
+      "code": "100000170096",
+      "display": "Standardised Quality units Ambrosia artemisiifolia"
+    },
+    {
+      "code": "100000110667",
+      "display": "curie(s)"
+    },
+    {
+      "code": "100000110811",
+      "display": "kilo units"
+    },
+    {
+      "code": "200000000183",
+      "display": "Therapeutic unit (TU)"
+    },
+    {
+      "code": "200000025939",
+      "display": "Percentage protective dose"
+    },
+    {
+      "code": "200000024901",
+      "display": "log 10 50% embryo lethal dose"
+    },
+    {
+      "code": "200000003536",
+      "display": "nanometre(s)"
+    },
+    {
+      "code": "200000000158",
+      "display": "LD50 unit (Lethal Dose 50%)"
+    },
+    {
+      "code": "200000017732",
+      "display": "50% embryo lethal dose"
+    },
+    {
+      "code": "200000000180",
+      "display": "Standardised quality plus (SQ+)"
+    },
+    {
+      "code": "100000110668",
+      "display": "millicurie(s)"
+    },
+    {
+      "code": "100000169998",
+      "display": "billion spores"
+    },
+    {
+      "code": "100000110892",
+      "display": "titre"
+    },
+    {
+      "code": "200000000144",
+      "display": "Gram Haemagglutinin"
+    },
+    {
+      "code": "100000110882",
+      "display": "square centimetre"
+    },
+    {
+      "code": "100000110730",
+      "display": "microcurie(s)/gram"
+    },
+    {
+      "code": "100000110672",
+      "display": "international unit(s)/kilogram"
+    },
+    {
+      "code": "200000002382",
+      "display": "capsid particle(s)/millilitre"
+    },
+    {
+      "code": "100000110735",
+      "display": "international unit(s)/litre"
+    },
+    {
+      "code": "100000110852",
+      "display": "million organisms/millilitre"
+    },
+    {
+      "code": "100000166774",
+      "display": "million international units/millilitre"
+    },
+    {
+      "code": "100000110720",
+      "display": "millicurie(s)/millilitre"
+    },
+    {
+      "code": "100000110713",
+      "display": "curie(s)/millilitre"
+    },
+    {
+      "code": "100000170437",
+      "display": "log10 pixel(s)/millilitre"
+    },
+    {
+      "code": "200000015754",
+      "display": "unknown",
+      "definition": "The unit of measurement is unknown."
+    },
+    {
+      "code": "100000110889",
+      "display": "thousand organisms/gram"
+    },
+    {
+      "code": "100000110677",
+      "display": "kilogram(s)/cubic metre"
+    },
+    {
+      "code": "100000110835",
+      "display": "megabecquerel(s)/microlitre"
+    },
+    {
+      "code": "200000000160",
+      "display": "Mac Lagan unit"
+    },
+    {
+      "code": "100000110849",
+      "display": "million organisms"
+    },
+    {
+      "code": "200000000129",
+      "display": "Bethesda unit"
+    },
+    {
+      "code": "200000000126",
+      "display": "Allergy unit"
+    },
+    {
+      "code": "100000110789",
+      "display": "farad"
+    },
+    {
+      "code": "100000164967",
+      "display": "pH",
+      "definition": "A measure of acidity and alkalinity of a solution that is a number on a scale on which a value of 7 represents neutrality, lower numbers indicate increasing acidity and higher numbers increasing alkalinity and on which each unit of change represents a tenfold change in acidity or alkalinity and that is the negative logarithm of the effective hydrogen-ion concentration or hydrogen-ion activity in gram equivalents per liter of the solution."
+    },
+    {
+      "code": "200000000127",
+      "display": "APL unit"
+    },
+    {
+      "code": "200000000139",
+      "display": "Equivalent"
+    },
+    {
+      "code": "100000110853",
+      "display": "million units"
+    },
+    {
+      "code": "100000110861",
+      "display": "nanomole(s)/millilitre"
+    },
+    {
+      "code": "100000110746",
+      "display": "millimole(s)/litre"
+    },
+    {
+      "code": "100000110795",
+      "display": "gigabecquerel/litre"
+    },
+    {
+      "code": "100000151833",
+      "display": "cells/millilitre"
+    },
+    {
+      "code": "100000110773",
+      "display": "billion organisms/millilitre"
+    },
+    {
+      "code": "100000110771",
+      "display": "billion organisms/gram"
+    },
+    {
+      "code": "200000005841",
+      "display": "tissue culture infective dose 50/millilitre"
+    },
+    {
+      "code": "100000110769",
+      "display": "billion colony forming units/millilitre"
+    },
+    {
+      "code": "100000110681",
+      "display": "kilogram(s)/litre"
+    },
+    {
+      "code": "100000164205",
+      "display": "millilitre(s)/dose"
+    },
+    {
+      "code": "200000005852",
+      "display": "percent weight/volume/millilitre"
+    },
+    {
+      "code": "200000003441",
+      "display": "treatment polymerised unit(s)/millilitre",
+      "definition": "TPU stands for Treatment Polymerized Units and are defined as the biological units that can be obtained from the equivalent TSU units after the polymerization process of the native allergenic extract."
+    },
+    {
+      "code": "200000010383",
+      "display": "million cell culture infective dose 50/millilitre"
+    },
+    {
+      "code": "100000156972",
+      "display": "gram(s)/unit(s)"
+    },
+    {
+      "code": "100000110657",
+      "display": "milligram(s)/kilogram"
+    },
+    {
+      "code": "100000167151",
+      "display": "milligram(s)/square centimetre"
+    },
+    {
+      "code": "100000110690",
+      "display": "mole(s)/gram"
+    },
+    {
+      "code": "100000167530",
+      "display": "Allergy Unit(s) Native"
+    },
+    {
+      "code": "100000110846",
+      "display": "million colony forming units/gram"
+    },
+    {
+      "code": "100000167039",
+      "display": "log10 ELISA infectious dose 50%/millilitre"
+    },
+    {
+      "code": "100000110823",
+      "display": "log10 fluorescent assay infectious dose 50%/dose"
+    },
+    {
+      "code": "200000025933",
+      "display": "80% effective dose in rabbit"
+    },
+    {
+      "code": "100000110790",
+      "display": "fluorescent assay infectious dose 50%"
+    },
+    {
+      "code": "100000110842",
+      "display": "millikatal"
+    },
+    {
+      "code": "100000110785",
+      "display": "degree"
+    },
+    {
+      "code": "200000000128",
+      "display": "Arbitary unit"
+    },
+    {
+      "code": "100000158395",
+      "display": "Relative Percentage Survival"
+    },
+    {
+      "code": "100000110814",
+      "display": "lime flocculation unit(s)"
+    },
+    {
+      "code": "100000110900",
+      "display": "weber"
+    },
+    {
+      "code": "100000110870",
+      "display": "plaque forming unit equiv 1000 mouse LD50"
+    },
+    {
+      "code": "100000156973",
+      "display": "Fluorescent Focus Forming Unit"
+    },
+    {
+      "code": "100000110859",
+      "display": "nanolitre(s)"
+    },
+    {
+      "code": "100000110666",
+      "display": "kilobecquerel(s)"
+    },
+    {
+      "code": "100000110673",
+      "display": "milliequivalent(s)"
+    },
+    {
+      "code": "100000110802",
+      "display": "henry"
+    },
+    {
+      "code": "100000168960",
+      "display": "Antibody microagglutination-lytic reaction"
+    },
+    {
+      "code": "100000169154",
+      "display": "Virus neutralization index"
+    },
+    {
+      "code": "100000110881",
+      "display": "sievert"
+    },
+    {
+      "code": "100000151834",
+      "display": "cells/square centimetre"
+    },
+    {
+      "code": "200000003980",
+      "display": "elementary bodies/millilitre",
+      "definition": "elementary bodies/1 ml dose - measurement for chlamydia infectious particles amongst others"
+    },
+    {
+      "code": "100000110815",
+      "display": "lime flocculation unit(s)/millilitre"
+    },
+    {
+      "code": "100000110722",
+      "display": "millicurie(s)/kilogram"
+    },
+    {
+      "code": "100000110794",
+      "display": "gigabecquerel/kilogram"
+    },
+    {
+      "code": "100000110739",
+      "display": "milliequivalent(s)/microlitre"
+    },
+    {
+      "code": "100000110788",
+      "display": "enzyme-linked immunosorbent assay unit/millilitre"
+    },
+    {
+      "code": "100000167030",
+      "display": "colony forming unit(s)/dose"
+    },
+    {
+      "code": "100000110660",
+      "display": "microgram(s)/square metre"
+    },
+    {
+      "code": "100000110714",
+      "display": "curie(s)/microlitre"
+    },
+    {
+      "code": "100000167445",
+      "display": "milligram(s)/milligram"
+    },
+    {
+      "code": "100000110680",
+      "display": "microgram(s)/cubic metre"
+    },
+    {
+      "code": "100000167459",
+      "display": "Depigmented polymerised unit(s)/millilitre"
+    },
+    {
+      "code": "100000110738",
+      "display": "milliequivalent(s)/millilitre"
+    },
+    {
+      "code": "100000110844",
+      "display": "millimetre(s)"
+    },
+    {
+      "code": "200000025195",
+      "display": "log2 antibody unit(s)"
+    },
+    {
+      "code": "200000003230",
+      "display": "Standardised Quality units Betula verrucosa"
+    },
+    {
+      "code": "200000003173",
+      "display": "log2 virus neutralising unit(s)"
+    },
+    {
+      "code": "100000110665",
+      "display": "megabecquerel(s)"
+    },
+    {
+      "code": "100000110862",
+      "display": "newton"
+    },
+    {
+      "code": "100000110818",
+      "display": "log10 cell culture infective dose 50"
+    },
+    {
+      "code": "100000110820",
+      "display": "log10 enzyme-linked immunosorbent assay unit"
+    },
+    {
+      "code": "100000110813",
+      "display": "lactose unit(s)"
+    },
+    {
+      "code": "100000166600",
+      "display": "relative potency"
+    },
+    {
+      "code": "200000025168",
+      "display": "log 10 optical density 50"
+    },
+    {
+      "code": "200000025190",
+      "display": "relative unit(s)"
+    },
+    {
+      "code": "100000110731",
+      "display": "microcurie(s)/milligram"
+    },
+    {
+      "code": "200000003425",
+      "display": "log2/millilitre"
+    },
+    {
+      "code": "100000110734",
+      "display": "international unit(s)/milligram"
+    },
+    {
+      "code": "100000156971",
+      "display": "gram(s)/kilogram(s)"
+    },
+    {
+      "code": "100000168602",
+      "display": "Allergy Unit(s) Native/millilitre"
+    },
+    {
+      "code": "100000110729",
+      "display": "microcurie(s)/kilogram"
+    },
+    {
+      "code": "100000110915",
+      "display": "milligram(s)/cubic centimetre"
+    },
+    {
+      "code": "100000110897",
+      "display": "unit(s)/millilitre"
+    },
+    {
+      "code": "100000110717",
+      "display": "curie(s)/milligram"
+    },
+    {
+      "code": "100000110685",
+      "display": "gram(s)/millilitre"
+    },
+    {
+      "code": "100000110895",
+      "display": "tuberculin unit(s)/millilitre"
+    },
+    {
+      "code": "100000110919",
+      "display": "Christensen Unit(s)/gram"
+    },
+    {
+      "code": "200000005848",
+      "display": "milligram(s)/microlitre"
+    },
+    {
+      "code": "100000110699",
+      "display": "becquerel(s)/milligram"
+    },
+    {
+      "code": "100000172967",
+      "display": "milligram(s)/actuation"
+    },
+    {
+      "code": "100000110863",
+      "display": "NIH units of Thrombin inhibited/square centimetre"
+    },
+    {
+      "code": "100000110692",
+      "display": "mole(s)/litre"
+    },
+    {
+      "code": "100000110694",
+      "display": "becquerel(s)/litre"
+    },
+    {
+      "code": "100000110706",
+      "display": "kilobecquerel(s)/gram"
+    },
+    {
+      "code": "100000110921",
+      "display": "milligram(s)/dose"
+    },
+    {
+      "code": "100000110901",
+      "display": "milligram(s)/hour"
+    },
+    {
+      "code": "100000110890",
+      "display": "thousand organisms/millilitre"
+    },
+    {
+      "code": "100000166608",
+      "display": "micrograms(s)/square centimetre"
+    },
+    {
+      "code": "200000000172",
+      "display": "Protein nitrogen unit"
+    },
+    {
+      "code": "100000110885",
+      "display": "thousand colony forming units"
+    },
+    {
+      "code": "200000000156",
+      "display": "King-Armstrong unit"
+    },
+    {
+      "code": "200000000175",
+      "display": "Revolution"
+    },
+    {
+      "code": "100000110884",
+      "display": "tesla"
+    },
+    {
+      "code": "200000018828",
+      "display": "Immunofluorescence units"
+    },
+    {
+      "code": "200000000138",
+      "display": "Dye unit"
+    },
+    {
+      "code": "200000000153",
+      "display": "Homeopathic Potency Of Quintamillesimal Hahnemannian Series"
+    },
+    {
+      "code": "200000015752",
+      "display": "micrometre(s)"
+    },
+    {
+      "code": "200000025935",
+      "display": "50% neutralisation dose"
+    },
+    {
+      "code": "100000110808",
+      "display": "katal"
+    },
+    {
+      "code": "200000018833",
+      "display": "log2 enzyme-linked immunosorbent assay unit(s)"
+    },
+    {
+      "code": "100000110888",
+      "display": "thousand organisms"
+    },
+    {
+      "code": "200000012227",
+      "display": "milliinternational unit(s)"
+    },
+    {
+      "code": "200000000179",
+      "display": "Spore"
+    },
+    {
+      "code": "100000110816",
+      "display": "log 10 50% embryo infective dose"
+    },
+    {
+      "code": "200000018832",
+      "display": "log2 serum neutralising unit(s)"
+    },
+    {
+      "code": "200000000142",
+      "display": "GPL unit"
+    },
+    {
+      "code": "100000110733",
+      "display": "international unit(s)/gram"
+    },
+    {
+      "code": "200000000143",
+      "display": "Gram Percent"
+    },
+    {
+      "code": "200000000145",
+      "display": "Gram/Hour"
+    },
+    {
+      "code": "100000110827",
+      "display": "log10 tissue culture infective dose 50/dose"
+    },
+    {
+      "code": "100000172942",
+      "display": "gram(s)/actuation"
+    },
+    {
+      "code": "100000110924",
+      "display": "viral particle(s)/millilitre"
+    },
+    {
+      "code": "100000110800",
+      "display": "gram(s)/square metre"
+    },
+    {
+      "code": "100000110841",
+      "display": "micromole(s)/millilitre"
+    },
+    {
+      "code": "100000110737",
+      "display": "milliequivalent(s)/litre"
+    },
+    {
+      "code": "100000110689",
+      "display": "mole(s)/kilogram"
+    },
+    {
+      "code": "200000013766",
+      "display": "micromole(s)/dose"
+    },
+    {
+      "code": "100000110768",
+      "display": "billion colony forming units/gram"
+    },
+    {
+      "code": "100000110850",
+      "display": "million organisms/gram"
+    },
+    {
+      "code": "100000110691",
+      "display": "mole(s)/milligram"
+    },
+    {
+      "code": "100000166072",
+      "display": "microgram(s)/gram"
+    },
+    {
+      "code": "100000110792",
+      "display": "gigabecquerel(s)"
+    },
+    {
+      "code": "100000110675",
+      "display": "drop(s)"
+    },
+    {
+      "code": "100000166343",
+      "display": "percent volume/weight"
+    },
+    {
+      "code": "200000003439",
+      "display": "dalton(s)"
+    },
+    {
+      "code": "100000110868",
+      "display": "picogram(s)"
+    },
+    {
+      "code": "100000110865",
+      "display": "ounce"
+    },
+    {
+      "code": "200000023347",
+      "display": "Hamster protective Dose 80 % (Ph. Eur. Monograph)"
+    },
+    {
+      "code": "100000110801",
+      "display": "gray"
+    },
+    {
+      "code": "100000110893",
+      "display": "tonne"
+    },
+    {
+      "code": "100000166625",
+      "display": "Standardised Quality units House Dust Mite"
+    },
+    {
+      "code": "100000110860",
+      "display": "nanomole(s)"
+    },
+    {
+      "code": "100000110917",
+      "display": "Index of Concentration"
+    },
+    {
+      "code": "200000018839",
+      "display": "virus neutralising unit(s)"
+    },
+    {
+      "code": "200000003174",
+      "display": "log2 haemagglutination inhibiting unit(s)"
+    },
+    {
+      "code": "200000000137",
+      "display": "DPP (1 DPP = 1 HEPL, after depigmentation and polymerisation)"
+    },
+    {
+      "code": "100000110910",
+      "display": "microgram(s) Haemagglutinin"
+    },
+    {
+      "code": "100000110923",
+      "display": "viral particle(s)"
+    },
+    {
+      "code": "100000166626",
+      "display": "Allergy Unit Equivalent"
+    },
+    {
+      "code": "100000110822",
+      "display": "log10 fluorescent assay infectious dose 50%"
+    },
+    {
+      "code": "200000000186",
+      "display": "United States Pharmacopeia unit"
+    },
+    {
+      "code": "100000110851",
+      "display": "million organisms/milligram"
+    },
+    {
+      "code": "200000005849",
+      "display": "microgram(s) Haemagglutinin/millilitre"
+    },
+    {
+      "code": "100000110908",
+      "display": "milligram(s)/kilogram/hour"
+    },
+    {
+      "code": "100000110700",
+      "display": "becquerel(s)/microgram"
+    },
+    {
+      "code": "100000110796",
+      "display": "gigabecquerel/microgram"
+    },
+    {
+      "code": "100000110701",
+      "display": "kilobecquerel(s)/litre"
+    },
+    {
+      "code": "100000110896",
+      "display": "unit(s)/gram"
+    },
+    {
+      "code": "100000110825",
+      "display": "log10 plaque forming unit(s)/dose"
+    },
+    {
+      "code": "100000110698",
+      "display": "becquerel(s)/gram"
+    },
+    {
+      "code": "100000166578",
+      "display": "50% neutralising dose/millilitre"
+    },
+    {
+      "code": "100000110659",
+      "display": "milligram(s)/square metre"
+    },
+    {
+      "code": "100000110828",
+      "display": "log10/ml"
+    },
+    {
+      "code": "100000110728",
+      "display": "microcurie(s)/microlitre"
+    },
+    {
+      "code": "100000110799",
+      "display": "gigabecquerel/millilitre"
+    },
+    {
+      "code": "100000110719",
+      "display": "millicurie(s)/litre"
+    },
+    {
+      "code": "100000110922",
+      "display": "gram(s)/gram"
+    },
+    {
+      "code": "100000110839",
+      "display": "micromole(s)"
+    },
+    {
+      "code": "100000110873",
+      "display": "pock forming unit(s)"
+    },
+    {
+      "code": "100000110669",
+      "display": "microcurie(s)"
+    },
+    {
+      "code": "100000167437",
+      "display": "Decimal potentisation"
+    },
+    {
+      "code": "100000110836",
+      "display": "metre"
+    },
+    {
+      "code": "100000172034",
+      "display": "50% Protective Dose"
+    },
+    {
+      "code": "100000110858",
+      "display": "nanokatal"
+    },
+    {
+      "code": "200000000174",
+      "display": "Radian"
+    },
+    {
+      "code": "200000024891",
+      "display": "70% Protective Dose"
+    },
+    {
+      "code": "200000000157",
+      "display": "Kunkel unit"
+    },
+    {
+      "code": "200000000151",
+      "display": "Homeopathic Potency Of Millesimal Hahnemannian Series"
+    },
+    {
+      "code": "200000000134",
+      "display": "Clinical unit"
+    },
+    {
+      "code": "100000110869",
+      "display": "picokatal"
+    },
+    {
+      "code": "100000166092",
+      "display": "microgram(s)/hour"
+    },
+    {
+      "code": "100000155671",
+      "display": "millilitre(s)/kilogram"
+    },
+    {
+      "code": "100000110875",
+      "display": "pressor units/millilitre"
+    },
+    {
+      "code": "100000110812",
+      "display": "kilobecquerel(s)/kilogram"
+    },
+    {
+      "code": "100000110705",
+      "display": "megabecquerel(s)/millilitre"
+    },
+    {
+      "code": "100000110876",
+      "display": "protein nitrogen units/millilitre"
+    },
+    {
+      "code": "100000171890",
+      "display": "microgram(s)/actuation"
+    },
+    {
+      "code": "200000003573",
+      "display": "million unit(s)/millilitre"
+    },
+    {
+      "code": "100000110887",
+      "display": "thousand colony forming units/millilitre"
+    },
+    {
+      "code": "100000168907",
+      "display": "Allergy Unit Equivalent/millilitre"
+    },
+    {
+      "code": "200000000170",
+      "display": "Piece"
+    },
+    {
+      "code": "200000015749",
+      "display": "other",
+      "definition": "A unit of measurement not otherwise defined."
+    },
+    {
+      "code": "100000110724",
+      "display": "millicurie(s)/milligram"
+    },
+    {
+      "code": "100000110787",
+      "display": "enzyme-linked immunosorbent assay unit/dose"
+    },
+    {
+      "code": "100000110840",
+      "display": "micromole(s)/litre"
+    },
+    {
+      "code": "100000166862",
+      "display": "gram(s)/dose"
+    },
+    {
+      "code": "100000110778",
+      "display": "colony forming unit(s)/gram"
+    },
+    {
+      "code": "100000110821",
+      "display": "log10 enzyme-linked immunosorbent assay unit/dose"
+    },
+    {
+      "code": "100000110912",
+      "display": "milligram(s)/24 hours"
+    },
+    {
+      "code": "100000155670",
+      "display": "millilitre(s)/gram"
+    },
+    {
+      "code": "100000110920",
+      "display": "microgram(s)/dose"
+    },
+    {
+      "code": "200000023393",
+      "display": "80% Protective Dose"
+    },
+    {
+      "code": "100000110832",
+      "display": "lumen"
+    },
+    {
+      "code": "100000110874",
+      "display": "pound"
+    },
+    {
+      "code": "100000110767",
+      "display": "billion colony forming units"
+    },
+    {
+      "code": "100000110764",
+      "display": "anti-thrombin unit(s)"
+    },
+    {
+      "code": "200000000125",
+      "display": "Allergy unit nominal (AUN)"
+    },
+    {
+      "code": "100000170275",
+      "display": "log 2 geometric mean of neutralizing unit"
+    },
+    {
+      "code": "100000110833",
+      "display": "lux"
+    },
+    {
+      "code": "100000169120",
+      "display": "Haemagglutination inhibition test"
+    },
+    {
+      "code": "200000000130",
+      "display": "Biological allergy unit (BAU)"
+    },
+    {
+      "code": "100000110880",
+      "display": "siemens"
+    },
+    {
+      "code": "200000000148",
+      "display": "Homeopathic Potency Of Centesimal Korsakovian Series"
+    },
+    {
+      "code": "100000163235",
+      "display": "haemagglutinating units",
+      "definition": "Haemagglutination is the process in which sialic acid receptors on the surface of red blood cells (RBCs) bind to the haemagglutinin glycoprotein found on the surface of influenza virus (and several other viruses) and create a network, or lattice structure, of interconnected RBC\u2019s and virus particles. Haemagglutinating (HA) units are the minimum amount of virus that will cause complete agglutination of the red blood cells."
+    },
+    {
+      "code": "100000166268",
+      "display": "LD100 concentration for mice after i.m. injection after 5 days",
+      "definition": "A dilution series of the vaccine is created. The vaccine is injected i.m. in mice (sample: 5 animals). The lowest dilution causing all mice to die within 5 days is taken as a measure for the concentration value."
+    },
+    {
+      "code": "100000167531",
+      "display": "Allergy Unit(s) Modified"
+    },
+    {
+      "code": "100000110909",
+      "display": "Infectious unit(s)"
+    },
+    {
+      "code": "200000025239",
+      "display": "log10 relative potency"
+    },
+    {
+      "code": "200000015750",
+      "display": "centimetre"
+    },
+    {
+      "code": "100000110804",
+      "display": "hour"
+    },
+    {
+      "code": "100000110743",
+      "display": "milliequivalent(s)/microgram"
+    },
+    {
+      "code": "200000003966",
+      "display": "spheroid(s)/square centimetre"
+    },
+    {
+      "code": "100000110707",
+      "display": "kilobecquerel(s)/milligram"
+    },
+    {
+      "code": "100000110703",
+      "display": "kilobecquerel(s)/microlitre"
+    },
+    {
+      "code": "200000025913",
+      "display": "genome copies/millilitre"
+    },
+    {
+      "code": "100000110744",
+      "display": "kilogram(s)/square metre"
+    },
+    {
+      "code": "100000110684",
+      "display": "microgram(s)/litre"
+    },
+    {
+      "code": "100000110831",
+      "display": "loomis unit/millilitre"
+    },
+    {
+      "code": "100000172654",
+      "display": "noon unit(s)/millilitre"
+    },
+    {
+      "code": "100000110891",
+      "display": "tissue culture infective dose 50/dose"
+    },
+    {
+      "code": "100000110871",
+      "display": "plaque forming unit(s)/dose"
+    },
+    {
+      "code": "200000000152",
+      "display": "Homeopathic Potency Of Millesimal Korsakovian Series"
+    },
+    {
+      "code": "200000000136",
+      "display": "Cubic centimetre"
+    },
+    {
+      "code": "200000000182",
+      "display": "Todd unit"
+    },
+    {
+      "code": "200000000167",
+      "display": "Parts per billion"
+    },
+    {
+      "code": "200000025936",
+      "display": "90% protective dose in guinea pig"
+    },
+    {
+      "code": "200000000141",
+      "display": "Genome Copies (GC)"
+    },
+    {
+      "code": "100000110780",
+      "display": "coulomb"
+    },
+    {
+      "code": "100000166630",
+      "display": "allergen unit(s)"
+    },
+    {
+      "code": "200000000177",
+      "display": "Somogyi unit"
+    },
+    {
+      "code": "100000110754",
+      "display": "plaque forming unit"
+    },
+    {
+      "code": "100000110774",
+      "display": "candela"
+    },
+    {
+      "code": "100000110777",
+      "display": "celsius temperature"
+    },
+    {
+      "code": "100000110761",
+      "display": "ampere"
+    },
+    {
+      "code": "200000005415",
+      "display": "standard reactivity unit(s)"
+    },
+    {
+      "code": "200000000150",
+      "display": "Homeopathic Potency Of Decimal Korsakovian Series"
+    },
+    {
+      "code": "200000025931",
+      "display": "80% effective dose in guinea pig"
+    },
+    {
+      "code": "200000000169",
+      "display": "Parts per trillion"
+    },
+    {
+      "code": "100000110807",
+      "display": "kallikrein inactivator unit/millilitre"
+    },
+    {
+      "code": "200000005839",
+      "display": "D antigen unit(s)/dose"
+    },
+    {
+      "code": "100000110763",
+      "display": "antigen unit(s)/millilitre"
+    },
+    {
+      "code": "200000005845",
+      "display": "plaque forming unit equiv 1000 mouse LD50/millilitre"
+    },
+    {
+      "code": "100000110716",
+      "display": "curie(s)/gram"
+    },
+    {
+      "code": "100000110688",
+      "display": "microgram(s)/microlitre"
+    },
+    {
+      "code": "100000110766",
+      "display": "anti-Xa activity International Unit(s)/millilitre"
+    },
+    {
+      "code": "100000110658",
+      "display": "microgram(s)/kilogram"
+    },
+    {
+      "code": "200000005843",
+      "display": "U. CEIP/millilitre"
+    },
+    {
+      "code": "100000110926",
+      "display": "vector genome per ml"
+    },
+    {
+      "code": "100000110686",
+      "display": "milligram(s)/millilitre"
+    },
+    {
+      "code": "100000110925",
+      "display": "cells/microlitre"
+    },
+    {
+      "code": "100000110682",
+      "display": "gram(s)/litre"
+    },
+    {
+      "code": "200000005299",
+      "display": "log10 plaque forming unit(s)/millilitre"
+    },
+    {
+      "code": "100000110749",
+      "display": "millimole(s)/gram"
+    },
+    {
+      "code": "100000110709",
+      "display": "megabecquerel(s)/kilogram"
+    },
+    {
+      "code": "200000003447",
+      "display": "gram(s)/mole"
+    },
+    {
+      "code": "100000167029",
+      "display": "part per million mole(s)/mole"
+    },
+    {
+      "code": "200000024888",
+      "display": "percentage protection"
+    },
+    {
+      "code": "200000024903",
+      "display": "antibody unit(s)"
+    },
+    {
+      "code": "200000000131",
+      "display": "Bodansky unit"
+    },
+    {
+      "code": "200000000149",
+      "display": "Homeopathic Potency Of Decimal Hahnemannian Series"
+    },
+    {
+      "code": "100000110664",
+      "display": "becquerel(s)"
+    },
+    {
+      "code": "100000110663",
+      "display": "microlitre(s)"
+    },
+    {
+      "code": "100000110745",
+      "display": "millimole(s)"
+    },
+    {
+      "code": "200000025261",
+      "display": "million cells"
+    },
+    {
+      "code": "100000110856",
+      "display": "nanocurie(s)"
+    },
+    {
+      "code": "200000000187",
+      "display": "Vector genome"
+    },
+    {
+      "code": "200000000178",
+      "display": "Specific treatment unit (STU)"
+    },
+    {
+      "code": "100000110855",
+      "display": "minute"
+    },
+    {
+      "code": "200000003433",
+      "display": "month"
+    },
+    {
+      "code": "100000166219",
+      "display": "focus forming unit(s)/millilitre"
+    },
+    {
+      "code": "100000110783",
+      "display": "D antigen unit(s)/millilitre"
+    },
+    {
+      "code": "100000110772",
+      "display": "billion organisms/milligram"
+    },
+    {
+      "code": "100000110776",
+      "display": "cell culture infective dose 50/dose"
+    },
+    {
+      "code": "100000110687",
+      "display": "microgram(s)/millilitre"
+    },
+    {
+      "code": "100000110798",
+      "display": "gigabecquerel/milligram"
+    },
+    {
+      "code": "200000003437",
+      "display": "treatment standardised unit(s)/millilitre"
+    },
+    {
+      "code": "100000110708",
+      "display": "kilobecquerel(s)/microgram"
+    },
+    {
+      "code": "100000110834",
+      "display": "megabecquerel(s)/microgram"
+    },
+    {
+      "code": "100000110847",
+      "display": "million colony forming units/millilitre"
+    },
+    {
+      "code": "100000110907",
+      "display": "Bioequivalent Allergy Unit(s)/millilitre"
+    },
+    {
+      "code": "100000110755",
+      "display": "microlitre(s)/millilitre"
+    },
+    {
+      "code": "100000110710",
+      "display": "megabecquerel(s)/gram"
+    },
+    {
+      "code": "100000110886",
+      "display": "thousand colony forming units/gram"
+    },
+    {
+      "code": "100000110830",
+      "display": "loomis unit/gram"
+    },
+    {
+      "code": "200000017733",
+      "display": "SD-493477"
+    },
+    {
+      "code": "200000000123",
+      "display": "Allergy unit equivalent (AUeq)"
+    },
+    {
+      "code": "100000110903",
+      "display": "Standardised Unit(s)/millilitre (Deprecated)"
+    },
+    {
+      "code": "100000110757",
+      "display": "100 milligrams/millilitre"
+    },
+    {
+      "code": "200000000124",
+      "display": "Allergy unit modified (AUM)"
+    },
+    {
+      "code": "100000110838",
+      "display": "microkatal(s)"
+    },
+    {
+      "code": "200000025238",
+      "display": "dose"
+    },
+    {
+      "code": "200000000146",
+      "display": "Histamine Equivalent Prick (HEP)"
+    },
+    {
+      "code": "200000000155",
+      "display": "Kallikrein Inactivator unit"
+    },
+    {
+      "code": "200000000159",
+      "display": "Lipoprotein Lipase Releasing unit (LSU)"
+    },
+    {
+      "code": "200000000161",
+      "display": "Molar"
+    },
+    {
+      "code": "200000026024",
+      "display": "log10 colour changing units"
+    },
+    {
+      "code": "200000027133",
+      "display": "80% seroresponse in rabbit"
+    },
+    {
+      "code": "200000027920",
+      "display": "agglutination K titer"
+    },
+    {
+      "code": "200000027120",
+      "display": "countable unit(s)",
+      "definition": "This term was created to allow PMS users to specify countable items in a medicinal product and to differentiate it from the term \"unit\" as this makes reference to catalytic activity and therefore shouldn't be used to count elements of a medicinal product."
+    },
+    {
+      "code": "200000027037",
+      "display": "microconidium"
+    },
+    {
+      "code": "200000027134",
+      "display": "log2 antibody titre"
+    },
+    {
+      "code": "200000026014",
+      "display": "log10 slow agglutination unit(s)"
+    },
+    {
+      "code": "200000027122",
+      "display": "venom unit(s)"
+    },
+    {
+      "code": "100000166631",
+      "display": "noon unit",
+      "definition": "Quantity of pollen extract which contains 0.00001 milligram of total nitrogen"
+    },
+    {
+      "code": "200000000121",
+      "display": "Allergan unit"
+    },
+    {
+      "code": "200000000135",
+      "display": "Colony forming unit"
+    },
+    {
+      "code": "200000000140",
+      "display": "FIP"
+    },
+    {
+      "code": "100000166876",
+      "display": "index of concentration/millilitre"
+    },
+    {
+      "code": "200000026019",
+      "display": "100% protective dose"
+    },
+    {
+      "code": "200000000173",
+      "display": "Protein unit (PUN)"
+    },
+    {
+      "code": "200000000184",
+      "display": "U. CEIP"
+    },
+    {
+      "code": "200000000185",
+      "display": "UAH (anti heparin unit)"
+    },
+    {
+      "code": "100000110782",
+      "display": "D antigen unit(s)"
+    },
+    {
+      "code": "100000110781",
+      "display": "cubic metre"
+    },
+    {
+      "code": "100000110916",
+      "display": "Index of Reactivity"
+    },
+    {
+      "code": "100000110918",
+      "display": "Christensen Unit(s)"
+    },
+    {
+      "code": "100000110902",
+      "display": "Standardised Unit(s) (Deprecated)"
+    },
+    {
+      "code": "100000110904",
+      "display": "Standardised Quality Unit(s) (Deprecated)"
+    },
+    {
+      "code": "100000110913",
+      "display": "tissue culture infective dose 50"
+    },
+    {
+      "code": "100000110914",
+      "display": "Standardised Quality units Tablet"
+    },
+    {
+      "code": "100000166604",
+      "display": "European Pharmacopoeia Unit(s)"
+    },
+    {
+      "code": "100000110676",
+      "display": "dosage form"
+    },
+    {
+      "code": "100000110752",
+      "display": "percent volume/volume"
+    },
+    {
+      "code": "100000110751",
+      "display": "percent weight/volume"
+    },
+    {
+      "code": "100000110762",
+      "display": "antigen unit(s)"
+    },
+    {
+      "code": "100000110765",
+      "display": "anti-Xa activity International Unit(s)"
+    },
+    {
+      "code": "100000110786",
+      "display": "enzyme-linked immunosorbent assay unit"
+    },
+    {
+      "code": "100000110805",
+      "display": "international opacity unit(s)"
+    },
+    {
+      "code": "100000110829",
+      "display": "loomis unit"
+    },
+    {
+      "code": "100000110866",
+      "display": "part per million"
+    },
+    {
+      "code": "100000110877",
+      "display": "quantity sufficient"
+    },
+    {
+      "code": "100000110894",
+      "display": "tuberculin unit(s)"
+    },
+    {
+      "code": "200000000132",
+      "display": "British Pharmacopoeia unit"
+    },
+    {
+      "code": "200000000147",
+      "display": "Homeopathic Potency Of Centesimal Hahnemannian Series"
+    },
+    {
+      "code": "100000151832",
+      "display": "cells"
+    },
+    {
+      "code": "100000110784",
+      "display": "day"
+    },
+    {
+      "code": "100000110671",
+      "display": "international unit(s)"
+    },
+    {
+      "code": "100000110662",
+      "display": "millilitre(s)"
+    },
+    {
+      "code": "100000110655",
+      "display": "milligram(s)"
+    },
+    {
+      "code": "100000110656",
+      "display": "microgram(s)"
+    },
+    {
+      "code": "100000110654",
+      "display": "gram(s)"
+    },
+    {
+      "code": "200000003438",
+      "display": "week"
+    },
+    {
+      "code": "200000003434",
+      "display": "year"
+    },
+    {
+      "code": "200000002246",
+      "display": "Therapeutic Unit(s)/mililiter"
+    },
+    {
+      "code": "100000110747",
+      "display": "millimole(s)/millilitre"
+    },
+    {
+      "code": "100000172970",
+      "display": "venom unit(s)/millilitre"
+    },
+    {
+      "code": "200000000165",
+      "display": "Organisms"
+    },
+    {
+      "code": "200000000176",
+      "display": "SBU (standardised biological unit)"
+    },
+    {
+      "code": "200000015751",
+      "display": "Embryo Infective Dose"
+    },
+    {
+      "code": "100000110670",
+      "display": "mole(s)"
+    },
+    {
+      "code": "100000110750",
+      "display": "percent weight/weight"
+    },
+    {
+      "code": "100000110758",
+      "display": "50% Embryo Infective Dose",
+      "definition": "The titre required to infect 50% of the embryos inoculated with the virus."
+    },
+    {
+      "code": "100000110674",
+      "display": "percent"
+    },
+    {
+      "code": "100000110756",
+      "display": "unit(s)"
+    },
+    {
+      "code": "100000110661",
+      "display": "litre(s)"
+    },
+    {
+      "code": "100000110653",
+      "display": "kilogram(s)"
+    },
+    {
+      "code": "100000166856",
+      "display": "index of reactivity/millilitre"
+    },
+    {
+      "code": "200000003442",
+      "display": "sublingual unit(s)/millilitre",
+      "definition": "Biological units based on the cutaneous allergenic activity of the extracts evaluated by prick test in allergic patients."
+    },
+    {
+      "code": "200000026018",
+      "display": "90% protective dose",
+      "definition": "Protective dose in at least 90% of the vaccinated animals described in monographia 2325 of European Pharmacopeia."
+    }
+  ],
+  "id": "100000110633",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000110633",
+  "name": "SPOR 100000110633 for Units of Measurement",
+  "title": "SPOR 100000110633 for Units of Measurement",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000110633"
+}

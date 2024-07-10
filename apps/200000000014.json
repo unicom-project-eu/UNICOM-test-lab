@@ -1,0 +1,479 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Unit of Presentation",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "200000022815",
+      "display": "Part"
+    },
+    {
+      "code": "200000002157",
+      "display": "Vessel",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single vessel-type container."
+    },
+    {
+      "code": "200000002108",
+      "display": "Barrel",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single barrel container."
+    },
+    {
+      "code": "200000002120",
+      "display": "Dressing",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of dressing."
+    },
+    {
+      "code": "200000002131",
+      "display": "Pad",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of pad."
+    },
+    {
+      "code": "200000002136",
+      "display": "Pendant",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of pendant."
+    },
+    {
+      "code": "200000002123",
+      "display": "Chewing gum",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of medicated chewing gum."
+    },
+    {
+      "code": "200000002126",
+      "display": "Insert",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of insert."
+    },
+    {
+      "code": "200000016502",
+      "display": "Globule"
+    },
+    {
+      "code": "200000022839",
+      "display": "Test"
+    },
+    {
+      "code": "200000016503",
+      "display": "Bar"
+    },
+    {
+      "code": "200000002109",
+      "display": "Blister",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single blister or unit-dose blister container."
+    },
+    {
+      "code": "200000002110",
+      "display": "Block",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of block."
+    },
+    {
+      "code": "200000002119",
+      "display": "Dart",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single dart container."
+    },
+    {
+      "code": "200000002113",
+      "display": "Capsule",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of capsule."
+    },
+    {
+      "code": "200000002114",
+      "display": "Cartridge",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single cartridge container."
+    },
+    {
+      "code": "200000002124",
+      "display": "Implant",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of implant."
+    },
+    {
+      "code": "200000002135",
+      "display": "Pen",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single pen container."
+    },
+    {
+      "code": "200000002152",
+      "display": "Tablet",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of tablet."
+    },
+    {
+      "code": "200000002156",
+      "display": "Tube",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single tube container."
+    },
+    {
+      "code": "200000002151",
+      "display": "System",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of system."
+    },
+    {
+      "code": "200000002112",
+      "display": "Cachet",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of cachet."
+    },
+    {
+      "code": "200000002130",
+      "display": "Matrix",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of matrix."
+    },
+    {
+      "code": "200000002127",
+      "display": "Jar",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single jar container."
+    },
+    {
+      "code": "200000002121",
+      "display": "Drop",
+      "definition": "A unit of presentation used to represent the quantity of product that is administered in a single drop dispensed from a dropper or equivalent administration device."
+    },
+    {
+      "code": "200000022814",
+      "display": "Other"
+    },
+    {
+      "code": "200000022841",
+      "display": "Troche"
+    },
+    {
+      "code": "200000022797",
+      "display": "Bead"
+    },
+    {
+      "code": "200000022809",
+      "display": "Dip"
+    },
+    {
+      "code": "200000016504",
+      "display": "Homeopathic dilution"
+    },
+    {
+      "code": "200000022838",
+      "display": "Tank"
+    },
+    {
+      "code": "200000016444",
+      "display": "Wafer"
+    },
+    {
+      "code": "200000016446",
+      "display": "Pellet"
+    },
+    {
+      "code": "200000016442",
+      "display": "Bead"
+    },
+    {
+      "code": "200000022801",
+      "display": "Canister"
+    },
+    {
+      "code": "200000022805",
+      "display": "Device"
+    },
+    {
+      "code": "200000022817",
+      "display": "Supersack"
+    },
+    {
+      "code": "200000022802",
+      "display": "Case"
+    },
+    {
+      "code": "200000022816",
+      "display": "Ring"
+    },
+    {
+      "code": "200000016428",
+      "display": "Packet"
+    },
+    {
+      "code": "200000016451",
+      "display": "Spray"
+    },
+    {
+      "code": "200000022808",
+      "display": "Dialpack"
+    },
+    {
+      "code": "200000022806",
+      "display": "Dewar"
+    },
+    {
+      "code": "200000002159",
+      "display": "Puff"
+    },
+    {
+      "code": "200000022804",
+      "display": "Coat"
+    },
+    {
+      "code": "200000018450",
+      "display": "Bolus"
+    },
+    {
+      "code": "200000016429",
+      "display": "Prick"
+    },
+    {
+      "code": "200000022810",
+      "display": "Dose pack"
+    },
+    {
+      "code": "200000016441",
+      "display": "Kit"
+    },
+    {
+      "code": "200000022811",
+      "display": "Drum"
+    },
+    {
+      "code": "200000018449",
+      "display": "Disk"
+    },
+    {
+      "code": "200000010635",
+      "display": "Box"
+    },
+    {
+      "code": "200000022842",
+      "display": "Unknown"
+    },
+    {
+      "code": "200000022812",
+      "display": "Generator"
+    },
+    {
+      "code": "200000022800",
+      "display": "Can"
+    },
+    {
+      "code": "200000022840",
+      "display": "Tray"
+    },
+    {
+      "code": "200000016427",
+      "display": "Dose"
+    },
+    {
+      "code": "200000022813",
+      "display": "Jug"
+    },
+    {
+      "code": "200000022803",
+      "display": "Cello pack"
+    },
+    {
+      "code": "200000018448",
+      "display": "Carton"
+    },
+    {
+      "code": "200000022837",
+      "display": "Tabminder"
+    },
+    {
+      "code": "200000002128",
+      "display": "Lozenge",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of lozenge."
+    },
+    {
+      "code": "200000002111",
+      "display": "Bottle",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single bottle container."
+    },
+    {
+      "code": "200000002118",
+      "display": "Cylinder",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single cylinder-type container."
+    },
+    {
+      "code": "200000002117",
+      "display": "Cup",
+      "definition": "A unit of presentation used to represent the quantity of product that is administered by filling a single cup administration device."
+    },
+    {
+      "code": "200000002122",
+      "display": "Film",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of film."
+    },
+    {
+      "code": "200000002125",
+      "display": "Inhaler",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single inhaler container."
+    },
+    {
+      "code": "200000002133",
+      "display": "Pastille",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of pastille."
+    },
+    {
+      "code": "200000002129",
+      "display": "Lyophilisate",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of lyophilisate."
+    },
+    {
+      "code": "200000002132",
+      "display": "Paper",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of paper."
+    },
+    {
+      "code": "200000002134",
+      "display": "Patch",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of patch."
+    },
+    {
+      "code": "200000002116",
+      "display": "Container",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single container, where a more-specific container term is not applicable."
+    },
+    {
+      "code": "200000002144",
+      "display": "Sponge",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of sponge."
+    },
+    {
+      "code": "200000002145",
+      "display": "Spoonful",
+      "definition": "A unit of presentation used to represent the quantity of product that is administered by filling a single spoon administration device."
+    },
+    {
+      "code": "200000002147",
+      "display": "Straw",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single straw container."
+    },
+    {
+      "code": "200000002155",
+      "display": "Thread",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of thread."
+    },
+    {
+      "code": "200000002165",
+      "display": "Applicator",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single applicator."
+    },
+    {
+      "code": "200000002141",
+      "display": "Plug",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of plug."
+    },
+    {
+      "code": "200000002158",
+      "display": "Vial",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single vial container."
+    },
+    {
+      "code": "200000002142",
+      "display": "Pouch",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form or container is a type of pouch."
+    },
+    {
+      "code": "200000002143",
+      "display": "Sachet",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single sachet container."
+    },
+    {
+      "code": "200000002154",
+      "display": "Tampon",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of tampon."
+    },
+    {
+      "code": "200000002148",
+      "display": "Strip",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of strip."
+    },
+    {
+      "code": "200000002149",
+      "display": "Suppository",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of suppository."
+    },
+    {
+      "code": "200000002150",
+      "display": "Syringe",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single syringe container."
+    },
+    {
+      "code": "200000002153",
+      "display": "Tag",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of tag."
+    },
+    {
+      "code": "200000002163",
+      "display": "Actuation",
+      "definition": "A unit of presentation used to represent the quantity of product that is administered following a single operation of a metered-dose pump, valve or other equivalent dosing mechanism."
+    },
+    {
+      "code": "200000002164",
+      "display": "Ampoule",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single ampoule container."
+    },
+    {
+      "code": "200000002166",
+      "display": "Bag",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single bag container."
+    },
+    {
+      "code": "200000002146",
+      "display": "Stick",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of stick."
+    },
+    {
+      "code": "200000002138",
+      "display": "Pillule",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of pillule."
+    },
+    {
+      "code": "200000002139",
+      "display": "Pipette",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single pipette administration device."
+    },
+    {
+      "code": "200000002140",
+      "display": "Plaster",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of plaster."
+    },
+    {
+      "code": "200000016445",
+      "display": "Swab",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of swab."
+    },
+    {
+      "code": "200000002115",
+      "display": "Collar",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of collar."
+    },
+    {
+      "code": "200000002137",
+      "display": "Pessary",
+      "definition": "A unit of presentation used to represent the quantity of product that is found in a single discrete entity where the pharmaceutical dose form is a type of pessary."
+    }
+  ],
+  "id": "200000000014",
+  "url": "https://spor.ema.europa.eu/v1/lists/200000000014",
+  "name": "SPOR 200000000014 for Unit of Presentation",
+  "title": "SPOR 200000000014 for Unit of Presentation",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/200000000014"
+}

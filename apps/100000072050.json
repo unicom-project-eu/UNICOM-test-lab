@@ -1,0 +1,78 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Ingredient Role",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000072082",
+      "display": "Excipient",
+      "definition": "Ingredient that is inert in relation to the intended activity of the medicinal product [CEN 12610:3.13]."
+    },
+    {
+      "code": "100000072073",
+      "display": "Adjuvant",
+      "definition": "A substance sometimes included in a vaccine formulation to enhance or modify the immune-stimulating properties of a vaccine [NAID]."
+    },
+    {
+      "code": "100000072072",
+      "display": "Active",
+      "definition": "Ingredient that alone or in combination with one or more other ingredients is considered to fulfil the intended activity of a medicinal product [CEN 12610:3.1]."
+    },
+    {
+      "code": "100000136178",
+      "display": "Raw materials used in the manufacture of the product"
+    },
+    {
+      "code": "100000136561",
+      "display": "Overage"
+    },
+    {
+      "code": "100000136179",
+      "display": "Starting material for active substance"
+    },
+    {
+      "code": "100000136065",
+      "display": "Starting material for excipient"
+    },
+    {
+      "code": "200000003427",
+      "display": "bioenhancer"
+    },
+    {
+      "code": "100000136066",
+      "display": "Solvent / Diluent"
+    }
+  ],
+  "id": "100000072050",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000072050",
+  "name": "SPOR 100000072050 for Ingredient Role",
+  "title": "SPOR 100000072050 for Ingredient Role",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000072050"
+}

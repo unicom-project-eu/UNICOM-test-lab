@@ -1,0 +1,249 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Material",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "200000025262",
+      "display": "PolyEthylene TerePhthalate Glycol"
+    },
+    {
+      "code": "200000025919",
+      "display": "Titanium Dioxide"
+    },
+    {
+      "code": "200000003205",
+      "display": "Glass type II"
+    },
+    {
+      "code": "200000003206",
+      "display": "Glass type III"
+    },
+    {
+      "code": "200000003207",
+      "display": "Paper"
+    },
+    {
+      "code": "200000015521",
+      "display": "PolyEthylene copolymer"
+    },
+    {
+      "code": "200000027028",
+      "display": "Ethylene-Vinyl Acetate"
+    },
+    {
+      "code": "200000003201",
+      "display": "Cyclic Olefin Copolymer"
+    },
+    {
+      "code": "200000003202",
+      "display": "Epoxyphenol"
+    },
+    {
+      "code": "200000003203",
+      "display": "Glass"
+    },
+    {
+      "code": "200000003208",
+      "display": "Plastic"
+    },
+    {
+      "code": "200000003209",
+      "display": "PolyAmide"
+    },
+    {
+      "code": "200000003210",
+      "display": "Orientated PolyAmide"
+    },
+    {
+      "code": "200000003211",
+      "display": "PolyCarbonate"
+    },
+    {
+      "code": "200000003212",
+      "display": "PolyChloroTriFluoroEthylene"
+    },
+    {
+      "code": "200000003213",
+      "display": "Polyester"
+    },
+    {
+      "code": "200000003214",
+      "display": "PolyEthylene"
+    },
+    {
+      "code": "200000003216",
+      "display": "Low Density PolyEthylene"
+    },
+    {
+      "code": "200000003217",
+      "display": "PolyEthylene TerePhthalate"
+    },
+    {
+      "code": "200000003218",
+      "display": "Polyolefin"
+    },
+    {
+      "code": "200000003219",
+      "display": "PolyPropylene"
+    },
+    {
+      "code": "200000003220",
+      "display": "PolyStyrene"
+    },
+    {
+      "code": "200000003221",
+      "display": "PolyVinyl Acetate"
+    },
+    {
+      "code": "200000003222",
+      "display": "PolyVinyl Chloride"
+    },
+    {
+      "code": "200000003223",
+      "display": "Plasticised PolyVinyl Chloride"
+    },
+    {
+      "code": "200000003224",
+      "display": "Non-plasticised PolyVinyl Chloride / Unplasticised PolyVinyl Chloride"
+    },
+    {
+      "code": "200000003225",
+      "display": "PolyVinylidene Chloride"
+    },
+    {
+      "code": "200000003226",
+      "display": "Rubber"
+    },
+    {
+      "code": "200000003227",
+      "display": "Silicone oil"
+    },
+    {
+      "code": "200000003228",
+      "display": "Silicone elastomer"
+    },
+    {
+      "code": "200000003229",
+      "display": "Steel"
+    },
+    {
+      "code": "200000003529",
+      "display": "Cardboard"
+    },
+    {
+      "code": "200000012514",
+      "display": "PolyAcryloNitrile"
+    },
+    {
+      "code": "200000012515",
+      "display": "Ethylene acrylic acid copolymer"
+    },
+    {
+      "code": "200000012521",
+      "display": "Ethylene meta-acrylic acid"
+    },
+    {
+      "code": "200000012522",
+      "display": "Ethylene-Vinyl Alcohol copolymer"
+    },
+    {
+      "code": "200000012523",
+      "display": "PolyVinylidene Fluoride"
+    },
+    {
+      "code": "200000012524",
+      "display": "Medium Density PolyEthylene"
+    },
+    {
+      "code": "200000023330",
+      "display": "Expanded Polyethylene"
+    },
+    {
+      "code": "200000025255",
+      "display": "Silica gel",
+      "definition": "a highly adsorbent gelatinous form of silica, used chiefly as a dehumidifying and dehydrating agent"
+    },
+    {
+      "code": "200000025257",
+      "display": "Linear Low Density PolyEthylene"
+    },
+    {
+      "code": "200000025918",
+      "display": "PolyButyl Methacrylate"
+    },
+    {
+      "code": "200000025920",
+      "display": "PolyButylene Terephthalate"
+    },
+    {
+      "code": "200000025921",
+      "display": "Acrylonitrile Butadiene Styrene"
+    },
+    {
+      "code": "200000025922",
+      "display": "PolyOxyMethylene"
+    },
+    {
+      "code": "200000025923",
+      "display": "Chlorobutyl Rubber"
+    },
+    {
+      "code": "200000003200",
+      "display": "Aluminium"
+    },
+    {
+      "code": "200000003204",
+      "display": "Glass type I"
+    },
+    {
+      "code": "200000003215",
+      "display": "High Density PolyEthylene"
+    },
+    {
+      "code": "200000012538",
+      "display": "Syndiotactic Polypropylene"
+    },
+    {
+      "code": "200000023332",
+      "display": "Cyclic Olefin Polymer",
+      "definition": "Cyclic Olefin Polymer (COP) is manufactured by the polymerizing of a single type of monomer. This polymers are typically made of cyclopentadiene derivates in a ring opening polymerization followed by a hydrogenation."
+    },
+    {
+      "code": "200000026009",
+      "display": "Bromobutyl Rubber"
+    }
+  ],
+  "id": "200000003199",
+  "url": "https://spor.ema.europa.eu/v1/lists/200000003199",
+  "name": "SPOR 200000003199 for Material",
+  "title": "SPOR 200000003199 for Material",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/200000003199"
+}

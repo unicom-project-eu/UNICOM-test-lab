@@ -1,0 +1,103 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Medicinal Product Name Part type",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "220000000005",
+      "display": "Pharmaceutical dose form part"
+    },
+    {
+      "code": "220000000010",
+      "display": "Device part"
+    },
+    {
+      "code": "220000000003",
+      "display": "Scientific name part"
+    },
+    {
+      "code": "220000000001",
+      "display": "Full name"
+    },
+    {
+      "code": "220000000006",
+      "display": "Formulation part"
+    },
+    {
+      "code": "220000000011",
+      "display": "Trademark or company name part"
+    },
+    {
+      "code": "220000000009",
+      "display": "Container or pack part"
+    },
+    {
+      "code": "220000000013",
+      "display": "Flavour part"
+    },
+    {
+      "code": "220000000002",
+      "display": "Invented name part"
+    },
+    {
+      "code": "220000000015",
+      "display": "Legacy name"
+    },
+    {
+      "code": "220000000004",
+      "display": "Strength part"
+    },
+    {
+      "code": "220000000007",
+      "display": "Intended use part"
+    },
+    {
+      "code": "220000000012",
+      "display": "Time/Period part"
+    },
+    {
+      "code": "220000000014",
+      "display": "Delimiter part"
+    },
+    {
+      "code": "220000000016",
+      "display": "Target species name part"
+    },
+    {
+      "code": "220000000008",
+      "display": "Target population part"
+    }
+  ],
+  "id": "220000000000",
+  "url": "https://spor.ema.europa.eu/v1/lists/220000000000",
+  "name": "SPOR 220000000000 for Medicinal Product Name Part type",
+  "title": "SPOR 220000000000 for Medicinal Product Name Part type",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/220000000000"
+}

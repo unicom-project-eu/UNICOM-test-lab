@@ -1,0 +1,773 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Routes and Methods of Administration",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000073564",
+      "display": "Auricular use",
+      "definition": "Administration of a medicinal product to the ear."
+    },
+    {
+      "code": "100000073581",
+      "display": "In ovo",
+      "definition": "Administration of a veterinary medicinal product through the shell into an embryonated egg."
+    },
+    {
+      "code": "100000073565",
+      "display": "Beak dipping",
+      "definition": "Administration of a veterinary medicinal product by dipping the beak of birds into an aqueous solution of the medicinal product."
+    },
+    {
+      "code": "100000073568",
+      "display": "Dipping",
+      "definition": "Administration of a veterinary medicinal product by immersing the animal into a bath or plunge pool containing the medicinal product."
+    },
+    {
+      "code": "100000073570",
+      "display": "Endosinusial use",
+      "definition": "Administration of a medicinal product to the sinuses to obtain a local effect."
+    },
+    {
+      "code": "100000073571",
+      "display": "Endotracheopulmonary use",
+      "definition": "Administration of a medicinal product to the trachea and/or bronchi by instillation (preparations for inhalation are excluded; see inhalation use)."
+    },
+    {
+      "code": "100000073566",
+      "display": "Cutaneous use",
+      "definition": "Administration of a medicinal product to the skin and/or cutaneous wounds and/or nails and/or hair in order to obtain a local effect."
+    },
+    {
+      "code": "100000073567",
+      "display": "Dental use",
+      "definition": "Administration of a medicinal product to and/or in the teeth or, on and/or around the nerves supplying the teeth."
+    },
+    {
+      "code": "100000073569",
+      "display": "Endocervical use",
+      "definition": "Administration of a medicinal product to the cervix uteri."
+    },
+    {
+      "code": "100000073582",
+      "display": "In-feed use",
+      "definition": "Administration of a veterinary medicinal product by incorporation into the animal feed."
+    },
+    {
+      "code": "100000073572",
+      "display": "Epidural use",
+      "definition": "Injection of a medicinal product into the epidural space."
+    },
+    {
+      "code": "100000073575",
+      "display": "Foot-stab use",
+      "definition": "Administration of a veterinary medicinal product into the foot of birds."
+    },
+    {
+      "code": "100000073577",
+      "display": "Gastric use",
+      "definition": "Administration of a medicinal product to the stomach by means of an appropriate device"
+    },
+    {
+      "code": "100000073587",
+      "display": "Intraarterial use",
+      "definition": "Injection of a medicinal product into an artery."
+    },
+    {
+      "code": "100000073589",
+      "display": "Intrabursal use",
+      "definition": "Injection of a medicinal product into bursae and tendons."
+    },
+    {
+      "code": "100000073594",
+      "display": "Intracoronary use",
+      "definition": "Injection of a medicinal product into the coronary artery."
+    },
+    {
+      "code": "100000073595",
+      "display": "Intradermal use",
+      "definition": "Injection of a medicinal product into the dermis."
+    },
+    {
+      "code": "100000073601",
+      "display": "Intraocular use",
+      "definition": "Administration of a medicinal product into the eye. The term 'intraocular use' is only for use when a more specific term (e.g. 'intracameral use', 'intravitreal use') does not apply. Ocular use and subconjunctival use are excluded."
+    },
+    {
+      "code": "100000073591",
+      "display": "Intracavernous use",
+      "definition": "Injection of a medicinal product into the corpus cavernosum."
+    },
+    {
+      "code": "100000073579",
+      "display": "Haemodialysis",
+      "definition": "Clearance of the blood by means of a semipermeable membrane. [Previous English term 'Hemodialysis' corrected 04/07/11.]"
+    },
+    {
+      "code": "100000073583",
+      "display": "In-hive use",
+      "definition": "Administration of a veterinary medicinal product by placing it or sprinkling over a bee hive."
+    },
+    {
+      "code": "100000073588",
+      "display": "Intraarticular use",
+      "definition": "Injection of a medicinal product into an articular cavity."
+    },
+    {
+      "code": "100000073598",
+      "display": "Intralymphatic use",
+      "definition": "Injection of a medicinal product into a lymphatic vessel."
+    },
+    {
+      "code": "100000073604",
+      "display": "Intraperitoneal use",
+      "definition": "Injection of a medicinal product into the peritoneal cavity."
+    },
+    {
+      "code": "100000073607",
+      "display": "Intrasternal use",
+      "definition": "Injection of a medicinal product into the bone marrow of the sternum."
+    },
+    {
+      "code": "100000073620",
+      "display": "Oromucosal use",
+      "definition": "Administration of a medicinal product to the oral cavity to obtain either a systemic or a local effect. The term oromucosal is only for use when a more specific term (e.g. buccal, gingival, sublingual...) does not apply. Oral use is excluded."
+    },
+    {
+      "code": "100000073597",
+      "display": "Intralesional use",
+      "definition": "Administration by injection or any other means of a medicinal product directly to a lesion."
+    },
+    {
+      "code": "100000073614",
+      "display": "Laryngopharyngeal use",
+      "definition": "Administration of a medicinal product to the laryngopharynx for a local effect (anaesthetics)."
+    },
+    {
+      "code": "100000073625",
+      "display": "Periodontal use",
+      "definition": "Administration to the pouch between the tooth and the gingiva."
+    },
+    {
+      "code": "100000075557",
+      "display": "Periosseous use",
+      "definition": "Administration of a medicinal product on or around the bone"
+    },
+    {
+      "code": "100000075266",
+      "display": "Parenteral use"
+    },
+    {
+      "code": "100000075267",
+      "display": "Other use"
+    },
+    {
+      "code": "100000075268",
+      "display": "Ophthalmic use"
+    },
+    {
+      "code": "100000075270",
+      "display": "Intravenous drip use"
+    },
+    {
+      "code": "100000075261",
+      "display": "Unknown use"
+    },
+    {
+      "code": "100000075260",
+      "display": "Intraprostatic use",
+      "definition": "Administration of a medicinal product into the prostate"
+    },
+    {
+      "code": "100000075262",
+      "display": "Topical use"
+    },
+    {
+      "code": "100000075263",
+      "display": "Subdermal use"
+    },
+    {
+      "code": "100000075265",
+      "display": "Respiratory use"
+    },
+    {
+      "code": "100000111216",
+      "display": "Occlusive dressing technique use"
+    },
+    {
+      "code": "100000075237",
+      "display": "Intraileal use"
+    },
+    {
+      "code": "100000075238",
+      "display": "Intragastric use"
+    },
+    {
+      "code": "100000075240",
+      "display": "Intradural use"
+    },
+    {
+      "code": "100000075241",
+      "display": "Intraduodenal use"
+    },
+    {
+      "code": "100000075242",
+      "display": "Intranasal use"
+    },
+    {
+      "code": "100000075243",
+      "display": "Local use"
+    },
+    {
+      "code": "100000075244",
+      "display": "Not mentioned"
+    },
+    {
+      "code": "100000075245",
+      "display": "In vitro use"
+    },
+    {
+      "code": "100000075246",
+      "display": "Intraabdominal use"
+    },
+    {
+      "code": "100000075247",
+      "display": "Interstitial use"
+    },
+    {
+      "code": "100000111217",
+      "display": "Transplacental use"
+    },
+    {
+      "code": "100000075251",
+      "display": "Conjunctival use"
+    },
+    {
+      "code": "100000075252",
+      "display": "Transmucosal use"
+    },
+    {
+      "code": "100000075253",
+      "display": "Soft tissue use"
+    },
+    {
+      "code": "100000075254",
+      "display": "Percutaneous use"
+    },
+    {
+      "code": "100000075255",
+      "display": "Nasogastric use"
+    },
+    {
+      "code": "100000075256",
+      "display": "Intraventricular use"
+    },
+    {
+      "code": "100000075257",
+      "display": "Intravascular use"
+    },
+    {
+      "code": "100000075258",
+      "display": "Intratympanic use"
+    },
+    {
+      "code": "100000075271",
+      "display": "Intravenous bolus use"
+    },
+    {
+      "code": "100000075272",
+      "display": "Intratracheal use"
+    },
+    {
+      "code": "100000075273",
+      "display": "Intrahepatic use"
+    },
+    {
+      "code": "100000075555",
+      "display": "Intramuscular and intravenous use"
+    },
+    {
+      "code": "100000075558",
+      "display": "Subgingival use"
+    },
+    {
+      "code": "100000075559",
+      "display": "Epicutaneous use"
+    },
+    {
+      "code": "100000075673",
+      "display": "Intraepidermal use",
+      "definition": "Administration of a medicinal product into the epidermis"
+    },
+    {
+      "code": "100000170847",
+      "display": "Coarse spray"
+    },
+    {
+      "code": "200000010603",
+      "display": "Intraputaminal use",
+      "definition": "Administration of a medicinal product into one or both of the putamen of the brain."
+    },
+    {
+      "code": "200000012510",
+      "display": "Instillation"
+    },
+    {
+      "code": "200000016447",
+      "display": "Injection"
+    },
+    {
+      "code": "200000016448",
+      "display": "Solution for infusion"
+    },
+    {
+      "code": "200000016449",
+      "display": "Infusion"
+    },
+    {
+      "code": "200000017716",
+      "display": "External use"
+    },
+    {
+      "code": "200000017722",
+      "display": "Preservative solution"
+    },
+    {
+      "code": "200000017723",
+      "display": "Concentrate for solution for infusion"
+    },
+    {
+      "code": "200000017724",
+      "display": "Solution for injection"
+    },
+    {
+      "code": "200000017725",
+      "display": "Irrigation"
+    },
+    {
+      "code": "200000022791",
+      "display": "Intrafollicular use"
+    },
+    {
+      "code": "200000022792",
+      "display": "Intratesticular use"
+    },
+    {
+      "code": "200000023029",
+      "display": "Intrasynovial use"
+    },
+    {
+      "code": "100000075250",
+      "display": "Enteral use"
+    },
+    {
+      "code": "100000111215",
+      "display": "Intrathoracic use"
+    },
+    {
+      "code": "100000111214",
+      "display": "Intrameningeal use"
+    },
+    {
+      "code": "100000143556",
+      "display": "Nail use"
+    },
+    {
+      "code": "100000073584",
+      "display": "Inhalation use",
+      "definition": "Administration of a medicinal product to the respiratory system by inhalation to obtain a systemic or a local effect in the lower respiratory tract. Nasal use and endotracheopulmonary use are excluded"
+    },
+    {
+      "code": "100000073585",
+      "display": "Intestinal use",
+      "definition": "Administration of a medicinal product to the intestine (duodenum, jejunum, ileum and colon) by means of an appropriate device. Gastroenteral use is excluded"
+    },
+    {
+      "code": "100000073573",
+      "display": "Epilesional use",
+      "definition": "Administration of a medicinal product onto a lesion."
+    },
+    {
+      "code": "100000073574",
+      "display": "Extraamniotic use",
+      "definition": "Injection of a medicinal product between chorion and amnion."
+    },
+    {
+      "code": "100000073578",
+      "display": "Gingival use",
+      "definition": "Administration of a medicinal product to the gingivae."
+    },
+    {
+      "code": "100000073580",
+      "display": "In drinking water/milk use",
+      "definition": "Administration of a veterinary medicinal product by incorporation into the animal drinking water, milk or milk replacer. [Previous English term 'In drinking water or milk use' corrected 28/03/2011.]"
+    },
+    {
+      "code": "100000073586",
+      "display": "Intraamniotic use",
+      "definition": "Injection of a medicinal product into the amniotic cavity."
+    },
+    {
+      "code": "100000073590",
+      "display": "Intracardiac use",
+      "definition": "Injection of a medicinal product into the cardiac muscle and/or cardiac cavity."
+    },
+    {
+      "code": "100000073615",
+      "display": "Nasal use",
+      "definition": "Administration of a medicinal product to the nose to obtain a systemic or local effect. Inhalation therapy intended for the lower respiratory tract is excluded; see inhalation use."
+    },
+    {
+      "code": "100000073617",
+      "display": "Ocular use",
+      "definition": "Administration of a medicinal product upon the eyeball and/or conjunctiva."
+    },
+    {
+      "code": "100000073593",
+      "display": "Intracervical use",
+      "definition": "Injection of a medicinal product into the cervix uteri."
+    },
+    {
+      "code": "100000073596",
+      "display": "Intradiscal use",
+      "definition": "Injection of a medicinal product into the nucleus pulposus of an intervertebral disc."
+    },
+    {
+      "code": "100000073599",
+      "display": "Intramammary use",
+      "definition": "Administration of a veterinary medicinal product into the intramammary gland via the teat canal."
+    },
+    {
+      "code": "100000073600",
+      "display": "Intramuscular use",
+      "definition": "Injection of a medicinal product into muscular tissue."
+    },
+    {
+      "code": "100000073602",
+      "display": "Intraosseous use",
+      "definition": "Administration of a medicinal product into the bone marrow. Intrasternal use is excluded."
+    },
+    {
+      "code": "100000073603",
+      "display": "Intrapericardial use",
+      "definition": "Injection of a medicinal product to the pericardium."
+    },
+    {
+      "code": "100000073605",
+      "display": "Intrapleural use",
+      "definition": "Injection of a medicinal product into the pleural cavity."
+    },
+    {
+      "code": "100000073606",
+      "display": "Intraruminal use",
+      "definition": "Administration of a veterinary medicinal product into the rumen."
+    },
+    {
+      "code": "100000073609",
+      "display": "Intratumoral use",
+      "definition": "Injection of a medicinal product into a tumor."
+    },
+    {
+      "code": "100000073610",
+      "display": "Intrauterine use",
+      "definition": "Administration of a medicinal product to the cavity of the uterus."
+    },
+    {
+      "code": "100000073611",
+      "display": "Intravenous use",
+      "definition": "Injection of a medicinal product into a vein."
+    },
+    {
+      "code": "100000073612",
+      "display": "Intravesical use",
+      "definition": "Administration of a medicinal product to the urinary bladder."
+    },
+    {
+      "code": "100000073616",
+      "display": "Nebulisation use",
+      "definition": "Administration of a veterinary medicinal product converted into an aerosol for mass medication, for example of birds."
+    },
+    {
+      "code": "100000073618",
+      "display": "Oculonasal use",
+      "definition": "Administration of a veterinary medicinal product by instillation (dropping) into the eyes and nares of individual animals (usually birds), or spraying onto the animals to achieve the same effect."
+    },
+    {
+      "code": "100000073619",
+      "display": "Oral use",
+      "definition": "Taking a medicinal product by means of swallowing."
+    },
+    {
+      "code": "100000073640",
+      "display": "Water-borne use",
+      "definition": "Administration of a veterinary medicinal product to aquatic (marine or fresh water) species by medication of the water environment."
+    },
+    {
+      "code": "100000073622",
+      "display": "Paravertebral use",
+      "definition": "Injection of a veterinary medicinal product along the spinal column of animals."
+    },
+    {
+      "code": "100000073623",
+      "display": "Periarticular use",
+      "definition": "Injection of a medicinal product around a joint."
+    },
+    {
+      "code": "100000073624",
+      "display": "Perineural use",
+      "definition": "Injection of a medicinal product into the direct surroundings of one or more nerves."
+    },
+    {
+      "code": "100000073626",
+      "display": "Posterior juxtascleral use",
+      "definition": "Administration of a medicinal product beneath the sub-tenon membrane of the sclera (i.e. in the episcleral space), adjacent to the macula."
+    },
+    {
+      "code": "100000073627",
+      "display": "Pour-on use",
+      "definition": "Administration of a veterinary medicinal product by pouring onto the dorsal midline of the animal or to the top of the head and around the base of the horns."
+    },
+    {
+      "code": "100000073628",
+      "display": "Rectal use",
+      "definition": "Administration of a medicinal product to the rectum in order to obtain a local or systemic effect."
+    },
+    {
+      "code": "100000073629",
+      "display": "Route of administration not applicable",
+      "definition": "Applies to medicinal products not directly coming into contact with the body of the patient, or administration to various or non-specified anatomical sites."
+    },
+    {
+      "code": "100000073630",
+      "display": "Skin scarification",
+      "definition": "Administration of a medicinal product by scratching the skin."
+    },
+    {
+      "code": "100000073631",
+      "display": "Spot-on use",
+      "definition": "Administration of a veterinary medicinal product to a single site on the back of the animal or the base of the poll of the head."
+    },
+    {
+      "code": "100000073632",
+      "display": "Subconjunctival use",
+      "definition": "Injection of a medicinal product underneath the conjunctiva."
+    },
+    {
+      "code": "100000073633",
+      "display": "Subcutaneous use",
+      "definition": "Injection of a medicinal product directly underneath the skin, i.e. subdermally"
+    },
+    {
+      "code": "100000073634",
+      "display": "Sublingual use",
+      "definition": "Administration of a medicinal product under the tongue to obtain a systemic effect."
+    },
+    {
+      "code": "100000073635",
+      "display": "Teat use",
+      "definition": "Administration of a veterinary medicinal product to the surface of teat(s). Teat dipping is included."
+    },
+    {
+      "code": "100000073636",
+      "display": "Top-dressing use",
+      "definition": "Administration of a veterinary medicinal product by application onto the surface of the feed immediately prior to feeding."
+    },
+    {
+      "code": "100000073637",
+      "display": "Transdermal use",
+      "definition": "Administration of a medicinal product to the skin in order to obtain a systemic effect after passing through the skin barrier."
+    },
+    {
+      "code": "100000073639",
+      "display": "Vaginal use",
+      "definition": "Administration of a medicinal product to the vagina."
+    },
+    {
+      "code": "100000073641",
+      "display": "Wing-web-stab use",
+      "definition": "Administration of a veterinary medicinal product into the wing-web of a bird."
+    },
+    {
+      "code": "100000075239",
+      "display": "Intraepidermal use",
+      "definition": "Administration of a medicinal product into the epidermis"
+    },
+    {
+      "code": "100000075264",
+      "display": "Retrobulbar use",
+      "definition": "Administration of a medicinal product behind the eyeball"
+    },
+    {
+      "code": "100000075553",
+      "display": "In drinking water use",
+      "definition": "Administration of a veterinary medicinal product by incorporation into the animal drinking water."
+    },
+    {
+      "code": "100000075554",
+      "display": "Submucosal use",
+      "definition": "Injection of a medicinal product directly underneath a mucosa"
+    },
+    {
+      "code": "100000111213",
+      "display": "Intracorneal use",
+      "definition": "Administration of a medicinal product into the cornea of the eye."
+    },
+    {
+      "code": "100000075248",
+      "display": "Infiltration",
+      "definition": "Method of administration, usually by injection, whereby a fluid passes into a target tissue (e.g. anaesthetic infiltration)"
+    },
+    {
+      "code": "100000075249",
+      "display": "Implantation",
+      "definition": "Insertion of an implant or living tissue equivalent into living tissue."
+    },
+    {
+      "code": "100000075269",
+      "display": "Iontophoresis",
+      "definition": "Introduction of (an) ionised active substance(s) through the intact skin by application of a direct electric current"
+    },
+    {
+      "code": "100000075274",
+      "display": "Intracisternal use",
+      "definition": "Administration of a medicinal product into the cisterna magna."
+    },
+    {
+      "code": "100000075275",
+      "display": "Buccal use",
+      "definition": "Administration of a medicinal product to the buccal cavity (pouch located between the cheek and the gum) to obtain a systemic effect"
+    },
+    {
+      "code": "100000075276",
+      "display": "Intracartilaginous use",
+      "definition": "Administration of a medicinal product into the cartilage"
+    },
+    {
+      "code": "100000075556",
+      "display": "Extracorporeal use",
+      "definition": "Use of a medicinal product outside the body"
+    },
+    {
+      "code": "200000010645",
+      "display": "Transmammary",
+      "definition": "Exposure of a breast-feeding infant to a medicinal product administered to the lactating mother."
+    },
+    {
+      "code": "200000024875",
+      "display": "Extrapleural use",
+      "definition": "Injection of a medicinal product directly outside the pleural cavity, between the parietal pleura and the endothoracic fascia."
+    },
+    {
+      "code": "100000125763",
+      "display": "Intracameral use",
+      "definition": "Administration of a medicinal product directly into the anterior chamber of the eye"
+    },
+    {
+      "code": "100000155948",
+      "display": "Intraportal use",
+      "definition": "Injection/infusion of a medicinal product into the hepatic portal vein for local delivery to the liver."
+    },
+    {
+      "code": "100000156091",
+      "display": "Intracholangiopancreatic use",
+      "definition": "Injection of a medicinal product into the bile duct and the pancreatic duct, for example via a cannula introduced into the ampulla of Vater (the common opening of the ducts), usually for the administration of a contrast medium for techniques such as endoscopic retrograde cholangiopancreatography (ERCP)."
+    },
+    {
+      "code": "100000156092",
+      "display": "Peritumoral use",
+      "definition": "Administration of a medicinal product directly into the region surrounding a tumour."
+    },
+    {
+      "code": "100000157797",
+      "display": "Intraglandular use",
+      "definition": "Administration of a medicinal product directly into a gland, usually by injection. Only to be used where more-specific terms such as 'Intraprostatic use' and 'Intramammary use' do not apply."
+    },
+    {
+      "code": "100000170084",
+      "display": "Subretinal use",
+      "definition": "Administration of a medicinal product between the sensory retina (neural retina) and the retinal pigment epithelium of the eye."
+    },
+    {
+      "code": "100000170279",
+      "display": "Intracerebroventricular use",
+      "definition": "Administration of a medicinal product into the cerebral ventricles (cerebral ventricular system) of the brain."
+    },
+    {
+      "code": "200000010644",
+      "display": "Transplacental",
+      "definition": "In utero exposure of an embryo/foetus to a medicinal product administered to the pregnant mother."
+    },
+    {
+      "code": "100000073576",
+      "display": "Gastroenteral use",
+      "definition": "Administration of a medicinal product to the gastroenteral tract by means of an appropriate device. For use only when gastric use and intestinal use do not apply."
+    },
+    {
+      "code": "100000073613",
+      "display": "Intravitreal use",
+      "definition": "Administration of a medicinal product into the rear chamber of the eye."
+    },
+    {
+      "code": "100000073638",
+      "display": "Urethral use",
+      "definition": "Administration of a medicinal product to the urethra."
+    },
+    {
+      "code": "100000075259",
+      "display": "Intrapulmonary use",
+      "definition": "Administration of a medicinal product into the lung, usually by injection. 'Inhalation use' and 'Endotracheopulmonary use' are excluded."
+    },
+    {
+      "code": "200000010643",
+      "display": "Topical",
+      "definition": "Administration of a medicinal product by an unspecified route, including administration to the skin or to a mucous membrane, and excluding oral and parenteral administration. This term is only to be used where a single specific route of administration (e.g. 'Cutaneous use') cannot be identified."
+    },
+    {
+      "code": "100000073592",
+      "display": "Intracerebral use",
+      "definition": "Administration of a medicinal product directly to the brain tissue. This term is only for use when a more-specific term (e.g. 'Intraputaminal use') is not applicable."
+    },
+    {
+      "code": "100000073621",
+      "display": "Oropharyngeal use",
+      "definition": "Administration of a medicinal product to the oropharynx (throat) to obtain a local effect."
+    },
+    {
+      "code": "100000073608",
+      "display": "Intrathecal use",
+      "definition": "Injection of a medicinal product through the dura to the subarachnoid cavity."
+    }
+  ],
+  "id": "100000073345",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000073345",
+  "name": "SPOR 100000073345 for Routes and Methods of Administration",
+  "title": "SPOR 100000073345 for Routes and Methods of Administration",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000073345"
+}

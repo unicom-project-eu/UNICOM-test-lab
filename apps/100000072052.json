@@ -1,0 +1,62 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "lastUpdated": "2020-04-09T21:10:28.568+00:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-11-17T05:18:48-07:00",
+  "publisher": "EMA",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "This Code System includes the SPOR list for Marketing Status",
+  "copyright": "This material derives from the HL7 Terminology (THO). THO is copyright \u00a91989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "100000072074",
+      "display": "Not marketed",
+      "definition": "The product has a marketing authorization granted and is not placed on the market."
+    },
+    {
+      "code": "230000000000",
+      "display": "Temporarily unavailable"
+    },
+    {
+      "code": "100000072083",
+      "display": "Marketed",
+      "definition": "The product has a marketing authorization granted and is placed on the market."
+    },
+    {
+      "code": "100000072075",
+      "display": "No data provided",
+      "definition": "The product has a marketing authorization granted and it is unknown to the regulatory authority if the product is placed on the market or not."
+    },
+    {
+      "code": "200000026055",
+      "display": "Never marketed"
+    }
+  ],
+  "id": "100000072052",
+  "url": "https://spor.ema.europa.eu/v1/lists/100000072052",
+  "name": "SPOR 100000072052 for Marketing Status",
+  "title": "SPOR 100000072052 for Marketing Status",
+  "valueSet": "https://spor.ema.europa.eu/v1/lists/100000072052"
+}
