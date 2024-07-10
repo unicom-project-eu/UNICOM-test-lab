@@ -1,572 +1,23 @@
 document.getElementById('questionnaireForm').addEventListener('submit', function (event) {
     event.preventDefault();
+    const selects = document.querySelectorAll('.dynamic-select');
+    //start transaction
+    const selectedData = {};
 
-    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
-    const MPID = document.getElementById('MPID').value;
-    const IVP = document.getElementById('IVP').value;
-    const SP = document.getElementById('SP').value;
-    const PDFP = document.getElementById('PDFP').value;
-    const nameusage = document.getElementById('nameusage').value;
-    const nameusageid = document.getElementById('nameusage').id;
-    const mpddoseform = document.getElementById('mpddoseform').value;
-    const mpddoseformid = document.getElementById('mpddoseform').id;
-
-    var mpd = {
-        "resourceType": "MedicinalProductDefinition",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLMedicinalProductDefinition"
-            ]
-        },
-        "identifier": [
-            {
-                "system": "http://ema.europa.eu/fhir/mpId",
-                "value": MPID,
-            }
-        ],
-        "domain": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/100000000004",
-                    "code": "100000000012",
-                    "display": "Human use"
-                }
-            ]
-        },
-        "status": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/200000005003",
-                    "code": "200000005004",
-                    "display": "Current"
-                }
-            ]
-        },
-        "combinedPharmaceuticalDoseForm": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/200000000004",
-                    "code": mpddoseformid,
-                    "display": mpddoseform
-                }
-            ]
-        },
-        "legalStatusOfSupply": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/100000072051",
-                    "code": "100000072084",
-                    "display": "Medicinal product subject to medical prescription"
-                }
-            ]
-        },
-        "name": [
-            {
-                "productName": IVP + " " + SP + " " + PDFP,
-                "part": [
-                    {
-                        "part": IVP,
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "https://spor.ema.europa.eu/v1/lists/220000000000",
-                                    "code": "220000000002",
-                                    "display": "Invented name part"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "part": SP,
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "https://spor.ema.europa.eu/v1/lists/220000000000",
-                                    "code": "220000000004",
-                                    "display": "Strength part"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "part": PDFP,
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "https://spor.ema.europa.eu/v1/lists/220000000000",
-                                    "code": "220000000005",
-                                    "display": "Pharmaceutical dose form part"
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "usage": [
-                    {
-                        "country": {
-                            "coding": [
-                                {
-                                    "system": "https://spor.ema.europa.eu/v1/lists/100000000002",
-                                    "code": nameusageid,
-                                    "display": nameusage,
-                                }
-                            ]
-                        },
-                        "language": {
-                            "coding": [
-                                {
-                                    "system": "urn:ietf:bcp:47",
-                                    "code": "et",
-                                    "display": "Estonian"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }]
-    };
-    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
-
-    const region = document.getElementById('region').value;
-    const regionid = document.getElementById('region').id;
-
-    const mahstatus = document.getElementById('mahstatus').value;
-    const mahstatusid = document.getElementById('mahstatus').id;
-
-    const MAH = document.getElementById('MAH').value;
-    const MAID = document.getElementById('MAID').value;
-    const MASTATUSDATE = document.getElementById('MASTATUSDATE').value;
-
-    var reagauth={
-        "resourceType": "RegulatedAuthorization",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLRegulatedAuthorization"
-            ]
-        },
-        "identifier": [
-            {
-                "value": MAID,
-            }
-        ],
-        "subject": [
-            {
-                "reference": "MedicinalProductDefinition/" + MPID
-            }
-        ],
-        "type": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/220000000060",
-                    "code": "220000000061",
-                    "display": "Marketing Authorisation"
-                }
-            ]
-        },
-        "region": [
-            {
-                "coding": [
-                    {
-                        "system": "https://spor.ema.europa.eu/v1/lists/100000000002",
-                        "code": regionid,
-                        "display": region,
-                    }
-                ]
-            }
-        ],
-        "status": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/100000072049",
-                    "code": mahstatusid,
-                    "display": mahstatus
-                }
-            ]
-        },
-        "statusDate": MASTATUSDATE,
-        "holder": {
-            "reference": "Organization/" + MAHID + "-" + MAH,
+    selects.forEach(select => {
+        const selectData = $(select).select2('data');
+        if (!selectedData[select.id]) {
+            selectedData[select.id] = [];
         }
-    };
+        selectData.forEach(item => {
+            selectedData[select.id].push({
+                id: item.id,
+                text: item.text
+            });
+        });
+    });
 
-       ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
-
-    const MAHID = document.getElementById('MAHID').value;
-    const FHIRBASE = "http://localhost:8080/fhir/"
-
-
-    var org={
-        "resourceType": "Organization",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLOrganization"
-            ]
-        },
-        "identifier": [
-            {
-                "system": "https://spor.ema.europa.eu/v1/locations",
-                "value": MAHID
-            }
-        ],
-        "name": MAH,
-    };
-    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
-
-    const apddoseformid = document.getElementById('mahstatus').id;
-    const apddoseform = document.getElementById('mahstatus').value;
-
-    const apdunit = document.getElementById('apdunit').value;
-    const apdunitid = document.getElementById('apdunit').id;
-
-    const selectedRoas = $('#roa').select2('data').map(option => ({
-        id: option.id,
-        text: option.text
-    }));
-    console.log('Selected RoA:', selectedRoas);
-    var roas = [];
-    for (var i = 0; i < selectedRoas.length; i++) {
-
-        roas.push({
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://spor.ema.europa.eu/v1/lists/100000073345",
-                        "code": selectedRoas[i].id,
-                        "display": selectedRoas[i].text
-                    }
-                ]
-            }
-        })
-    };
-
-    var apd={
-        "resourceType": "AdministrableProductDefinition",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLAdministrableProductDefinition"
-            ]
-        },
-
-        "status": "active",
-        "formOf": [
-            {
-                "reference": "MedicinalProductDefinition/" + MPID
-            }
-        ],
-        "administrableDoseForm": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/200000000004",
-                    "code": apddoseformid,
-                    "display": apddoseform
-                }
-            ]
-        },
-        "unitOfPresentation": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                    "code": apdunitid,
-                    "display": apdunit
-                }
-            ]
-        },
-        "producedFrom": [
-            {
-                "reference": "ManufacturedItemDefinition/" + MPID + "-MID"
-            }
-        ],
-        "routeOfAdministration": roas,
-    };
-    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
-
-    
-    const midunitpres = document.getElementById('apdunit').value;
-    const midunitpresid = document.getElementById('apdunit').id;
-
-    const middoseform = document.getElementById('apdunit').value;
-    const middoseformid = document.getElementById('apdunit').id;
-
-
-    var mid={
-        "resourceType": "ManufacturedItemDefinition",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLManufacturedItemDefinition"
-            ]
-        },
-        "status": "active",
-        "manufacturedDoseForm": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/200000000004",
-                    "code": middoseformid,
-                    "display": middoseform
-                }
-            ]
-        },
-        "unitOfPresentation": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                    "code": midunitpresid,
-                    "display": midunitpres
-                }
-            ]
-        }
-    };
-    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
-
-    const packquantityunit = document.getElementById('packquantityunit').value;
-    const packquantityunitid = document.getElementById('packquantityunit').id;
-    const packdescription = document.getElementById('packdescription').value;
-    const packquantity = document.getElementById('packquantity').value;
-    const selectedMaterials = $('#packquantitymaterial').select2('data').map(option => ({
-        id: option.id,
-        text: option.text
-    }));
-    console.log('Selected packquantitymaterial:', selectedMaterials);
-
-    var materials = [];
-    for (var i = 0; i < selectedMaterials.length; i++) {
-
-        materials.push({
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://spor.ema.europa.eu/v1/lists/200000003199",
-                        "code": selectedMaterials[i].id,
-                        "display": selectedMaterials[i].text
-                    }
-                ]
-            }
-        })
-    };
-    
-    const packidentifier = document.getElementById('packidentifier').value;
-    const packsizeunit = document.getElementById('packsizeunit').value;
-    const packsize = document.getElementById('packsize').value;
-    const packsizeunitid = document.getElementById('packsizeunit').id;
-    const containedelements= document.getElementById('packsizeunit').value;
-
-    var ppd={
-        "resourceType": "PackagedProductDefinition",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLPackagedProductDefinition"
-            ]
-        },
-
-        "identifier": [
-            {
-                "system": "http://ema.europa.eu/example/pcid",
-                "value": packidentifier
-            }
-        ],
-        "packageFor": [
-            {
-                "reference": "MedicinalProductDefinition/" + MPID,
-            }
-        ],
-        "containedItemQuantity": [
-            {
-                "value": packquantity,
-                "unit": packquantityunit,
-                "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                "code": packquantityunitid,
-            }
-        ],
-        "description": packdescription,
-        "packaging": {
-            "type": {
-                "coding": [
-                    {
-                        "system": "https://spor.ema.europa.eu/v1/lists/100000073346",
-                        "code": "100000073498",
-                        "display": "Box"
-                    }
-                ]
-            },
-            "quantity": 1,
-            "material": [
-                {
-                    "coding": [
-                        {
-                            "system": "https://spor.ema.europa.eu/v1/lists/200000003199",
-                            "code": "200000003529",
-                            "display": "Cardboard"
-                        }
-                    ]
-                }
-            ],
-            "packaging": [
-                {
-                    "type": {
-                        "coding": [
-                            {
-                                "system": "https://spor.ema.europa.eu/v1/lists/100000073346",
-                                "code": packsizeunitid,
-                                "display": packsizeunit
-                            }
-                        ]
-                    },
-                    "quantity": packsize,
-                    "material": materials,
-                    "containedItem": [
-                        {
-                            "item": {
-                                "reference": {
-                                    "reference": "ManufacturedItemDefinition/" + MPID + "-MID"
-                                }
-                            },
-                            "amount": {
-                                "value": containedelements,
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    };
-   
-  // check how many ings:
-
-   // Select the parent div by its id
-   const parentDiv = document.getElementById('ingredientBoxContainer');
-
-   // Select all child div elements
-   const childDivs = parentDiv.querySelectorAll('div');
-
-   // Get the count of child divs
-   const ingcount = childDivs.length;
-   var ings={};
-   console.log('Number of Ingredients:', ingcount);
-
-    for (var i = 0; i < ingcount; i++) {
-    if(i==0){appendix=""}
-    else{appendix=i}
-    const substrole = document.getElementById('substrole'+appendix).value;
-    const substroleid = document.getElementById('substrole'+appendix).id;
-
-    const substance = document.getElementById('substance'+appendix).value;
-    const substanceid = document.getElementById('substance'+appendix).id;
-
-    const psnumerator = document.getElementById('ps-numerator'+appendix).value;
-    const psnumunit = document.getElementById('ps-num-unit'+appendix).value;
-    const psnumunitid = document.getElementById('ps-num-unit'+appendix).id;
-
-    const psdenominator = document.getElementById('ps-denominator'+appendix).value;
-    const psdenunit = document.getElementById('ps-den-unit'+appendix).value;
-    const psdenunitid = document.getElementById('ps-den-unit'+appendix).id;
-
-    const rsnumerator = document.getElementById('rs-numerator'+appendix).value;
-    const rsnumunit = document.getElementById('rs-num-unit'+appendix).value;
-    const rsnumunitid = document.getElementById('rs-num-unit'+appendix).id;
-
-    const rsdenominator = document.getElementById('rs-denominator'+appendix).value;
-    const rsdenunit = document.getElementById('rs-den-unit'+appendix).value;
-    const rsdenunitid = document.getElementById('rs-den-unit'+appendix).id;
-
-    var ing={
-        "resourceType": "Ingredient",
-        "meta": {
-            "profile": [
-                "http://unicom-project.eu/fhir/StructureDefinition/PPLIngredient"
-            ]
-        },
-        "status": "active",
-        "for": [
-            {
-                "reference": "MedicinalProductDefinition/" + MPID
-            },
-            {
-                "reference": "ManufacturedItemDefinition/" + MPID + "-MID",
-            },
-            {
-                "reference": "AdministrableProductDefinition/" + MPID + "-APD",
-            }
-        ],
-        "role": {
-            "coding": [
-                {
-                    "system": "https://spor.ema.europa.eu/v1/lists/100000072050",
-                    "code": substroleid,
-                    "display": substrole
-                }
-            ]
-        },
-        "substance": {
-            "code": {
-                "concept": {
-                    "coding": [
-                        {
-                            "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
-                            "code": substanceid,
-                            "display": substance
-                        }
-                    ]
-                }
-            },
-            "strength": [
-                {
-                    "presentationRatio": {
-                        "numerator": {
-                            "value": psnumerator,
-                            "unit": psnumunit,
-                            "system": "https://spor.ema.europa.eu/v1/lists/100000110633",
-                            "code": psnumunitid
-                        },
-                        "denominator": {
-                            "value": psdenominator,
-                            "unit": psdenunit,
-                            "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                            "code": psdenunitid
-                        }
-                    },
-                    "referenceStrength": [
-                        {
-                            "substance": {
-                                "concept": {
-                                    "coding": [
-                                        {
-                                            "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
-                                            "code": "100000085259",
-                                            "display": "Amlodipine"
-                                        }
-                                    ]
-                                }
-                            },
-                            "strengthRatio": {
-                                "numerator": {
-                                    "value": rsnumerator,
-                                    "unit": rsnumunit,
-                                    "system": "https://spor.ema.europa.eu/v1/lists/100000110633",
-                                    "code": rsnumunitid
-                                },
-                                "denominator": {
-                                    "value": rsdenominator,
-                                    "unit": rsdenunit,
-                                    "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                                    "code": rsdenunitid
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    };
-
-    ings.push({
-        "fullUrl": "Ingredient" + MPID + "-" + substanceid+appendix,
-        "resource": ing, "request": {
-            "method": "POST",
-            "url": "Ingredient"
-        }
-    })
-
-
-    }
+    console.log('All selected data:', selectedData);
 
     // Create FHIR-compliant JSON
     var fhirTransaction = {
@@ -574,54 +25,566 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
         "id": "bundle-transaction",
         "type": "transaction",
         "entry": [
-            {
-                "fullUrl": "MedicinalProductDefinition/" + MPID,
-                "resource": mpd,
-                "request": {
-                    "method": "POST",
-                    "url": "MedicinalProductDefinition"
-                }
-            },
-            {
-                "fullUrl": "RegulatedAuthorization/" + MAID,
-                "resource": reagauth, "request": {
-                    "method": "POST",
-                    "url": "RegulatedAuthorization"
-                }
-            },
-            {
-                "fullUrl": "Organization/" + MAHID + "-" + MAH,
-                "resource": org, "request": {
-                    "method": "POST",
-                    "url": "Organization"
-                }
-            },
-            {
-                "fullUrl": "AdministrableProductDefinition/" + MPID + "-APD",
-                "resource": apd, "request": {
-                    "method": "POST",
-                    "url": "AdministrableProductDefinition"
-                }
-            },
-            {
-                "fullUrl": "ManufacturedItemDefinition/" + MPID + "-MID",
-                "resource": mid, "request": {
-                    "method": "POST",
-                    "url": "ManufacturedItemDefinition"
-                }
-            },
-           ings,
-            {
-                "fullUrl": "PackagedProductDefinition-" + MPID + "-PPD",
-                "resource": ppd, "request": {
-                    "method": "POST",
-                    "url": "PackagedProductDefinition"
-                }
-            }
         ]
     };
 
+    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
+    const MPID = document.getElementById('MPID').value;
+    const IVP = document.getElementById('IVP').value;
+    const SP = document.getElementById('SP').value;
+    const PDFP = document.getElementById('PDFP').value;
 
+
+    var mpd = {
+        "fullUrl": "MedicinalProductDefinition/" + MPID,
+        "resource": {
+            "resourceType": "MedicinalProductDefinition",
+            "meta": {
+                "profile": [
+                    "http://unicom-project.eu/fhir/StructureDefinition/PPLMedicinalProductDefinition"
+                ]
+            },
+            "identifier": [
+                {
+                    "system": "http://ema.europa.eu/fhir/mpId",
+                    "value": MPID,
+                }
+            ],
+            "domain": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/100000000004",
+                        "code": "100000000012",
+                        "display": "Human use"
+                    }
+                ]
+            },
+            "status": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000005003",
+                        "code": "200000005004",
+                        "display": "Current"
+                    }
+                ]
+            },
+            "combinedPharmaceuticalDoseForm": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000000004",
+                        "code": selectedData['mpddoseform'][0].id,
+                        "display": selectedData["mpddoseform"][0].text
+                    }
+                ]
+            },
+            "legalStatusOfSupply": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/100000072051",
+                        "code": "100000072084",
+                        "display": "Medicinal product subject to medical prescription"
+                    }
+                ]
+            },
+            "name": [
+                {
+                    "productName": IVP + " " + SP + " " + PDFP,
+                    "part": [
+                        {
+                            "part": IVP,
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "https://spor.ema.europa.eu/v1/lists/220000000000",
+                                        "code": "220000000002",
+                                        "display": "Invented name part"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "part": SP,
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "https://spor.ema.europa.eu/v1/lists/220000000000",
+                                        "code": "220000000004",
+                                        "display": "Strength part"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "part": PDFP,
+                            "type": {
+                                "coding": [
+                                    {
+                                        "system": "https://spor.ema.europa.eu/v1/lists/220000000000",
+                                        "code": "220000000005",
+                                        "display": "Pharmaceutical dose form part"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "usage": [
+                        {
+                            "country": {
+                                "coding": [
+                                    {
+                                        "system": "https://spor.ema.europa.eu/v1/lists/100000000002",
+                                        "code": selectedData["nameusage"][0].id,
+                                        "display": selectedData["nameusage"][0].text,
+                                    }
+                                ]
+                            },
+                            "language": {
+                                "coding": [
+                                    {
+                                        "system": "urn:ietf:bcp:47",
+                                        "code": "et",
+                                        "display": "Estonian"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }]
+        },
+        "request": {
+            "method": "POST",
+            "url": "MedicinalProductDefinition"
+        }
+    };
+    fhirTransaction["entry"].push(mpd);
+    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
+
+    const MAH = document.getElementById('MAH').value;
+    const MAID = document.getElementById('MAID').value;
+    const MASTATUSDATE = document.getElementById('MASTATUSDATE').value;
+    const MAHID = document.getElementById('MAHID').value;
+
+    var reagauth = {
+        "fullUrl": "RegulatedAuthorization/" + MAID,
+        "resource": {
+            "resourceType": "RegulatedAuthorization",
+            "meta": {
+                "profile": [
+                    "http://unicom-project.eu/fhir/StructureDefinition/PPLRegulatedAuthorization"
+                ]
+            },
+            "identifier": [
+                {
+                    "value": MAID,
+                }
+            ],
+            "subject": [
+                {
+                    "reference": "MedicinalProductDefinition/" + MPID
+                }
+            ],
+            "type": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/220000000060",
+                        "code": "220000000061",
+                        "display": "Marketing Authorisation"
+                    }
+                ]
+            },
+            "region": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://spor.ema.europa.eu/v1/lists/100000000002",
+                            "code": selectedData["region"][0].id,
+                            "display": selectedData["region"][0].text,
+                        }
+                    ]
+                }
+            ],
+            "status": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/100000072049",
+                        "code": selectedData["mahstatus"][0].id,
+                        "display": selectedData["mahstatus"][0].text,
+                    }
+                ]
+            },
+            "statusDate": MASTATUSDATE,
+            "holder": {
+                "reference": "Organization/" + MAHID + "-" + MAH,
+            }
+        }, "request": {
+            "method": "POST",
+            "url": "RegulatedAuthorization"
+        }
+    };
+    fhirTransaction["entry"].push(reagauth);
+
+    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
+
+    var org = {
+        "fullUrl": "Organization/" + MAHID + "-" + MAH,
+        "resource": {
+            "resourceType": "Organization",
+            "meta": {
+                "profile": [
+                    "http://unicom-project.eu/fhir/StructureDefinition/PPLOrganization"
+                ]
+            },
+            "identifier": [
+                {
+                    "system": "https://spor.ema.europa.eu/v1/locations",
+                    "value": MAHID
+                }
+            ],
+            "name": MAH,
+        }, "request": {
+            "method": "POST",
+            "url": "Organization"
+        }
+    };
+    fhirTransaction["entry"].push(org);
+
+    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
+
+
+    var roas = [];
+    for (var i = 0; i < selectedData["roa"].length; i++) {
+
+        roas.push({
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/100000073345",
+                        "code": selectedData["roa"][i].id,
+                        "display": selectedData["roa"][i].text
+                    }
+                ]
+            }
+        })
+    };
+
+    var apd = {
+        "fullUrl": "AdministrableProductDefinition/" + MPID + "-APD",
+        "resource": {
+            "resourceType": "AdministrableProductDefinition",
+            "meta": {
+                "profile": [
+                    "http://unicom-project.eu/fhir/StructureDefinition/PPLAdministrableProductDefinition"
+                ]
+            },
+
+            "status": "active",
+            "formOf": [
+                {
+                    "reference": "MedicinalProductDefinition/" + MPID
+                }
+            ],
+            "administrableDoseForm": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000000004",
+                        "code": selectedData["apddoseform"][0].id,
+                        "display": selectedData["apddoseform"][0].text,
+                    }
+                ]
+            },
+            "unitOfPresentation": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
+                        "code": selectedData["apdunit"][0].id,
+                        "display": selectedData["apdunit"][0].text,
+                    }
+                ]
+            },
+            "producedFrom": [
+                {
+                    "reference": "ManufacturedItemDefinition/" + MPID + "-MID"
+                }
+            ],
+            "routeOfAdministration": roas,
+        }, "request": {
+            "method": "POST",
+            "url": "AdministrableProductDefinition"
+        }
+    };
+    fhirTransaction["entry"].push(apd);
+
+    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
+
+    var mid = {
+        "fullUrl": "ManufacturedItemDefinition/" + MPID + "-MID",
+        "resource": {
+            "resourceType": "ManufacturedItemDefinition",
+            "meta": {
+                "profile": [
+                    "http://unicom-project.eu/fhir/StructureDefinition/PPLManufacturedItemDefinition"
+                ]
+            },
+            "status": "active",
+            "manufacturedDoseForm": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000000004",
+                        "code": selectedData["middoseform"][0].id,
+                        "display": selectedData["middoseform"][0].text,
+                    }
+                ]
+            },
+            "unitOfPresentation": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
+                        "code": selectedData["midunitpres"][0].id,
+                        "display": selectedData["midunitpres"][0].text,
+                    }
+                ]
+            }
+        }, "request": {
+            "method": "POST",
+            "url": "ManufacturedItemDefinition"
+        }
+    };
+    fhirTransaction["entry"].push(mid);
+
+    ////////////////////////////////////////////// Capture form data for MEDICINAL PRODUCT DEFINITION //////////////////////////////////////////////
+
+
+    const packdescription = document.getElementById('packdescription').value;
+    const packquantity = document.getElementById('packquantity').value;
+
+    var materials = [];
+    for (var i = 0; i < selectedData["packquantitymaterial"].length; i++) {
+
+        materials.push({
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://spor.ema.europa.eu/v1/lists/200000003199",
+                        "code": selectedData["packquantitymaterial"][i].id,
+                        "display": selectedData["packquantitymaterial"][i].text
+                    }
+                ]
+            }
+        })
+    };
+
+    const packidentifier = document.getElementById('packidentifier').value;
+
+    const containedelements = document.getElementById('containedelements').value;
+
+    var ppd = {
+        "fullUrl": "PackagedProductDefinition-" + MPID + "-PPD",
+        "resource": {
+            "resourceType": "PackagedProductDefinition",
+            "meta": {
+                "profile": [
+                    "http://unicom-project.eu/fhir/StructureDefinition/PPLPackagedProductDefinition"
+                ]
+            },
+
+            "identifier": [
+                {
+                    "system": "http://ema.europa.eu/example/pcid",
+                    "value": packidentifier
+                }
+            ],
+            "packageFor": [
+                {
+                    "reference": "MedicinalProductDefinition/" + MPID,
+                }
+            ],
+            "containedItemQuantity": [
+                {
+                    "value": packquantity,
+                    "unit": selectedData["packquantityunit"][0].id,
+                    "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
+                    "code": selectedData["packquantityunit"][0].text
+                }
+            ],
+            "description": packdescription,
+            "packaging": {
+                "type": {
+                    "coding": [
+                        {
+                            "system": "https://spor.ema.europa.eu/v1/lists/100000073346",
+                            "code": "100000073498",
+                            "display": "Box"
+                        }
+                    ]
+                },
+                "quantity": 1,
+                "material": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://spor.ema.europa.eu/v1/lists/200000003199",
+                                "code": "200000003529",
+                                "display": "Cardboard"
+                            }
+                        ]
+                    }
+                ],
+                "packaging": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "https://spor.ema.europa.eu/v1/lists/100000073346",
+                                    "code": selectedData["packsizeunit"][0].id,
+                                    "display": selectedData["packsizeunit"][0].text,
+                                }
+                            ]
+                        },
+                        "quantity": packsize,
+                        "material": materials,
+                        "containedItem": [
+                            {
+                                "item": {
+                                    "reference": {
+                                        "reference": "ManufacturedItemDefinition/" + MPID + "-MID"
+                                    }
+                                },
+                                "amount": {
+                                    "value": containedelements,
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }, "request": {
+            "method": "POST",
+            "url": "PackagedProductDefinition"
+        }
+    };
+    fhirTransaction["entry"].push(ppd);
+
+    ////////////////////////////////////////////// Capture form data for INGREDIENT //////////////////////////////////////////////
+
+    var ingcount = document.querySelectorAll("#ingredientBoxContainer > div").length;
+
+    console.log('Number of Ingredients:', ingcount);
+
+    for (var i = 0; i < ingcount; i++) {
+        if (i == 0) { appendix = "" }
+        else { appendix = i + 1 }
+        console.log(i);
+        console.log(appendix);
+        const substrole=document.getElementById('substrole'+appendix).selectedOptions[0].textContent;
+        const substroleid=document.getElementById('substrole'+appendix).selectedOptions[0].value;
+
+        const psnumerator = document.getElementById('ps-numerator' + appendix).value;
+
+        const psdenominator = document.getElementById('ps-denominator' + appendix).value;
+
+        const rsnumerator = document.getElementById('rs-numerator' + appendix).value;
+
+        const rsdenominator = document.getElementById('rs-denominator' + appendix).value;
+        console.log(selectedData["substance"+appendix][0].id);
+        var ing = {
+            "fullUrl": "Ingredient-" + MPID + "-" +  appendix,
+            "resource": {
+                "resourceType": "Ingredient",
+                "meta": {
+                    "profile": [
+                        "http://unicom-project.eu/fhir/StructureDefinition/PPLIngredient"
+                    ]
+                },
+                "status": "active",
+                "for": [
+                    {
+                        "reference": "MedicinalProductDefinition/" + MPID
+                    },
+                    {
+                        "reference": "ManufacturedItemDefinition/" + MPID + "-MID",
+                    },
+                    {
+                        "reference": "AdministrableProductDefinition/" + MPID + "-APD",
+                    }
+                ],
+                "role": {
+                    "coding": [
+                        {
+                            "system": "https://spor.ema.europa.eu/v1/lists/100000072050",
+                            "code": substroleid,
+                            "display": substrole,
+                        }
+                    ]
+                },
+                "substance": {
+                    "code": {
+                        "concept": {
+                            "coding": [
+                                {
+                                    "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
+                                    "code": selectedData["substance"+appendix][0].id,
+                                    "display": selectedData["substance"+appendix][0].text
+                                }
+                            ]
+                        }
+                    },
+                    "strength": [
+                        {
+                            "presentationRatio": {
+                                "numerator": {
+                                    "value": psnumerator,
+                                    "unit": selectedData["ps-num-unit"+appendix][0].text,
+                                    "system": "https://spor.ema.europa.eu/v1/lists/100000110633",
+                                    "code": selectedData["ps-num-unit"+appendix][0].id,
+                                },
+                                "denominator": {
+                                    "value": psdenominator,
+                                    "unit": selectedData["ps-den-unit"+appendix][0].text,
+                                    "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
+                                    "code": selectedData["ps-den-unit"+appendix][0].id
+                                }
+                            },
+                            "referenceStrength": [
+                                {
+                                    "substance": {
+                                        "concept": {
+                                            "coding": [
+                                                {
+                                                    "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
+                                                    "code": "100000085259",
+                                                    "display": "Amlodipine"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "strengthRatio": {
+                                        "numerator": {
+                                            "value": rsnumerator,
+                                            "unit": selectedData["rs-num-unit"+appendix][0].text,
+                                            "system": "https://spor.ema.europa.eu/v1/lists/100000110633",
+                                            "code": selectedData["rs-num-unit"+appendix][0].id
+                                        },
+                                        "denominator": {
+                                            "value": rsdenominator,
+                                            "unit": selectedData["rs-den-unit"+appendix][0].text,
+                                            "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
+                                            "code": selectedData["rs-den-unit"+appendix][0].id
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, "request": {
+                "method": "POST",
+                "url": "Ingredient"
+            }
+        };
+
+        fhirTransaction["entry"].push(ing);
+
+    }
 
     // Convert JSON object to string
     const fhirTransactionString = JSON.stringify(fhirTransaction);
@@ -639,6 +602,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
     })
         .then(response => {
             if (response.ok) {
+                showNotification("Submission successful!");
+
                 return response.json();
             }
             throw new Error('Network response was not ok.');
@@ -647,6 +612,21 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
             console.log('Success:', data);
         })
         .catch(error => {
+            showNotification("Submission failed!", true);
+
             console.error('Error:', error);
         });
+
+        function showNotification(message, isError = false) {
+            const notificationDiv = document.getElementById("notification");
+            notificationDiv.textContent = message;
+            notificationDiv.style.backgroundColor = isError ? '#f44336' : '#4CAF50';  // Red for error, green for success
+            notificationDiv.style.display = 'block';
+            setTimeout(() => {
+                notificationDiv.style.display = 'none';
+            }, 3000);
+        }
+        
+        const jsonOutputDiv = document.getElementById("jsonOutput");
+            jsonOutputDiv.innerHTML = `<pre>${fhirTransactionString}</pre>`;
 });

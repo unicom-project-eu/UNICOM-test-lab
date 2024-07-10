@@ -5,53 +5,166 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Questionnaire</title>
        <script src="https://cdn.tailwindcss.com"></script>
-
+       <style>
+        #notification {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const addButton = document.getElementById('addIngredient');
-                const ingredientBox = document.getElementById('ingredientBox');
-                let ingredientCount = 1;
-            
-                addButton.addEventListener('click', function() {
-                    ingredientCount++;
-                    const newBox = ingredientBox.cloneNode(true);
-                    newBox.id = 'ingredientBox' + ingredientCount;
-                    
-                    // Update the IDs and names of the inputs in the new box
-                    const inputs = newBox.querySelectorAll('select, input');
-                    inputs.forEach(input => {
-                        const oldId = input.id;
-                        const newId = input.id + ingredientCount;
-                        input.id = newId;
-                        input.name = newId;
-                        const label = newBox.querySelector(`label[for="${oldId}"]`);
-                        if (label) {
-                            label.setAttribute('for', newId);
-                        }
-                    });
-            
-                    // Update the title of the new box
-                    const title = newBox.querySelector('h2');
-                    title.textContent = `Ingredient ${ingredientCount}`;
-            
-                    // Insert the new box before the add button
-                    addButton.parentNode.insertBefore(newBox, addButton);
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addButton = document.getElementById('addIngredient');
+        const ingredientBox = document.getElementById('ingredientBox');
+        let ingredientCount = 1;
 
-                    const newSelects = newBox.querySelectorAll('.dynamic-select');
-                    console.log(newSelects)
-                newSelects.forEach(select => {
-                    $(select).val(null).trigger('change'); // Clear any existing data
+        addButton.addEventListener('click', function() {
+            ingredientCount++;
+            const newBox = document.createElement('div');
+                newBox.classList.add('section-box', 'mb-8', 'p-4', 'bg-red-50', 'rounded-lg');
+                newBox.id = 'ingredientBox' + ingredientCount;
 
-                
-                });
+            newBox.innerHTML = `
+                    <h2 class="font-bold mb-6">Ingredient ${ingredientCount}</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="mb-4">
+                            <label for="substrole${ingredientCount}" class="block text-gray-700">Role</label>
+                            <select id="substrole${ingredientCount}" name="substrole${ingredientCount}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                                <option selected value="100000072072">Active</option>
+                                <option value="100000072073">Adjuvant</option>
+                                <option value="100000072082">Excipient</option>
+                                <option value="100000136065">Starting material for excipient</option>
+                                <option value="100000136066">Solvent / Diluent</option>
+                                <option value="100000136178">Raw materials used in the manufacture of the product</option>
+                                <option value="100000136179">Starting material for active substance</option>
+                                <option value="100000136561">Overage</option>
+                                <option value="200000003427">bioenhancer</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="substance${ingredientCount}" class="block text-gray-700">Substance</label>
+                            <select id="substance${ingredientCount}" name="substance${ingredientCount}" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" required data-json="CodeSystem-substance-sms-cs.json">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <p><b>Presentation Strength</b></p>
+                    <div class="grid grid-cols-4 gap-4 mb-4">
+                        <div class="col-md-6">
+                            <label for="ps-numerator${ingredientCount}" class="block text-gray-700">Numerator</label>
+                            <input type="number" id="ps-numerator${ingredientCount}" name="numerator${ingredientCount}" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="ps-num-unit${ingredientCount}" class="block text-gray-700">Numerator Unit</label>
+                            <select id="ps-num-unit${ingredientCount}" name="ps-num-unit${ingredientCount}" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" required style="width: 100%;">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ps-denominator${ingredientCount}" class="block text-gray-700">Denominator</label>
+                            <input type="number" id="ps-denominator${ingredientCount}" name="denominator${ingredientCount}" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="ps-den-unit${ingredientCount}" class="block text-gray-700">Denominator Unit</label>
+                            <select id="ps-den-unit${ingredientCount}" name="ps-den-unit${ingredientCount}" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" required style="width: 100%;">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <p><b>Reference Strength</b></p>
+                    <div class="grid grid-cols-4 gap-4 mb-4">
+                        <div class="col-md-6">
+                            <label for="rs-numerator${ingredientCount}" class="block text-gray-700">Numerator</label>
+                            <input type="number" id="rs-numerator${ingredientCount}" name="numerator${ingredientCount}" class="form-control">
+                        </div>
+                        <div>
+                            <label for="rs-num-unit${ingredientCount}" class="block text-gray-700">Numerator Unit</label>
+                            <select id="rs-num-unit${ingredientCount}" name="rs-num-unit${ingredientCount}" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" style="width: 100%;">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="rs-denominator${ingredientCount}" class="block text-gray-700">Denominator</label>
+                            <input type="number" id="rs-denominator${ingredientCount}" name="denominator${ingredientCount}" class="form-control">
+                        </div>
+                        <div>
+                            <label for="rs-den-unit${ingredientCount}" class="block text-gray-700">Denominator Unit</label>
+                            <select id="rs-den-unit${ingredientCount}" name="rs-den-unit${ingredientCount}" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="100000110633.json" style="width: 100%;">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+          
+
+            // Insert the new box before the add button
+            addButton.parentNode.insertBefore(newBox, addButton);
+
+            // Reinitialize Select2 for new select elements
+            const newSelects = newBox.querySelectorAll('.dynamic-select');
+            newSelects.forEach(select => {
+                const jsonFileName = select.getAttribute('data-json');
+                const placeholder = select.getAttribute('data-placeholder');
+
+                fetch(jsonFileName)
+                    .then(response => response.json())
+                    .then(data => {
+                        const formattedData = data.concept.map(item => {
+                            return {
+                                id: item.code,
+                                text: item.display
+                            };
+                        });
+                        $(select).select2({
+                            data: formattedData,
+                            placeholder: placeholder,
+                            allowClear: true,
+                            closeOnSelect: !select.hasAttribute('multiple') // Close dropdown on select only if it's not a multi-select
+                        });
+                    })
+                    .catch(error => console.error('Error fetching the JSON data:', error));
             });
         });
-            </script>
+
+        // Initialize Select2 for existing elements
+        const selects = document.querySelectorAll('.dynamic-select');
+        selects.forEach(select => {
+            const jsonFileName = select.getAttribute('data-json');
+            const placeholder = select.getAttribute('data-placeholder');
+
+            fetch(jsonFileName)
+                .then(response => response.json())
+                .then(data => {
+                    const formattedData = data.concept.map(item => {
+                        return {
+                            id: item.code,
+                            text: item.display
+                        };
+                    });
+                    $(select).select2({
+                        data: formattedData,
+                        placeholder: placeholder,
+                        allowClear: true,
+                        closeOnSelect: !select.hasAttribute('multiple') // Close dropdown on select only if it's not a multi-select
+                    });
+                })
+                .catch(error => console.error('Error fetching the JSON data:', error));
+        });
+    });
+</script>
     </head>
     <body class="bg-gray-200 p-6">
         <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
@@ -187,7 +300,9 @@
                     </div>
                 <div >
                     <label for="packsizeunit" class="block text-gray-700">Pack size Unit</label>
-                    <input type="text" id="packsizeunit" name="packsizeunit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                    <select id="packsizeunit" name="packsizeunit" class="dynamic-select mt-1 block w-full border-gray-300 rounded-md shadow-sm" data-placeholder="Select 1 option" data-json="200000000004.json" required style="width: 100%;">
+                        <option></option>
+                    </select>
                 </div>
      
             </div>
@@ -251,14 +366,14 @@
                     <label for="substrole" class="block text-gray-700">Role</label>
                     <select id="substrole" name="substrole" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
                         <option selected value="100000072072">Active</option>
-                        <option value="100000072073">Adjuvant</option>
-                        <option value="100000072082">Excipient</option>
-                        <option value="100000136065">Starting material for excipient</option>
-                        <option value="100000136066">Solvent / Diluent</option>
-                        <option value="100000136178">Raw materials used in the manufacture of the product</option>
-                        <option value="100000136179">Starting material for active substance</option>
-                        <option value="100000136561">Overage</option>
-                        <option value="200000003427">bioenhancer</option>
+                        <option id="100000072073">Adjuvant</option>
+                        <option id="100000072082">Excipient</option>
+                        <option id="100000136065">Starting material for excipient</option>
+                        <option id="100000136066">Solvent / Diluent</option>
+                        <option id="100000136178">Raw materials used in the manufacture of the product</option>
+                        <option id="100000136179">Starting material for active substance</option>
+                        <option id="100000136561">Overage</option>
+                        <option id="200000003427">bioenhancer</option>
                     </select>
                 </div>
                 <div class="mb-4">
@@ -287,7 +402,7 @@
 
                     <div >
                         <label for="ps-denominator" class="block text-gray-700">Denominator</label>
-                        <input type="ps-denominator" id="ps-denominator" name="numerator" class="form-control" required>
+                        <input type="number" id="ps-denominator" name="numerator" class="form-control" required>
                     </div>
                     <div >
 
@@ -318,7 +433,7 @@
 
             <div >
                 <label for="rs-denominator" class="block text-gray-700">Denominator</label>
-                <input type="rs-denominator" id="rs-denominator" name="numerator" class="form-control" >
+                <input type="number" id="rs-denominator" name="numerator" class="form-control" >
             </div>
             <div >
 
@@ -340,35 +455,10 @@
             </form>
         </div>
         <script src="assets/js/productregister.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const selects = document.querySelectorAll('.dynamic-select');
-    
-                selects.forEach(select => {
-                    const jsonFileName = select.getAttribute('data-json');
-                    const placeholder = select.getAttribute('data-placeholder');
+        <div id="notification">Submission successful!</div>
 
-                    fetch(jsonFileName)
-                        .then(response => response.json())
-                        .then(data => {
-                            const formattedData = data.concept.map(item => {
-                            return {
-                                id: item.code,
-                                text: item.display
-                            };
-                        });
-                            $(select).select2({
-                                data: formattedData,
-                                placeholder: placeholder,
-                                allowClear: true,
-                                closeOnSelect: !select.hasAttribute('multiple') // Close dropdown on select only if it's not a multi-select
+        <div id="jsonOutput"></div>
 
-                            });
-                        })
-                        .catch(error => console.error('Error fetching the JSON data:', error));
-                });
-            });
-        </script>
     </body>
     </html>
 <body>
