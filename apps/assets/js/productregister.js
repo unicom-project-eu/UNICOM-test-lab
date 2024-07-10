@@ -551,8 +551,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                                             "coding": [
                                                 {
                                                     "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
-                                                    "code": "100000085259",
-                                                    "display": "Amlodipine"
+                                                    "code": selectedData["refsubstance"+appendix][0].id,
+                                                    "display": selectedData["refsubstance"+appendix][0].text
                                                 }
                                             ]
                                         }
@@ -626,7 +626,7 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                 notificationDiv.style.display = 'none';
             }, 3000);
         }
-        
+
         const jsonOutputDiv = document.getElementById("jsonOutput");
             jsonOutputDiv.innerHTML = `<pre>${fhirTransactionString}</pre>`;
 });
