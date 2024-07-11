@@ -1,0 +1,92 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "combination-package-ema-cs",
+  "url" : "https://spor.ema.europa.eu/v1/lists/200000000008",
+  "version" : "0.1.0",
+  "name" : "CombinationPackage_EMA_CS",
+  "title" : "Combination Package EMA",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-07-10T21:24:19+00:00",
+  "publisher" : "UNICOM",
+  "contact" : [{
+    "name" : "UNICOM",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://unicom-project.eu"
+    }]
+  }],
+  "description" : "Dose forms for combination packages. Based on EDQM. Re-coded with RMS codes. Only used for authorised dose form.",
+  "caseSensitive" : false,
+  "compositional" : false,
+  "content" : "complete",
+  "count" : 17,
+  "concept" : [{
+    "code" : "100000173972",
+    "display" : "Cream + pessary"
+  },
+  {
+    "code" : "100000173973",
+    "display" : "Cutaneous solution + medicated sponge"
+  },
+  {
+    "code" : "100000173974",
+    "display" : "Gastro-resistant tablet + rectal suspension"
+  },
+  {
+    "code" : "100000173975",
+    "display" : "Vaginal capsule, soft + vaginal cream"
+  },
+  {
+    "code" : "100000173976",
+    "display" : "Vaginal cream + vaginal tablet"
+  },
+  {
+    "code" : "100000173977",
+    "display" : "Effervescent granules + film-coated tablet"
+  },
+  {
+    "code" : "100000173978",
+    "display" : "Effervescent tablet + film-coated tablet"
+  },
+  {
+    "code" : "100000173979",
+    "display" : "Tablet + vaginal tablet"
+  },
+  {
+    "code" : "100000173980",
+    "display" : "Cream + vaginal capsule, soft"
+  },
+  {
+    "code" : "100000173981",
+    "display" : "Cream + vaginal tablet"
+  },
+  {
+    "code" : "200000028535",
+    "display" : "Eye drops, solution + eye ointment"
+  },
+  {
+    "code" : "200000010779",
+    "display" : "Ointment + vaginal tablet"
+  },
+  {
+    "code" : "200000002334",
+    "display" : "Film-coated tablet + pessary"
+  },
+  {
+    "code" : "200000003175",
+    "display" : "Capsule, soft + tablet"
+  },
+  {
+    "code" : "200000003176",
+    "display" : "Capsule, hard + tablet"
+  },
+  {
+    "code" : "200000003177",
+    "display" : "Film-coated tablet + tablet"
+  },
+  {
+    "code" : "200000015757",
+    "display" : "Effervescent granules + gastro-resistant tablet"
+  }]
+}

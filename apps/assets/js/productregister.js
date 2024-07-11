@@ -142,8 +142,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                                 "coding": [
                                     {
                                         "system": "urn:ietf:bcp:47",
-                                        "code": "et",
-                                        "display": "Estonian"
+                                        "code": selectedData["language"][0].id,
+                                        "display": selectedData["language"][0].id,
                                     }
                                 ]
                             }
@@ -401,9 +401,9 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
             "containedItemQuantity": [
                 {
                     "value": packquantity,
-                    "unit": selectedData["packquantityunit"][0].id,
+                    "unit": selectedData["packquantityunit"][0].text,
                     "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                    "code": selectedData["packquantityunit"][0].text
+                    "code": selectedData["packquantityunit"][0].id
                 }
             ],
             "description": packdescription,
