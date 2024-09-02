@@ -593,7 +593,9 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
 
 
     // Push JSON to server
-    fetch('http://localhost:8080/fhir', {
+    fetch('https://sandbox.hl7europe.eu/unicom/fhir', {
+
+   // fetch('http://localhost:8080/fhir', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/fhir+json'

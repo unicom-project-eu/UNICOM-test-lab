@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     .then((response) => response.json())
     .then((config) => {
       var baseurl = config.server_url;
+      console.log(baseurl);
       var url = baseurl + '/Bundle?_format=json&_count=20000';
 
       var productFormatType = document.getElementById('productFormatType');
