@@ -475,8 +475,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
         else { appendix = i + 1 }
         console.log(i);
         console.log(appendix);
-        const substrole=document.getElementById('substrole'+appendix).selectedOptions[0].textContent;
-        const substroleid=document.getElementById('substrole'+appendix).selectedOptions[0].value;
+        const substrole = document.getElementById('substrole' + appendix).selectedOptions[0].textContent;
+        const substroleid = document.getElementById('substrole' + appendix).selectedOptions[0].value;
 
         const psnumerator = document.getElementById('ps-numerator' + appendix).value;
 
@@ -485,9 +485,9 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
         const rsnumerator = document.getElementById('rs-numerator' + appendix).value;
 
         const rsdenominator = document.getElementById('rs-denominator' + appendix).value;
-        console.log(selectedData["substance"+appendix][0].id);
+        console.log(selectedData["substance" + appendix][0].id);
         var ing = {
-            "fullUrl": "Ingredient-" + MPID + "-" +  appendix,
+            "fullUrl": "Ingredient-" + MPID + "-" + appendix,
             "resource": {
                 "resourceType": "Ingredient",
                 "meta": {
@@ -522,8 +522,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                             "coding": [
                                 {
                                     "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
-                                    "code": selectedData["substance"+appendix][0].id,
-                                    "display": selectedData["substance"+appendix][0].text
+                                    "code": selectedData["substance" + appendix][0].id,
+                                    "display": selectedData["substance" + appendix][0].text
                                 }
                             ]
                         }
@@ -533,15 +533,15 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                             "presentationRatio": {
                                 "numerator": {
                                     "value": psnumerator,
-                                    "unit": selectedData["ps-num-unit"+appendix][0].text,
+                                    "unit": selectedData["ps-num-unit" + appendix][0].text,
                                     "system": "https://spor.ema.europa.eu/v1/lists/100000110633",
-                                    "code": selectedData["ps-num-unit"+appendix][0].id,
+                                    "code": selectedData["ps-num-unit" + appendix][0].id,
                                 },
                                 "denominator": {
                                     "value": psdenominator,
-                                    "unit": selectedData["ps-den-unit"+appendix][0].text,
+                                    "unit": selectedData["ps-den-unit" + appendix][0].text,
                                     "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                                    "code": selectedData["ps-den-unit"+appendix][0].id
+                                    "code": selectedData["ps-den-unit" + appendix][0].id
                                 }
                             },
                             "referenceStrength": [
@@ -551,8 +551,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                                             "coding": [
                                                 {
                                                     "system": "https://spor.ema.europa.eu/v2/SubstanceDefinition",
-                                                    "code": selectedData["refsubstance"+appendix][0].id,
-                                                    "display": selectedData["refsubstance"+appendix][0].text
+                                                    "code": selectedData["refsubstance" + appendix][0].id,
+                                                    "display": selectedData["refsubstance" + appendix][0].text
                                                 }
                                             ]
                                         }
@@ -560,15 +560,15 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                                     "strengthRatio": {
                                         "numerator": {
                                             "value": rsnumerator,
-                                            "unit": selectedData["rs-num-unit"+appendix][0].text,
+                                            "unit": selectedData["rs-num-unit" + appendix][0].text,
                                             "system": "https://spor.ema.europa.eu/v1/lists/100000110633",
-                                            "code": selectedData["rs-num-unit"+appendix][0].id
+                                            "code": selectedData["rs-num-unit" + appendix][0].id
                                         },
                                         "denominator": {
                                             "value": rsdenominator,
-                                            "unit": selectedData["rs-den-unit"+appendix][0].text,
+                                            "unit": selectedData["rs-den-unit" + appendix][0].text,
                                             "system": "https://spor.ema.europa.eu/v1/lists/200000000014",
-                                            "code": selectedData["rs-den-unit"+appendix][0].id
+                                            "code": selectedData["rs-den-unit" + appendix][0].id
                                         }
                                     }
                                 }
@@ -593,42 +593,55 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
 
 
     // Push JSON to server
-    fetch('https://sandbox.hl7europe.eu/unicom/fhir', {
+    // Load server URL from config.json
+    fetch('config.json')
+        .then(response => response.json())
+        .then(config => {
+            var baseurl = config.server_url;
+            console.log(baseurl);
 
-   // fetch('http://localhost:8080/fhir', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/fhir+json'
-        },
-        body: fhirTransactionString
-    })
-        .then(response => {
-            if (response.ok) {
-                showNotification("Submission successful!");
+            // Push JSON to server using the baseurl from config.json
+            fetch(baseurl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/fhir+json'
+                },
+                body: fhirTransactionString
+            })
+                .then(response => {
+                    if (response.ok) {
+                        showNotification("Submission successful!");
 
-                return response.json();
-            }
-            throw new Error('Network response was not ok.');
-        })
-        .then(data => {
-            console.log('Success:', data);
+                        return response.json();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch(error => {
+                    showNotification("Submission failed!", true);
+
+                    console.error('Error:', error);
+                });
+
         })
         .catch(error => {
-            showNotification("Submission failed!", true);
-
-            console.error('Error:', error);
+            console.error('Error loading config:', error);
         });
 
-        function showNotification(message, isError = false) {
-            const notificationDiv = document.getElementById("notification");
-            notificationDiv.textContent = message;
-            notificationDiv.style.backgroundColor = isError ? '#f44336' : '#4CAF50';  // Red for error, green for success
-            notificationDiv.style.display = 'block';
-            setTimeout(() => {
-                notificationDiv.style.display = 'none';
-            }, 3000);
-        }
+    // Function to show notification
+    function showNotification(message, isError = false) {
+        const notificationDiv = document.getElementById("notification");
+        notificationDiv.textContent = message;
+        notificationDiv.style.backgroundColor = isError ? '#f44336' : '#4CAF50';  // Red for error, green for success
+        notificationDiv.style.display = 'block';
+        setTimeout(() => {
+            notificationDiv.style.display = 'none';
+        }, 3000);
+    }
 
-        const jsonOutputDiv = document.getElementById("jsonOutput");
-            jsonOutputDiv.innerHTML = `<pre>${fhirTransactionString}</pre>`;
+    // Display FHIR transaction string
+    const jsonOutputDiv = document.getElementById("jsonOutput");
+    jsonOutputDiv.innerHTML = `<pre>${fhirTransactionString}</pre>`;
 });
