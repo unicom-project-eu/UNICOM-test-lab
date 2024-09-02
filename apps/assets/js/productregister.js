@@ -86,6 +86,16 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
                     }
                 ]
             },
+            "classification": [
+                {
+                  "coding": [
+                    {
+                      "code": selectedData['classification'][0].id,
+                      "system": "https://spor.ema.europa.eu/v1/lists/100000093533",
+                      "display": selectedData['classification'][0].text,
+                    }
+                  ]
+                }],
             "name": [
                 {
                     "productName": IVP + " " + SP + " " + PDFP,
