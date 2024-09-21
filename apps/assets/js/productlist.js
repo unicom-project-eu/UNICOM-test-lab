@@ -261,10 +261,22 @@ async function getDataToProcess(url, isBundleOfBundles) {
   }
 }
 
-async function transformDatatorequestphpid(data){
+
+
+
+async function sendTransformedData(url, data) {
   //console.log(data);
 
-  const newdata ={
+  const mpd = data["entry"].find(item => item.resource && item.resource.resourceType === "MedicinalProductDefinition");
+  const org = data["entry"].find(item => item.resource && item.resource.resourceType === "Organization");
+  const ingre = data["entry"].find(item => item.resource && item.resource.resourceType === "Ingredient");
+
+  const mpid_id = mpd["resource"]["id"];
+  const org_id = org["resource"]["id"];
+  const ingre_id = ingre["resource"]["id"];
+
+  //console.log(mpd);
+  const newdata = {
     "resourceType": "Task",
     "id": "template-generated-by-server-phpid-req",
     "meta": {
@@ -275,193 +287,7 @@ async function transformDatatorequestphpid(data){
         "http://who-umc.org/idmp/StructureDefinition/Task-who-php-phpid"
       ]
     },
-    "contained": [
-      {
-        "resourceType": "MedicinalProductDefinition",
-        "id": "296b006a-f1c6-4595-be0e-0d02a0811710",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2024-02-29T15:36:22.8247159+00:00",
-          "source": "http://idmp.who-umc.org/fhir",
-          "profile": [
-            "http://who-umc.org/idmp/StructureDefinition/MedicinalProductDefinition-who-php-req"
-          ]
-        },
-        "identifier": [
-          {
-            "system": "http://ema.europa.eu/example/mpid",
-            "value": "MPID-123"
-          }
-        ],
-        "type": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/medicinal-product-type",
-              "code": "MedicinalProduct"
-            }
-          ]
-        },
-        "domain": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/medicinal-product-domain",
-              "code": "Human"
-            }
-          ],
-          "text": "Human use"
-        },
-        "status": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/publication-status",
-              "code": "active"
-            }
-          ],
-          "text": "Active"
-        },
-        "combinedPharmaceuticalDoseForm": {
-          "text": "tablet"
-        },
-        "attachedDocument": [
-          {
-            "display": "SPC/123"
-          }
-        ],
-        "contact": [
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/medicinal-product-contact-type",
-                  "code": "ProposedMAH"
-                }
-              ]
-            },
-            "contact": {
-              "reference": "#acmeinc",
-              "type": "Organization",
-              "display": "Acme Inc"
-            }
-          }
-        ],
-        "name": [
-          {
-            "productName": "Marvelol",
-            "usage": [
-              {
-                "country": {
-                  "coding": [
-                    {
-                      "system": "urn:iso:std:iso:3166",
-                      "code": "NLD"
-                    }
-                  ]
-                },
-                "jurisdiction": {
-                  "coding": [
-                    {
-                      "system": "http://who-umc.org/idmp/CodeSystem/jurisdiction",
-                      "code": "EU"
-                    }
-                  ]
-                },
-                "language": {
-                  "coding": [
-                    {
-                      "system": "urn:ietf:bcp:47",
-                      "code": "nl"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "resourceType": "Ingredient",
-        "id": "2a5fb5c2-5422-4eff-8326-f9c24fa306e1",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2021-03-09T15:36:22.8249693+00:00",
-          "source": "http://idmp.who-umc.org/fhir",
-          "profile": [
-            "http://who-umc.org/idmp/StructureDefinition/Ingredient-who-php"
-          ]
-        },
-        "status": "active",
-        "for": [
-          {
-            "reference": "#296b006a-f1c6-4595-be0e-0d02a0811710"
-          }
-        ],
-        "role": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/ingredient-role",
-              "code": "100000072072"
-            }
-          ],
-          "text": "Active"
-        },
-        "substance": {
-          "code": {
-            "concept": {
-              "coding": [
-                {
-                  "system": "http://who-umc.org/idmp/gsid",
-                  "code": "GSID23G92UMX93H45"
-                }
-              ],
-              "text": "Methotrexate"
-            }
-          },
-          "strength": [
-            {
-              "presentationRatio": {
-                "numerator": {
-                  "value": 1.5,
-                  "unit": "mg",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "mg"
-                },
-                "denominator": {
-                  "value": 1,
-                  "unit": "IU",
-                  "system": "http://who-umc.org/idmp/CodeSystem/strengthUnit",
-                  "code": "IU"
-                }
-              },
-              "textPresentation": "1.5 mg"
-            }
-          ]
-        }
-      },
-      {
-        "resourceType": "Organization",
-        "id": "acmeinc",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2023-11-25T15:36:22.8249835+00:00",
-          "source": "http://idmp.who-umc.org/fhir",
-          "profile": [
-            "http://who-umc.org/idmp/StructureDefinition/MarketingAuthorizationHolder-who-php"
-          ]
-        },
-        "active": true,
-        "type": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                "code": "bus"
-              }
-            ],
-            "text": "Non-Healthcare Business or Corporation"
-          }
-        ],
-        "name": "Acme Inc"
-      }
+    "contained": [mpd["resource"], ingre["resource"], org["resource"]
     ],
     "identifier": [
       {
@@ -486,7 +312,7 @@ async function transformDatatorequestphpid(data){
           ]
         },
         "valueReference": {
-          "reference": "#296b006a-f1c6-4595-be0e-0d02a0811710"
+          "reference": "#" + mpid_id
         }
       },
       {
@@ -500,7 +326,7 @@ async function transformDatatorequestphpid(data){
           ]
         },
         "valueReference": {
-          "reference": "#2a5fb5c2-5422-4eff-8326-f9c24fa306e1"
+          "reference": "#" + ingre_id
         }
       },
       {
@@ -514,62 +340,67 @@ async function transformDatatorequestphpid(data){
           ]
         },
         "valueReference": {
-          "reference": "#acmeinc"
+          "reference": "#" + org_id
         }
       }
     ]
   }
-  return newdata
-}
 
-
-async function sendTransformedData(url,data){
+  console.log("task created:", JSON.stringify(newdata));
 
   const response = await fetch(url, {
     method: 'POST',  // or 'POST', depending on your API
-    data: data,
+    body: JSON.stringify(newdata),  // Use 'body' to send data and stringify it
     headers: {
-        'Content-Type': 'application/json'
+      'Content-Type': 'application/json+fhir',
+      'Ocp-Apim-Subscription-Key': 'c1847d6e-176b-41d9-9db0-5d5e37b8fc85'
     }
-});
-console.log(response);
+  });
+  //console.log("the response from umc is",response.json());
+  // Parse the response as JSON
+  const jsonResponse = await response.json();
+
+  // Log the JSON result
+  console.log("the response from umc is:", JSON.stringify(jsonResponse));
 }
 // Function to make the request when the button is clicked
 async function sendRequest(url) {
+  const newurl = url + "&_revinclude:iterate=Ingredient:for&_revinclude=RegulatedAuthorization:subject&_include:iterate=RegulatedAuthorization:holder#L16"
+
   ///get a phpID request.
   try {
-      // Display a loading message or indicator (optional)
-      console.log('Sending request to:', url);
+    // Display a loading message or indicator (optional)
+    console.log('Sending request to:', newurl);
 
-      // Make the API call
-      const response = await fetch(url, {
-          method: 'GET',  // or 'POST', depending on your API
-          headers: {
-              'Content-Type': 'application/json'
-          }
-      });
-
-      // Check if the response is okay
-      if (response.ok) {
-          const result = await response.json();
-
-           // Now, transform the data based on the result
-           const transformedData = transformDatatorequestphpid(result);
-
-           // Send the transformed data to a different endpoint
-           const destinationUrl = 'https://idmp.who-umc.org/fhir/Task';  // Replace with the actual URL
-           await sendTransformedData(destinationUrl, transformedData);
-
-
-          console.log('Request successful:', result);
-          // You can update the UI or process the response further here
-          alert('Request successful:\n' + JSON.stringify("result", null, 2));
-
-      } else {
-          console.error('Request failed with status:', response.status);
+    // Make the API call
+    const response = await fetch(newurl, {
+      method: 'GET',  // or 'POST', depending on your API
+      headers: {
+        'Content-Type': 'application/json'
       }
+    });
+
+    // Check if the response is okay
+    if (response.ok) {
+      const result = await response.json();
+
+      // Now, transform the data based on the result
+      //const transformedData = transformDatatorequestphpid(result);
+
+      // Send the transformed data to a different endpoint
+      const destinationUrl = 'https://idmp.who-umc.org/fhir/Task';  // Replace with the actual URL
+      await sendTransformedData(destinationUrl, result);
+
+
+      console.log('Request successful:', result);
+      // You can update the UI or process the response further here
+      alert('Request successful:\n' + JSON.stringify("result", null, 2));
+
+    } else {
+      console.error('Request failed with status:', response.status);
+    }
   } catch (error) {
-      console.error('Error during the request:', error);
+    console.error('Error during the request:', error);
   }
 }
 
@@ -643,8 +474,8 @@ async function processData(data, baseurl) {
       } catch (error) {
         current_row.push(error);
       };
-//"<span class="requestphpid"><a target="_blank" href="http://localhost:8080/fhir/MedicinalProductDefinition?_id=CefuroximStragen-1-5g-Powder-SE-IS-MedicinalProductDefinition>Request</a></span>"
-    // console.log(current_row);
+      //"<span class="requestphpid"><a target="_blank" href="http://localhost:8080/fhir/MedicinalProductDefinition?_id=CefuroximStragen-1-5g-Powder-SE-IS-MedicinalProductDefinition>Request</a></span>"
+      // console.log(current_row);
       t.row.add(current_row);
       // Update progress indicator
       progressIndicator.innerText = 'Processing product ' + (i + 1) + ' of ' + totalCount + '...';

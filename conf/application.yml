@@ -210,7 +210,7 @@ hapi:
     #    filter_search_enabled: true
     #    graphql_enabled: true
     narrative_enabled: true
-    mdm_enabled: false
+    mdm_enabled: true
     mdm_rules_json_location: "mdm-rules.json"
     #    local_base_urls:
     #      - https://hapi.fhir.org/baseR4
@@ -283,10 +283,9 @@ hapi:
     #      responses_enabled: true
     #    binary_storage_enabled: true
     inline_resource_storage_below_size: 4000
-#    bulk_export_enabled: true
-#    subscription:
-#      resthook_enabled: true
-#      websocket_enabled: false
+    subscription:
+      resthook_enabled: true
+      websocket_enabled: false
 #      email:
 #        from: some@test.com
 #        host: google.com
