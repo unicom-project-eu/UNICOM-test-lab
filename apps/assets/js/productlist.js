@@ -271,10 +271,85 @@ async function sendTransformedData(url, data) {
   const org = data["entry"].find(item => item.resource && item.resource.resourceType === "Organization");
   const ingre = data["entry"].find(item => item.resource && item.resource.resourceType === "Ingredient");
 
+  delete mpd.resource.meta;
+  delete org.resource.meta;
+  delete ingre.resource.meta;
+  delete ingre.resource.substance.strength[0].referenceStrength;
+  delete mpd.resource.text;
+  delete org.resource.text;
+  delete ingre.resource.text;
+
+  //  delete ingre.resource.for.splice(1, 2); //test only
+  delete ingre.resource.for
+
   const mpid_id = mpd["resource"]["id"];
   const org_id = org["resource"]["id"];
   const ingre_id = ingre["resource"]["id"];
 
+  ingre["resource"]["for"] = [{
+    "reference": "#" + mpid_id
+  }]
+
+  mpd["resource"]["contact"] = [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/medicinal-product-contact-type",
+            "code": "ProposedMAH"
+          }
+        ]
+      },
+      "contact": {
+        "reference": "#" + org_id,
+        "type": "Organization",
+        "display": "Acme Inc"
+      }
+    }
+  ];
+
+  mpd["resource"]["attachedDocument"] = [
+    {
+      "display": "SPC/123"
+    }
+  ];
+
+
+  mpd["resource"]["name"][0]["usage"][0]["jurisdiction"] = {
+    "coding": [
+      {
+        "system": "http://who-umc.org/idmp/CodeSystem/jurisdiction",
+        "code": "EU"
+      }
+    ]
+  };
+
+  mpd["resource"]["name"][0]["usage"][0]["country"] = {
+    "coding": [
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NLD"
+      }
+    ]
+  };
+  ingre["resource"]["substance"]["code"]["concept"]["text"] = "example"
+  ingre["resource"]["substance"]["code"]["concept"]["coding"][0]["system"] = "http://who-umc.org/idmp/gsid"
+  ingre["resource"]["substance"]["code"]["concept"]["coding"][0]["code"] = "GSID23G92UMX93H45"
+
+
+  //        "Task.contained[1].substance[0].code[0].concept[0].coding[0].system[0]",
+
+
+  delete mpd.resource.domain;
+  mpd.resource.domain = {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/medicinal-product-domain",
+        "code": "Human"
+      }
+    ],
+    "text": "Human use"
+  };
   //console.log(mpd);
   const newdata = {
     "resourceType": "Task",
