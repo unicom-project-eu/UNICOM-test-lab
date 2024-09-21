@@ -17,8 +17,9 @@ This test lab consists of
 ### Starting up
 1. install docker
 2. download (clone) this repository (`git clone https://github.com/unicom-project-eu/UNICOM-test-lab.git` )
-3. inside the folder run ```docker-compose up -d```
-4. access the homepage in localhost:8080
+3. inside the folder run ```docker-compose up -d``` for a simple instance
+4. inside the folder run ```docker-compose -f docker-compose-bd.yml up -d``` for a more robust and feature-rich instance
+5. access the homepage in localhost:8080
 
 
 

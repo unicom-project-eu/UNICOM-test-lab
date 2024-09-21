@@ -1,0 +1,32 @@
+services:
+  fhir-server:
+    image: hapiproject/hapi:latest
+    restart: always
+    logging:
+      driver: "json-file"
+      options: 
+        tag: "{{.ImageName}}|{{.Name}}|{{.ImageFullID}}|{{.FullID}}"
+    container_name: unicom-test-lab
+    ports:
+      - 8080:8080
+    environment:
+     SPRING_CONFIG_LOCATION: 'file:///data/hapi/application.yml'
+    volumes:
+      - ./conf:/data/hapi
+      - ./web:/custom
+      - ./apps:/apps
+    depends_on:
+        - db
+
+  db:
+    image: postgres:latest
+
+    restart: always
+    container_name: db
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=hapi
+      - POSTGRES_ROOT_PASSWORD=admin
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
