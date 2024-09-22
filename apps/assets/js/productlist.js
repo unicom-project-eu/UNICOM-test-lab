@@ -324,33 +324,56 @@ async function sendTransformedData(url, data) {
     ]
   };
 
-  mpd["resource"]["name"][0]["usage"][0]["country"] = {
-    "coding": [
-      {
-        "system": "urn:iso:std:iso:3166",
-        "code": "NLD"
-      }
-    ]
-  };
-  ingre["resource"]["substance"]["code"]["concept"]["text"] = "example"
-  ingre["resource"]["substance"]["code"]["concept"]["coding"][0]["system"] = "http://who-umc.org/idmp/gsid"
-  ingre["resource"]["substance"]["code"]["concept"]["coding"][0]["code"] = "GSID23G92UMX93H45"
+  ingre["resource"]["substance"]["code"]["concept"]["text"] = ingre["resource"]["substance"]["code"]["concept"]["coding"][0]["display"]
 
 
-  //        "Task.contained[1].substance[0].code[0].concept[0].coding[0].system[0]",
-
+// translate codesystem for domain
+const domainurl ='http://localhost:8080/fhir/ConceptMap/$translate?system=' + mpd.resource.domain.coding[0].system + '&code=' + mpd.resource.domain.coding[0].code + '&reverse=true';
+console.log(domainurl);  
+const domainresponse = await fetch(domainurl, {
+    method: 'GET'
+  });
 
   delete mpd.resource.domain;
+  const jsonResponse_domain = await domainresponse.json();
+
+  const matchParameter_domain = jsonResponse_domain.parameter.find(param => param.name === "match");
+  const conceptPart_domain = matchParameter_domain.part.find(part => part.name === "concept");
+  const system = conceptPart_domain.valueCoding.system;
+  const code = conceptPart_domain.valueCoding.code;
+
+
   mpd.resource.domain = {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/medicinal-product-domain",
-        "code": "Human"
+        "system": system,
+        "code": code
       }
     ],
-    "text": "Human use"
+    "text": code
   };
-  //console.log(mpd);
+
+
+  console.log(mpd.resource.name[0].usage[0]);
+  // translate codesystem for usage country
+  countryrul='http://localhost:8080/fhir/ConceptMap/$translate?system=' + mpd.resource.name[0].usage[0].country.coding[0].system + '&code=' + mpd.resource.name[0].usage[0].country.coding[0].code + '&reverse=true';
+  console.log(countryrul);
+  const countryresponse = await fetch(countryrul, {method: 'GET'});
+
+  const jsonResponse_country = await countryresponse.json();
+
+  delete mpd.resource.domain;
+
+  console.log(jsonResponse_country);
+  const matchParameter_country = jsonResponse_country.parameter.find(param => param.name === "match");
+  const conceptPart_country = matchParameter_country.part.find(part => part.name === "concept");
+  const system_country = conceptPart_country.valueCoding.system;
+  const code_country = conceptPart_country.valueCoding.code;
+
+
+  mpd["resource"]["name"][0]["usage"][0]["country"] = {"coding": [{"system": system_country,"code": code_country}]};
+  
+   //console.log(mpd);
   const newdata = {
     "resourceType": "Task",
     "id": "template-generated-by-server-phpid-req",
@@ -437,6 +460,7 @@ async function sendTransformedData(url, data) {
 
   // Log the JSON result
   console.log("the response from umc is:", JSON.stringify(jsonResponse));
+  return jsonResponse;
 }
 // Function to make the request when the button is clicked
 async function sendRequest(url) {
@@ -464,13 +488,14 @@ async function sendRequest(url) {
 
       // Send the transformed data to a different endpoint
       const destinationUrl = 'https://idmp.who-umc.org/fhir/Task';  // Replace with the actual URL
-      await sendTransformedData(destinationUrl, result);
+      const taskdata = await sendTransformedData(destinationUrl, result);
 
 
-      console.log('Request successful:', result);
+      console.log('Request successful:', taskdata);
       // You can update the UI or process the response further here
-      alert('Request successful:\n' + JSON.stringify("result", null, 2));
-
+      if (taskdata){
+      alert('Request successful:\n' + JSON.stringify("task created", null, 2));
+    }
     } else {
       console.error('Request failed with status:', response.status);
     }
