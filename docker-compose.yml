@@ -1,4 +1,4 @@
-version: "3.9"
+#version: "3.9"
 
 services:
   fhir-server:
@@ -20,7 +20,7 @@ services:
     environment:
       - server.servlet.context-path=/unicom
       - hapi.fhir.allow_multiple_delete=true
-      - hapi.fhir.server_address=localhost:8080
+      - hapi.fhir.server_address=https://sandbox.hl7europe.eu/unicom/fhir
       - hapi.fhir.reuse_cached_search_results_millis=10000
       - hapi.fhir.cors.allow_Credentials=true
 #      - hapi.fhir.cors.allowed_origin_patterns="*"
@@ -54,7 +54,7 @@ services:
       - hapi.fhir.custom_content_path=/custom
       - hapi.fhir.app_content_path=/apps
       - hapi.fhir.tester.home.name="Local Tester"
-      - hapi.fhir.tester.home.server_address=http://sandbox.hl7europe.eu/unicom/fhir
+      - hapi.fhir.tester.home.server_address=https://sandbox.hl7europe.eu/unicom/fhir
       - hapi.fhir.tester.home.fhir_version=R5
 
     volumes:
