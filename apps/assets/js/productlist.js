@@ -488,13 +488,19 @@ async function sendRequest(url) {
 
       // Send the transformed data to a different endpoint
       const destinationUrl = 'https://idmp.who-umc.org/fhir/Task';  // Replace with the actual URL
-      const taskdata = await sendTransformedData(destinationUrl, result);
+      const resultdata = await sendTransformedData(destinationUrl, result);
 
 
-      console.log('Request successful:', taskdata);
+      console.log('Request successful:', resultdata);
+
+      if (resultdata["resourceType"]=="OperationOutcome"){
+      var messagetoshow="An error ocurred requesting PhPID"
+    }else{
+      var messagetoshow="A task with id:"+resultdata["id"]+" was created"
+    }
       // You can update the UI or process the response further here
-      if (taskdata){
-      alert('Request successful:\n' + JSON.stringify("task created", null, 2));
+      if (resultdata){
+      alert('Request successful:\n' + messagetoshow);
     }
     } else {
       console.error('Request failed with status:', response.status);
