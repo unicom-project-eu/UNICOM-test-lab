@@ -1,8 +1,8 @@
 #Uncomment the "servlet" and "context-path" lines below to make the fhir endpoint available at /example/path/fhir instead of the default value of /fhir
 server:
-#  servlet:
-#    context-path: /example/path
-  port: 8080
+  servlet:
+    context-path: /unicom
+  #port: 8080
 #Adds the option to go to eg. http://localhost:8080/actuator/health for seeing the running configuration
 #see https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints
 management:
@@ -150,9 +150,10 @@ hapi:
     #    server_address: http://hapi.fhir.org/baseR4
     #    defer_indexing_for_codesystems_of_size: 101
     #    install_transitive_ig_dependencies: true
+   
     implementationguides:
       unicom:
-        packageUrl: https://build.fhir.org/ig/hl7-eu/unicom-ig/package.tgz
+        packageUrl: https://hl7-eu.github.io/unicom-ig/package.tgz
         name: hl7.eu.fhir.unicom
         version: 0.1.0
     ###    example from registry (packages.fhir.org)
@@ -270,7 +271,7 @@ hapi:
     tester:
       home:
         name: Local Tester
-        server_address: 'http://localhost:8080/fhir'
+        server_address: 'https://sandbox.hl7europe.eu/unicom/fhir'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R5
       global:
